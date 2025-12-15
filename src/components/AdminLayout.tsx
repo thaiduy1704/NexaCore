@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 import { Layout, Menu } from "antd";
 import {
@@ -9,8 +7,7 @@ import {
   ShoppingOutlined,
   LogoutOutlined,
 } from "@ant-design/icons";
-import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const { Header, Sider, Content } = Layout;
 
@@ -20,35 +17,35 @@ interface AdminLayoutProps {
 
 export default function AdminLayout({ children }: AdminLayoutProps) {
   const [collapsed, setCollapsed] = useState(false);
-  const pathname = usePathname();
-  const router = useRouter();
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const menuItems = [
     {
       key: "/admin/dashboard",
       icon: <DashboardOutlined />,
-      label: <Link href="/admin/dashboard">Dashboard</Link>,
+      label: <Link to="/admin/dashboard">Dashboard</Link>,
     },
     {
       key: "/admin/news",
       icon: <FileTextOutlined />,
-      label: <Link href="/admin/news">News</Link>,
+      label: <Link to="/admin/news">News</Link>,
     },
     {
       key: "/admin/projects",
       icon: <ProjectOutlined />,
-      label: <Link href="/admin/projects">Projects</Link>,
+      label: <Link to="/admin/projects">Projects</Link>,
     },
     {
       key: "/admin/products",
       icon: <ShoppingOutlined />,
-      label: <Link href="/admin/products">Products</Link>,
+      label: <Link to="/admin/products">Products</Link>,
     },
   ];
 
   const handleLogout = () => {
     localStorage.removeItem("admin_authenticated");
-    router.push("/admin/login");
+    navigate("/admin/login");
   };
 
   return (
@@ -77,7 +74,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
         <Menu
           theme="dark"
           mode="inline"
-          selectedKeys={[pathname]}
+          selectedKeys={[location.pathname]}
           items={[
             ...menuItems,
             {

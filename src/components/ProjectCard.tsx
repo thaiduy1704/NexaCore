@@ -2,6 +2,7 @@ import { Card } from "antd";
 import { ArrowRightOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import type { Project } from "@/types";
 
 interface ProjectCardProps {
@@ -9,6 +10,8 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project }: ProjectCardProps) {
+  const { t } = useTranslation();
+  
   return (
     <motion.div whileHover={{ y: -8 }} transition={{ duration: 0.3 }}>
       <Link to={`/projects/${project.slug}`}>
@@ -29,7 +32,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           </p>
           <p className="text-gray-600 mb-4">{project.description}</p>
           <div className="flex items-center text-[#0052CC] font-medium">
-            Learn More <ArrowRightOutlined className="ml-2" />
+            {t("common.learnMore")} <ArrowRightOutlined className="ml-2" />
           </div>
         </Card>
       </Link>

@@ -11,19 +11,35 @@ import {
   TeamOutlined,
 } from "@ant-design/icons";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import SeoHelmet from "@/components/SeoHelmet";
 import { projects } from "@/lib/mockData";
 
 const industryGradients: Record<string, string> = {
+  "Bán lẻ": "from-purple-600 via-pink-600 to-rose-600",
+  "Sản xuất": "from-blue-600 via-cyan-600 to-teal-600",
+  "Tài chính": "from-green-600 via-emerald-600 to-teal-600",
+  "Chính phủ": "from-indigo-600 via-purple-600 to-pink-600",
+  FMCG: "from-orange-600 via-amber-600 to-yellow-600",
+  "Thời trang": "from-pink-600 via-rose-600 to-red-600",
+  "Ngân hàng": "from-blue-600 via-cyan-600 to-teal-600",
+  "Bất động sản": "from-violet-600 via-purple-600 to-indigo-600",
+  // Fallback for old data
   "Banking & Finance": "from-blue-600 via-cyan-600 to-teal-600",
   Retail: "from-purple-600 via-pink-600 to-rose-600",
   Healthcare: "from-green-600 via-emerald-600 to-teal-600",
 };
 
 export default function ProjectDetailPage() {
+  const { t } = useTranslation();
   const { slug } = useParams<{ slug: string }>();
   const project = projects.find((p) => p.slug === slug);
+  const siteUrl = import.meta.env.VITE_SITE_URL;
+  const canonicalUrl =
+    siteUrl && project ? `${siteUrl.replace(/\/$/, "")}/projects/${project.slug}` : undefined;
 
-  const gradient = industryGradients[project?.industry || "Banking & Finance"];
+  const gradient =
+    industryGradients[project?.industry || ""] || "from-violet-600 via-purple-600 to-indigo-600";
 
   if (!project) {
     return (
@@ -33,13 +49,15 @@ export default function ProjectDetailPage() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center"
         >
-          <h1 className="!text-5xl font-extrabold !mb-6 text-gray-900">Project Not Found</h1>
+          <h1 className="!text-5xl font-extrabold !mb-6 text-gray-900">
+            {t("projectDetail.notFound")}
+          </h1>
           <Link
             to="/projects"
             className="inline-flex items-center !gap-2 !px-8 !py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-2xl font-bold !text-lg shadow-xl hover:shadow-2xl transition-all"
           >
             <ArrowLeftOutlined />
-            <span>Back to Projects</span>
+            <span>{t("projectDetail.backToProjects")}</span>
           </Link>
         </motion.div>
       </div>
@@ -54,6 +72,12 @@ export default function ProjectDetailPage() {
 
   return (
     <div className="!pt-20 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50">
+      <SeoHelmet
+        title={`${project.title} | NexaCore Projects`}
+        description={project.description}
+        url={canonicalUrl}
+        type="article"
+      />
       {/* Hero Section */}
       <section
         className={`relative overflow-hidden bg-gradient-to-br ${gradient} text-white !py-32`}
@@ -78,7 +102,7 @@ export default function ProjectDetailPage() {
               <div className="!w-10 !h-10 rounded-full bg-white/20 backdrop-blur-lg flex items-center justify-center group-hover:bg-white/30 transition-all">
                 <ArrowLeftOutlined />
               </div>
-              <span className="font-semibold !text-lg">Back to Projects</span>
+              <span className="font-semibold !text-lg">{t("projectDetail.backToProjects")}</span>
             </Link>
 
             <div className="!max-w-5xl !mx-auto text-center">
@@ -174,7 +198,9 @@ export default function ProjectDetailPage() {
               className="bg-white rounded-3xl shadow-xl !p-12"
             >
               <div className="prose prose-lg !max-w-none">
-                <h2 className="!text-3xl font-extrabold !mb-6 text-gray-900">Project Overview</h2>
+                <h2 className="!text-3xl font-extrabold !mb-6 text-gray-900">
+                  {t("projectDetail.overview")}
+                </h2>
                 <p className="!text-xl text-gray-700 !mb-8 leading-relaxed">
                   {project.description}
                 </p>
@@ -187,7 +213,7 @@ export default function ProjectDetailPage() {
                   >
                     <CheckCircleOutlined className="text-white" />
                   </div>
-                  Solution Delivered
+                  {t("projectDetail.solutionDelivered")}
                 </h3>
                 <p className="text-gray-600 !mb-6 leading-relaxed">{project.solution}</p>
 
@@ -199,7 +225,7 @@ export default function ProjectDetailPage() {
                   >
                     <TrophyOutlined className="text-white" />
                   </div>
-                  Results Achieved
+                  {t("projectDetail.resultsAchieved")}
                 </h3>
                 <div className="flex items-start !gap-4 p-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl">
                   <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
@@ -211,20 +237,18 @@ export default function ProjectDetailPage() {
                 <h2
                   className={`!text-3xl font-extrabold !mt-12 !mb-6 bg-gradient-to-r ${gradient} bg-clip-text text-transparent`}
                 >
-                  Impact & Benefits
+                  {t("projectDetail.impactBenefits")}
                 </h2>
                 <p className="text-gray-600 !mb-6 leading-relaxed">
-                  This project has delivered significant value to {project.client}, transforming
-                  their business operations and driving measurable improvements across key
-                  performance indicators.
+                  {t("projectDetail.impactDescription", { client: project.client })}
                 </p>
 
                 <ul className="!space-y-4 !mb-8">
                   {[
-                    "Streamlined business processes and workflows",
-                    "Enhanced operational efficiency and productivity",
-                    "Improved decision-making with real-time insights",
-                    "Scalable infrastructure for future growth",
+                    t("projectDetail.benefit1"),
+                    t("projectDetail.benefit2"),
+                    t("projectDetail.benefit3"),
+                    t("projectDetail.benefit4"),
                   ].map((item, index) => (
                     <motion.li
                       key={index}
@@ -248,7 +272,7 @@ export default function ProjectDetailPage() {
                 <div className="flex flex-wrap items-center justify-between !gap-4">
                   <span className="text-gray-700 font-bold !text-lg flex items-center !gap-2">
                     <ShareAltOutlined className="!text-xl" />
-                    Share this project
+                    {t("projectDetail.shareProject")}
                   </span>
                   <div className="flex !gap-3">
                     {[
@@ -275,7 +299,7 @@ export default function ProjectDetailPage() {
               {/* CTA Section */}
               <div className="!mt-12 !pt-8 border-t border-gray-200 text-center">
                 <p className="text-gray-600 !mb-6 text-lg">
-                  Interested in similar solutions for your organization?
+                  {t("projectDetail.interestedInSimilar")}
                 </p>
                 <Link to="/contact">
                   <motion.button
@@ -283,7 +307,7 @@ export default function ProjectDetailPage() {
                     whileTap={{ scale: 0.95 }}
                     className={`inline-flex items-center !gap-2 !px-8 !py-4 bg-gradient-to-r ${gradient} text-white rounded-2xl font-bold shadow-xl hover:shadow-2xl transition-all`}
                   >
-                    <span>Contact Us</span>
+                    <span>{t("projectDetail.contactUs")}</span>
                     <ArrowRightOutlined />
                   </motion.button>
                 </Link>
@@ -312,10 +336,10 @@ export default function ProjectDetailPage() {
             className="text-center !max-w-4xl !mx-auto"
           >
             <h2 className="!text-5xl md:text-6xl font-extrabold text-white !mb-6">
-              Ready to Start Your Project?
+              {t("projectDetail.readyToStart")}
             </h2>
             <p className="!text-2xl text-white/95 !mb-12 leading-relaxed">
-              Let's discuss how we can help transform your business
+              {t("projectDetail.letsDiscuss")}
             </p>
 
             <div className="flex flex-wrap !gap-6 justify-center">
@@ -324,7 +348,7 @@ export default function ProjectDetailPage() {
                   to="/contact"
                   className="inline-flex items-center !gap-3 !px-10 !py-5 bg-white text-gray-900 rounded-2xl font-bold !text-lg shadow-2xl hover:shadow-white/50 transition-all"
                 >
-                  <span>Get Started</span>
+                  <span>{t("solutions.getStarted")}</span>
                   <ArrowRightOutlined />
                 </Link>
               </motion.div>
@@ -334,7 +358,7 @@ export default function ProjectDetailPage() {
                   to="/projects"
                   className="inline-flex items-center !gap-3 !px-10 !py-5 bg-white/10 backdrop-blur-lg text-white rounded-2xl font-bold !text-lg !border-2 border-white/30 hover:bg-white/20 transition-all"
                 >
-                  <span>View All Projects</span>
+                  <span>{t("projectDetail.viewAllProjects")}</span>
                 </Link>
               </motion.div>
             </div>

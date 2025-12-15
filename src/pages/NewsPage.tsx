@@ -1,16 +1,25 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import * as Icons from "@ant-design/icons";
 import HeroBanner from "@/components/HeroBanner";
 import SectionTitle from "@/components/SectionTitle";
+import SeoHelmet from "@/components/SeoHelmet";
 import NewsCard from "@/components/NewsCard";
 import { newsArticles } from "@/lib/mockData";
-
-const categories = ["All", "Company News", "Technology", "Industry"];
+import { newsMetadata } from "@/lib/metadata";
 
 export default function NewsPage() {
+  const { t } = useTranslation();
   const [activeCategory, setActiveCategory] = useState("All");
+
+  const categories = [
+    { key: "All", label: t("news.categories.all") },
+    { key: "Company News", label: t("news.categories.companyNews") },
+    { key: "Technology", label: t("news.categories.technology") },
+    { key: "Industry", label: t("news.categories.industry") },
+  ];
 
   const filteredArticles =
     activeCategory === "All"
@@ -18,17 +27,24 @@ export default function NewsPage() {
       : newsArticles.filter((article) => article.category === activeCategory);
 
   return (
-    <div className="!pt-20">
+    <>
+      <SeoHelmet
+        title={newsMetadata.title}
+        description={newsMetadata.description}
+        keywords={newsMetadata.keywords}
+        type="article"
+      />
+      <div className="!pt-20">
       <HeroBanner
-        title="News & Events"
-        subtitle="Stay updated with the latest news, insights, and events from NexaCore"
+        title={t("news.hero.title")}
+        subtitle={t("news.hero.subtitle")}
       />
 
       <section className="!py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50">
         <div className="container !mx-auto !px-4">
           <SectionTitle
-            title="Latest News"
-            subtitle="Discover our latest announcements, thought leadership, and industry insights"
+            title={t("news.title")}
+            subtitle={t("news.subtitle")}
           />
 
           {/* Category Filter */}
@@ -41,20 +57,20 @@ export default function NewsPage() {
           >
             {categories.map((category) => (
               <motion.button
-                key={category}
+                key={category.key}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => setActiveCategory(category)}
+                onClick={() => setActiveCategory(category.key)}
                 className={`
                   !px-8 !py-3 rounded-2xl font-bold !text-base transition-all shadow-lg
                   ${
-                    activeCategory === category
+                    activeCategory === category.key
                       ? "bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-indigo-200"
                       : "bg-white text-gray-700 hover:bg-gray-50"
                   }
                 `}
               >
-                {category}
+                {category.label}
               </motion.button>
             ))}
           </motion.div>
@@ -82,8 +98,8 @@ export default function NewsPage() {
               className="text-center !py-20"
             >
               <Icons.InboxOutlined className="!text-8xl text-gray-300 !mb-6" />
-              <h3 className="!text-2xl font-bold text-gray-600 !mb-4">No articles found</h3>
-              <p className="text-gray-500">Try selecting a different category</p>
+              <h3 className="!text-2xl font-bold text-gray-600 !mb-4">{t("news.emptyState.title")}</h3>
+              <p className="text-gray-500">{t("news.emptyState.description")}</p>
             </motion.div>
           )}
         </div>
@@ -106,9 +122,9 @@ export default function NewsPage() {
             transition={{ duration: 0.8 }}
             className="text-center !max-w-4xl !mx-auto"
           >
-            <h2 className="!text-5xl md:text-6xl font-extrabold text-white !mb-6">Stay Updated</h2>
+            <h2 className="!text-5xl md:text-6xl font-extrabold text-white !mb-6">{t("news.newsletter.title")}</h2>
             <p className="!text-2xl text-white/95 !mb-12 leading-relaxed">
-              Subscribe to our newsletter and never miss the latest news, insights, and updates
+              {t("news.newsletter.description")}
             </p>
 
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -116,7 +132,7 @@ export default function NewsPage() {
                 to="/contact"
                 className="inline-flex items-center !gap-3 !px-10 !py-5 bg-white text-indigo-900 rounded-2xl font-bold !text-lg shadow-2xl hover:shadow-white/50 transition-all"
               >
-                <span>Subscribe Now</span>
+                <span>{t("news.newsletter.subscribeNow")}</span>
                 <Icons.ArrowRightOutlined className="!text-xl" />
               </Link>
             </motion.div>
@@ -124,5 +140,6 @@ export default function NewsPage() {
         </div>
       </section>
     </div>
+    </>
   );
 }

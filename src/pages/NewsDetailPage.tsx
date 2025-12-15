@@ -10,19 +10,30 @@ import {
   LinkedinOutlined,
 } from "@ant-design/icons";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import SeoHelmet from "@/components/SeoHelmet";
 import { newsArticles } from "@/lib/mockData";
 
 const categoryGradients: Record<string, string> = {
   "Company News": "from-violet-600 via-purple-600 to-indigo-600",
-  Technology: "from-blue-600 via-cyan-600 to-teal-600",
+  "Product News": "from-blue-600 via-cyan-600 to-teal-600",
+  Technology: "from-green-600 via-emerald-600 to-teal-600",
+  "Case Study": "from-orange-600 via-amber-600 to-yellow-600",
   Industry: "from-pink-600 via-rose-600 to-red-600",
 };
 
 export default function NewsDetailPage() {
+  const { t } = useTranslation();
   const { slug } = useParams<{ slug: string }>();
   const article = newsArticles.find((a) => a.slug === slug);
+  const [imageError, setImageError] = useState(false);
+  const siteUrl = import.meta.env.VITE_SITE_URL;
+  const canonicalUrl =
+    siteUrl && article ? `${siteUrl.replace(/\/$/, "")}/news/${article.slug}` : undefined;
 
-  const gradient = categoryGradients[article?.category || "Technology"];
+  const gradient =
+    categoryGradients[article?.category || ""] || "from-violet-600 via-purple-600 to-indigo-600";
 
   if (!article) {
     return (
@@ -32,13 +43,15 @@ export default function NewsDetailPage() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center"
         >
-          <h1 className="!text-5xl font-extrabold !mb-6 text-gray-900">Article Not Found</h1>
+          <h1 className="!text-5xl font-extrabold !mb-6 text-gray-900">
+            {t("newsDetail.notFound")}
+          </h1>
           <Link
             to="/news"
             className="inline-flex items-center !gap-2 !px-8 !py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-2xl font-bold !text-lg shadow-xl hover:shadow-2xl transition-all"
           >
             <ArrowLeftOutlined />
-            <span>Back to News</span>
+            <span>{t("newsDetail.backToNews")}</span>
           </Link>
         </motion.div>
       </div>
@@ -53,6 +66,13 @@ export default function NewsDetailPage() {
 
   return (
     <div className="!pt-20 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50">
+      <SeoHelmet
+        title={`${article.title} | NexaCore News`}
+        description={article.excerpt}
+        image={article.image}
+        url={canonicalUrl}
+        type="article"
+      />
       {/* Hero Section */}
       <section
         className={`relative overflow-hidden bg-gradient-to-br ${gradient} text-white !py-32`}
@@ -77,7 +97,7 @@ export default function NewsDetailPage() {
               <div className="!w-10 !h-10 rounded-full bg-white/20 backdrop-blur-lg flex items-center justify-center group-hover:bg-white/30 transition-all">
                 <ArrowLeftOutlined />
               </div>
-              <span className="font-semibold !text-lg">Back to News</span>
+              <span className="font-semibold !text-lg">{t("newsDetail.backToNews")}</span>
             </Link>
 
             <div className="!max-w-5xl !mx-auto text-center">
@@ -149,18 +169,29 @@ export default function NewsDetailPage() {
               transition={{ duration: 0.6 }}
               className="!mb-12"
             >
-              <div
-                className={`aspect-video bg-gradient-to-br ${gradient} rounded-3xl shadow-2xl flex items-center justify-center overflow-hidden relative`}
-              >
-                {/* Background Pattern */}
-                <div className="absolute inset-0 !opacity-10">
-                  <div className="absolute !top-0 !right-0 !w-64 !h-64 bg-white rounded-full blur-3xl"></div>
-                  <div className="absolute !bottom-0 !left-0 !w-48 !h-48 bg-white rounded-full blur-3xl"></div>
+              {!imageError ? (
+                <div className="aspect-video rounded-3xl shadow-2xl overflow-hidden relative">
+                  <img
+                    src={article.image}
+                    alt={article.title}
+                    className="w-full h-full object-cover"
+                    onError={() => setImageError(true)}
+                  />
                 </div>
-                <span className="text-white !text-9xl font-bold opacity-20 relative z-10">
-                  {article.title.charAt(0)}
-                </span>
-              </div>
+              ) : (
+                <div
+                  className={`aspect-video bg-gradient-to-br ${gradient} rounded-3xl shadow-2xl flex items-center justify-center overflow-hidden relative`}
+                >
+                  {/* Background Pattern */}
+                  <div className="absolute inset-0 !opacity-10">
+                    <div className="absolute !top-0 !right-0 !w-64 !h-64 bg-white rounded-full blur-3xl"></div>
+                    <div className="absolute !bottom-0 !left-0 !w-48 !h-48 bg-white rounded-full blur-3xl"></div>
+                  </div>
+                  <span className="text-white !text-9xl font-bold opacity-20 relative z-10">
+                    {article.title.charAt(0)}
+                  </span>
+                </div>
+              )}
             </motion.div>
 
             {/* Article Body */}
@@ -185,7 +216,7 @@ export default function NewsDetailPage() {
                 <h2
                   className={`!text-3xl font-extrabold !mt-12 !mb-6 bg-gradient-to-r ${gradient} bg-clip-text text-transparent`}
                 >
-                  Key Highlights
+                  {t("newsDetail.keyHighlights")}
                 </h2>
                 <p className="text-gray-600 !mb-6 leading-relaxed">
                   Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
@@ -219,7 +250,7 @@ export default function NewsDetailPage() {
                 <h2
                   className={`!text-3xl font-extrabold !mt-12 !mb-6 bg-gradient-to-r ${gradient} bg-clip-text text-transparent`}
                 >
-                  Looking Ahead
+                  {t("newsDetail.lookingAhead")}
                 </h2>
                 <p className="text-gray-600 !mb-6 leading-relaxed">
                   Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
@@ -238,7 +269,7 @@ export default function NewsDetailPage() {
                 <div className="flex flex-wrap items-center justify-between !gap-4">
                   <span className="text-gray-700 font-bold !text-lg flex items-center !gap-2">
                     <ShareAltOutlined className="!text-xl" />
-                    Share this article
+                    {t("newsDetail.shareArticle")}
                   </span>
                   <div className="flex !gap-3">
                     {[
@@ -285,10 +316,10 @@ export default function NewsDetailPage() {
             className="text-center !max-w-4xl !mx-auto"
           >
             <h2 className="!text-5xl md:text-6xl font-extrabold text-white !mb-6">
-              Explore More News & Insights
+              {t("newsDetail.exploreMore")}
             </h2>
             <p className="!text-2xl text-white/95 !mb-12 leading-relaxed">
-              Stay updated with our latest articles and industry insights
+              {t("newsDetail.stayUpdated")}
             </p>
 
             <div className="flex flex-wrap !gap-6 justify-center">
@@ -297,7 +328,7 @@ export default function NewsDetailPage() {
                   to="/news"
                   className="inline-flex items-center !gap-3 !px-10 !py-5 bg-white text-gray-900 rounded-2xl font-bold !text-lg shadow-2xl hover:shadow-white/50 transition-all"
                 >
-                  <span>View All News</span>
+                  <span>{t("newsDetail.viewAllNews")}</span>
                   <ArrowRightOutlined />
                 </Link>
               </motion.div>
@@ -307,7 +338,7 @@ export default function NewsDetailPage() {
                   to="/contact"
                   className="inline-flex items-center !gap-3 !px-10 !py-5 bg-white/10 backdrop-blur-lg text-white rounded-2xl font-bold !text-lg !border-2 border-white/30 hover:bg-white/20 transition-all"
                 >
-                  <span>Subscribe to Newsletter</span>
+                  <span>{t("newsDetail.subscribeNewsletter")}</span>
                 </Link>
               </motion.div>
             </div>

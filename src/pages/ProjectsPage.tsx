@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import * as Icons from "@ant-design/icons";
 import HeroBanner from "@/components/HeroBanner";
 import SectionTitle from "@/components/SectionTitle";
+import SeoHelmet from "@/components/SeoHelmet";
 import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/lib/mockData";
-import { Link } from "react-router-dom";
+import { projectsMetadata } from "@/lib/metadata";
 
 const statGradients = [
   "from-violet-600 via-purple-600 to-indigo-600",
@@ -15,50 +17,54 @@ const statGradients = [
 ];
 
 export default function ProjectsPage() {
+  const { t } = useTranslation();
   const [hoveredStat, setHoveredStat] = useState<number | null>(null);
 
   const stats = [
     {
-      label: "Projects Completed",
+      label: t("projects.impact.projectsCompleted"),
       value: "500+",
       icon: "CheckCircleOutlined",
-      description: "Successfully delivered",
+      description: t("projects.impact.successfullyDelivered"),
     },
     {
-      label: "Countries Served",
+      label: t("projects.impact.countriesServed"),
       value: "50+",
       icon: "GlobalOutlined",
-      description: "Worldwide presence",
+      description: t("projects.impact.worldwidePresence"),
     },
     {
-      label: "Client Satisfaction",
+      label: t("projects.impact.clientSatisfaction"),
       value: "98%",
       icon: "SmileOutlined",
-      description: "Happy clients",
+      description: t("projects.impact.happyClients"),
     },
     {
-      label: "Awards Won",
+      label: t("projects.impact.awardsWon"),
       value: "25+",
       icon: "TrophyOutlined",
-      description: "Industry recognition",
+      description: t("projects.impact.industryRecognition"),
     },
   ];
 
   return (
-    <div className="!pt-20">
+    <>
+      <SeoHelmet
+        title={projectsMetadata.title}
+        description={projectsMetadata.description}
+        keywords={projectsMetadata.keywords}
+      />
+      <div className="!pt-20">
       <HeroBanner
-        title="Our Projects"
-        subtitle="Success stories and case studies from clients around the world"
-        ctaText="Start Your Project"
+        title={t("projects.hero.title")}
+        subtitle={t("projects.hero.subtitle")}
+        ctaText={t("projects.hero.startProject")}
         ctaLink="/contact"
       />
 
       <section className="!py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50">
         <div className="container !mx-auto !px-4">
-          <SectionTitle
-            title="Case Studies"
-            subtitle="See how we've helped organizations achieve their digital transformation goals"
-          />
+          <SectionTitle title={t("projects.title")} subtitle={t("projects.subtitle")} />
 
           <div className="!max-w-7xl !mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 !gap-8 !mt-12">
             {projects.map((project, index) => (
@@ -93,9 +99,11 @@ export default function ProjectsPage() {
             transition={{ duration: 0.6 }}
             className="text-center !mb-16"
           >
-            <h2 className="!text-5xl md:text-6xl font-extrabold text-white !mb-6">Our Impact</h2>
+            <h2 className="!text-5xl md:text-6xl font-extrabold text-white !mb-6">
+              {t("projects.impact.title")}
+            </h2>
             <p className="!text-2xl text-white/95 !max-w-3xl !mx-auto leading-relaxed">
-              Numbers that speak for themselves
+              {t("projects.impact.subtitle")}
             </p>
           </motion.div>
 
@@ -151,5 +159,6 @@ export default function ProjectsPage() {
         </div>
       </section>
     </div>
+    </>
   );
 }

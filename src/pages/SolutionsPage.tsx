@@ -4,10 +4,13 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRightOutlined } from "@ant-design/icons";
+import { useTranslation } from "react-i18next";
 import HeroBanner from "@/components/HeroBanner";
 import SectionTitle from "@/components/SectionTitle";
 import ServiceCard from "@/components/ServiceCard";
+import SeoHelmet from "@/components/SeoHelmet";
 import { solutions } from "@/lib/mockData";
+import { solutionsMetadata } from "@/lib/metadata";
 
 const solutionDetails = [
   {
@@ -139,8 +142,8 @@ const solutionDetails = [
 ];
 
 export default function SolutionsPage() {
+  const { t } = useTranslation();
   const [hoveredSolution, setHoveredSolution] = useState<string | null>(null);
-  const [activeSection, setActiveSection] = useState<string | null>(null);
 
   useEffect(() => {
     // Handle anchor links on mount
@@ -150,7 +153,6 @@ export default function SolutionsPage() {
         const element = document.getElementById(hash);
         if (element) {
           element.scrollIntoView({ behavior: "smooth", block: "start" });
-          setActiveSection(hash);
         }
       }, 100);
     }
@@ -158,10 +160,15 @@ export default function SolutionsPage() {
 
   return (
     <div className="pt-20">
+      <SeoHelmet
+        title={solutionsMetadata.title}
+        description={solutionsMetadata.description}
+        keywords={solutionsMetadata.keywords}
+      />
       <HeroBanner
-        title="Our Solutions"
-        subtitle="Comprehensive technology solutions tailored to your business needs"
-        ctaText="Get Started"
+        title={t("solutions.hero.title")}
+        subtitle={t("solutions.hero.subtitle")}
+        ctaText={t("solutions.hero.getStarted")}
         ctaLink="/contact"
       />
 
@@ -228,10 +235,7 @@ export default function SolutionsPage() {
             transition={{ duration: 0.8 }}
             className="mb-16 md:mb-20"
           >
-            <SectionTitle
-              title="Our Solutions"
-              subtitle="Comprehensive technology solutions tailored to your business needs"
-            />
+            <SectionTitle title={t("solutions.title")} subtitle={t("solutions.subtitle")} />
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
             {solutions.map((solution, index) => (
@@ -502,7 +506,7 @@ export default function SolutionsPage() {
                                 <Icons.CheckCircleOutlined className="text-white text-xl relative z-10" />
                               </motion.div>
                               <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 bg-clip-text text-transparent font-extrabold">
-                                Key Features
+                                {t("solutions.keyFeatures")}
                               </span>
                             </motion.h3>
                             <ul className="space-y-3">
@@ -615,7 +619,7 @@ export default function SolutionsPage() {
                             viewport={{ once: true }}
                             className="text-gray-700 !mb-6 text-base md:text-lg font-medium"
                           >
-                            Ready to transform your business with{" "}
+                            {t("solutions.readyToTransform")}{" "}
                             <span
                               className={`bg-gradient-to-r ${detail.gradient} bg-clip-text text-transparent font-semibold`}
                             >
@@ -713,10 +717,10 @@ export default function SolutionsPage() {
             className="text-center !max-w-4xl !mx-auto"
           >
             <h2 className="!text-5xl md:text-6xl font-extrabold text-white !mb-8">
-              Ready to Get Started?
+              {t("home.cta.title")}
             </h2>
             <p className="!text-2xl text-white/95 !mb-12 leading-relaxed">
-              Let's discuss how our solutions can transform your business
+              {t("home.cta.description")}
             </p>
 
             <div className="flex flex-wrap !gap-6 justify-center">
@@ -729,7 +733,7 @@ export default function SolutionsPage() {
                     className="bg-white text-indigo-900 border-0 h-16 px-12 text-lg font-bold shadow-2xl hover:shadow-white/50 transition-all rounded-xl"
                     iconPosition="end"
                   >
-                    Contact Us Today
+                    {t("contact.hero.title")}
                   </Button>
                 </Link>
               </motion.div>
@@ -740,7 +744,7 @@ export default function SolutionsPage() {
                     size="large"
                     className="bg-white/10 backdrop-blur-lg text-white border-2 border-white/30 hover:bg-white/20 h-16 px-12 text-lg font-bold rounded-xl transition-all"
                   >
-                    View Our Products
+                    {t("nav.products")}
                   </Button>
                 </Link>
               </motion.div>

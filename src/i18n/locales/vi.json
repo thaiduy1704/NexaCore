@@ -1,0 +1,416 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "solutions": "Giải pháp",
+    "products": "Sản phẩm",
+    "projects": "Dự án",
+    "news": "Tin tức",
+    "careers": "Tuyển dụng",
+    "contact": "Liên hệ"
+  },
+  "footer": {
+    "stayUpdated": "Cập nhật",
+    "subscribe": "Đăng ký",
+    "toOurNewsletter": "Nhận bản tin",
+    "newsletterDescription": "Nhận các cập nhật mới nhất về xu hướng công nghệ, thông tin chi tiết và ưu đãi độc quyền được gửi trực tiếp đến hộp thư của bạn.",
+    "enterEmail": "Nhập địa chỉ email của bạn",
+    "subscribeButton": "Đăng ký",
+    "privacyNote": "Chúng tôi tôn trọng quyền riêng tư của bạn. Hủy đăng ký bất cứ lúc nào.",
+    "companyDescription": "Chuyển đổi doanh nghiệp với các giải pháp công nghệ tiên tiến và trải nghiệm kỹ thuật số sáng tạo.",
+    "quickLinks": "Liên kết nhanh",
+    "services": "Dịch vụ",
+    "contactUs": "Liên hệ",
+    "allRightsReserved": "Bảo lưu mọi quyền.",
+    "privacyPolicy": "Chính sách bảo mật",
+    "termsOfService": "Điều khoản dịch vụ",
+    "cookiePolicy": "Chính sách cookie",
+    "sitemap": "Sơ đồ trang web"
+  },
+  "home": {
+    "hero": {
+      "title": "Chuyển đổi doanh nghiệp của bạn với giải pháp thông minh",
+      "subtitle": "NexaCore cung cấp cho các doanh nghiệp với công nghệ tiên tiến thúc đẩy sự tiên tiến kỹ thuật số và hiệu quả kinh doanh.",
+      "getStarted": "Bắt đầu",
+      "learnMore": "Tìm hiểu thêm",
+      "badge": "Dẫn đầu Đổi mới Công nghệ",
+      "projectsCount": "500+ Dự án",
+      "clientsCount": "200+ Khách hàng",
+      "yearsExperience": "10+ Năm Kinh nghiệm"
+    },
+    "about": {
+      "badge": "Về NexaCore",
+      "title": "Dẫn đầu Chuyển đổi",
+      "transformation": "Số",
+      "description": "Trong hơn một thập kỷ, NexaCore đã đi đầu trong đổi mới công nghệ, giúp các tổ chức điều hướng sự phức tạp của chuyển đổi số với sự tự tin và rõ ràng.",
+      "awardWinning": "Giải pháp Đạt Giải thưởng",
+      "awardWinningDesc": "Được tin cậy bởi các công ty Fortune 500 trên toàn thế giới",
+      "globalPresence": "Hiện diện Toàn cầu",
+      "globalPresenceDesc": "Văn phòng tại hơn 15 quốc gia trên 5 châu lục",
+      "provenTrack": "Thành tích Đã được Chứng minh",
+      "provenTrackDesc": "Hơn 500 dự án chuyển đổi số thành công",
+      "yearsOfExcellence": "Năm Xuất sắc",
+      "clients": "Khách hàng",
+      "projects": "Dự án",
+      "countries": "Quốc gia",
+      "learnMoreAboutUs": "Tìm hiểu thêm về chúng tôi"
+    },
+    "solutions": {
+      "title": "Giải pháp của Chúng tôi",
+      "subtitle": "Giải pháp công nghệ toàn diện được điều chỉnh theo nhu cầu kinh doanh của bạn",
+      "viewAll": "Xem tất cả Giải pháp"
+    },
+    "projects": {
+      "title": "Dự án Nổi bật",
+      "subtitle": "Câu chuyện thành công từ khách hàng của chúng tôi trên toàn thế giới",
+      "projectsDelivered": "Dự án Đã Giao",
+      "clientSatisfaction": "Sự Hài lòng của Khách hàng",
+      "countriesWorldwide": "Quốc gia Trên toàn Thế giới",
+      "viewAll": "Xem tất cả Dự án"
+    },
+    "clients": {
+      "title": "Được tin cậy bởi các Nhà lãnh đạo Ngành",
+      "subtitle": "Hợp tác với các công ty sáng tạo nhất thế giới"
+    },
+    "cta": {
+      "title": "Sẵn sàng Chuyển đổi Doanh nghiệp của Bạn?",
+      "description": "Hãy thảo luận về cách NexaCore có thể giúp bạn đạt được mục tiêu chuyển đổi số và thúc đẩy tăng trưởng bền vững.",
+      "scheduleConsultation": "Đặt lịch Tư vấn",
+      "exploreSolutions": "Khám phá Giải pháp"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Về NexaCore",
+      "subtitle": "Tiên phong trong chuyển đổi số và đổi mới từ năm 2014",
+      "joinTeam": "Tham gia Đội ngũ của Chúng tôi"
+    },
+    "intro": {
+      "title": "Dẫn đầu Tương lai Công nghệ",
+      "description1": "NexaCore là nhà lãnh đạo công nghệ toàn cầu chuyên về các giải pháp chuyển đổi số. Chúng tôi kết hợp chuyên môn ngành sâu với công nghệ tiên tiến để giúp các tổ chức điều hướng sự phức tạp của thời đại số.",
+      "description2": "Các giải pháp phần mềm của chúng tôi được thiết kế nhằm tối ưu hóa mọi quy trình kinh doanh, từ vận hành cốt lõi đến tương tác khách hàng, giúp doanh nghiệp đạt được hiệu suất tối đa và tăng trưởng bền vững."
+    },
+    "visionMission": {
+      "title": "Tầm nhìn, Sứ mệnh & Giá trị của Chúng tôi",
+      "subtitle": "Những nguyên tắc hướng dẫn mọi việc chúng tôi làm",
+      "vision": {
+        "title": "Tầm nhìn của Chúng tôi",
+        "description": "Trở thành đối tác đáng tin cậy nhất thế giới trong chuyển đổi số, giúp các tổ chức đạt được mức độ đổi mới và hiệu quả chưa từng có."
+      },
+      "mission": {
+        "title": "Sứ mệnh của Chúng tôi",
+        "description": "Trao quyền cho các tổ chức với các giải pháp công nghệ thông minh thúc đẩy tăng trưởng bền vững, xuất sắc hoạt động và lợi thế cạnh tranh trong nền kinh tế số."
+      },
+      "values": {
+        "title": "Giá trị Cốt lõi",
+        "innovation": "Đổi mới: Liên tục vượt qua ranh giới",
+        "excellence": "Xuất sắc: Cung cấp chất lượng đặc biệt",
+        "integrity": "Chính trực: Hoạt động minh bạch",
+        "collaboration": "Hợp tác: Xây dựng quan hệ đối tác mạnh mẽ",
+        "impact": "Tác động: Tạo ra thay đổi có ý nghĩa"
+      },
+      "commitment": {
+        "title": "Cam kết của Chúng tôi",
+        "description": "Chúng tôi cam kết đổi mới liên tục, thành công của khách hàng và tạo tác động tích cực đến xã hội thông qua lãnh đạo công nghệ có trách nhiệm."
+      }
+    },
+    "team": {
+      "title": "Đội ngũ Lãnh đạo",
+      "subtitle": ""
+    },
+    "stats": {
+      "yearsOfExcellence": "Năm Xuất sắc",
+      "globalClients": "Khách hàng Toàn cầu",
+      "teamMembers": "Thành viên Đội ngũ",
+      "countries": "Quốc gia"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Liên hệ",
+      "subtitle": "Doanh nghiệp của bạn đang tìm kiếm giải pháp để nâng cao hiệu suất, kiểm soát chi phí, hay mở rộng thị trường?"
+    },
+    "form": {
+      "title": "Gửi Tin nhắn cho Chúng tôi",
+      "description": "Điền vào biểu mẫu và chúng tôi sẽ liên hệ lại với bạn trong vòng 24 giờ",
+      "name": "Tên",
+      "namePlaceholder": "Tên của bạn",
+      "nameRequired": "Vui lòng nhập tên của bạn",
+      "email": "Email",
+      "emailPlaceholder": "email.cua.ban@example.com",
+      "emailRequired": "Vui lòng nhập email của bạn",
+      "emailInvalid": "Vui lòng nhập email hợp lệ",
+      "phone": "Điện thoại",
+      "phonePlaceholder": "Số điện thoại của bạn (Tùy chọn)",
+      "message": "Tin nhắn",
+      "messagePlaceholder": "Cho chúng tôi biết về dự án hoặc yêu cầu của bạn...",
+      "messageRequired": "Vui lòng nhập tin nhắn của bạn",
+      "submit": "Gửi Tin nhắn",
+      "success": "Cảm ơn bạn! Chúng tôi sẽ liên hệ lại với bạn sớm."
+    },
+    "mail": {
+      "subject": "Liên hệ từ {{name}} - {{email}}",
+      "greeting": "Xin chào,",
+      "name": "Tên: {{value}}",
+      "email": "Email: {{value}}",
+      "phone": "Số điện thoại: {{value}}",
+      "message": "Nội dung:"
+    },
+    "info": {
+      "title": "Thông tin Liên hệ",
+      "description": "Liên hệ với chúng tôi qua bất kỳ kênh nào sau đây",
+      "headquarters": "Trụ sở chính",
+      "phone": "Điện thoại",
+      "email": "Email",
+      "businessHours": "Giờ Làm việc",
+      "sales": "Bán hàng",
+      "support": "Hỗ trợ",
+      "general": "Chung",
+      "mondayFriday": "Thứ Hai - Thứ Sáu: 9:00 - 18:00",
+      "saturday": "Thứ Bảy: 10:00 - 14:00",
+      "sunday": "Chủ Nhật: Đóng cửa"
+    },
+    "location": {
+      "title": "Vị trí của Chúng tôi",
+      "subtitle": "Ghé thăm chúng tôi tại trụ sở chính"
+    },
+    "cta": {
+      "title": "Cần Hỗ trợ Ngay lập tức?",
+      "description": "👉 Hãy liên hệ ngay với chúng tôi để nhận được bản demo chuyên biệt và tư vấn chiến lược chuyển đổi số phù hợp nhất với ngành nghề và quy mô của bạn.",
+      "callNow": "Gọi Ngay",
+      "emailSupport": "Email Hỗ trợ"
+    }
+  },
+  "products": {
+    "hero": {
+      "title": "Sản phẩm của Chúng tôi",
+      "subtitle": "Giải pháp phần mềm cấp doanh nghiệp được xây dựng cho các doanh nghiệp hiện đại",
+      "requestDemo": "Yêu cầu Demo"
+    },
+    "title": "Giải pháp Phần mềm Sáng tạo",
+    "subtitle": "Sản phẩm mạnh mẽ được thiết kế để tăng tốc chuyển đổi số của bạn",
+    "learnMore": "Tìm hiểu thêm",
+    "more": "thêm"
+  },
+  "projects": {
+    "hero": {
+      "title": "Dự án của Chúng tôi",
+      "subtitle": "Câu chuyện thành công và nghiên cứu tình huống từ khách hàng trên toàn thế giới",
+      "startProject": "Bắt đầu Dự án của Bạn"
+    },
+    "title": "Các dự án thành công",
+    "subtitle": "Xem cách chúng tôi đã giúp các tổ chức đạt được mục tiêu chuyển đổi số của họ",
+    "impact": {
+      "title": "Tác động của Chúng tôi",
+      "subtitle": "Những con số nói lên tất cả",
+      "projectsCompleted": "Dự án Đã Hoàn thành",
+      "successfullyDelivered": "Đã giao thành công",
+      "countriesServed": "Quốc gia Đã Phục vụ",
+      "worldwidePresence": "Hiện diện toàn cầu",
+      "clientSatisfaction": "Sự Hài lòng của Khách hàng",
+      "happyClients": "Khách hàng hài lòng",
+      "awardsWon": "Giải thưởng Đã Đạt được",
+      "industryRecognition": "Công nhận ngành"
+    }
+  },
+  "news": {
+    "hero": {
+      "title": "Tin tức & Sự kiện",
+      "subtitle": "Cập nhật tin tức, thông tin chi tiết và sự kiện mới nhất từ NexaCore"
+    },
+    "title": "Tin tức Mới nhất",
+    "subtitle": "Khám phá các thông báo mới nhất, tư duy lãnh đạo và thông tin chi tiết ngành của chúng tôi",
+    "categories": {
+      "all": "Tất cả",
+      "companyNews": "Tin tức Công ty",
+      "technology": "Công nghệ",
+      "industry": "Ngành"
+    },
+    "emptyState": {
+      "title": "Không tìm thấy bài viết",
+      "description": "Thử chọn một danh mục khác"
+    },
+    "newsletter": {
+      "title": "Cập nhật",
+      "description": "Đăng ký nhận bản tin của chúng tôi và không bao giờ bỏ lỡ tin tức, thông tin chi tiết và cập nhật mới nhất",
+      "subscribeNow": "Đăng ký Ngay"
+    }
+  },
+  "careers": {
+    "hero": {
+      "title": "Tham gia Đội ngũ của Chúng tôi",
+      "subtitle": "Xây dựng sự nghiệp của bạn với nhà lãnh đạo toàn cầu trong chuyển đổi số",
+      "viewPositions": "Xem Vị trí Mở"
+    },
+    "whyJoin": {
+      "title": "Tại sao Tham gia NexaCore?",
+      "subtitle": "Chúng tôi cung cấp nhiều hơn chỉ là một công việc - chúng tôi cung cấp một sự nghiệp có mục đích và tăng trưởng",
+      "competitiveSalary": {
+        "title": "Lương Cạnh tranh",
+        "description": "Gói bồi thường dẫn đầu thị trường"
+      },
+      "healthWellness": {
+        "title": "Sức khỏe & Sức khỏe",
+        "description": "Bảo hiểm y tế toàn diện và chương trình sức khỏe"
+      },
+      "flexibleWork": {
+        "title": "Làm việc Linh hoạt",
+        "description": "Tùy chọn làm việc từ xa và kết hợp"
+      },
+      "careerGrowth": {
+        "title": "Phát triển Sự nghiệp",
+        "description": "Cơ hội phát triển chuyên nghiệp và đào tạo"
+      },
+      "greatTeam": {
+        "title": "Đội ngũ Tuyệt vời",
+        "description": "Làm việc với đồng nghiệp tài năng và đam mê"
+      },
+      "timeOff": {
+        "title": "Nghỉ phép",
+        "description": "Nghỉ phép và nghỉ cá nhân hào phóng"
+      }
+    },
+    "positions": {
+      "title": "Vị trí Mở",
+      "subtitle": "Khám phá cơ hội tham gia đội ngũ đang phát triển của chúng tôi",
+      "searchPlaceholder": "Tìm kiếm việc làm theo tiêu đề hoặc mô tả...",
+      "allDepartments": "Tất cả Phòng ban",
+      "allLocations": "Tất cả Địa điểm",
+      "requirements": "Yêu cầu",
+      "applyNow": "Ứng tuyển Ngay",
+      "viewDetails": "Xem Chi tiết",
+      "emptyState": {
+        "title": "Không tìm thấy việc làm",
+        "description": "Thử điều chỉnh tiêu chí tìm kiếm của bạn"
+      }
+    },
+    "culture": {
+      "title": "Văn hóa của Chúng tôi",
+      "subtitle": "Điều gì làm cho làm việc tại NexaCore trở nên đặc biệt",
+      "innovationFirst": {
+        "title": "Đổi mới Trước tiên",
+        "description": "Chúng tôi khuyến khích thử nghiệm và giải quyết vấn đề sáng tạo"
+      },
+      "workLifeBalance": {
+        "title": "Cân bằng Công việc-Cuộc sống",
+        "description": "Chúng tôi tin vào năng suất bền vững và phúc lợi cá nhân"
+      },
+      "diversityInclusion": {
+        "title": "Đa dạng & Hòa nhập",
+        "description": "Chúng tôi tôn vinh các quan điểm và nền tảng đa dạng"
+      },
+      "continuousLearning": {
+        "title": "Học tập Liên tục",
+        "description": "Chúng tôi đầu tư vào sự phát triển của bạn với đào tạo và hội nghị"
+      }
+    },
+    "applicationProcess": {
+      "title": "Quy trình Ứng tuyển",
+      "subtitle": "Các bước đơn giản để tham gia đội ngũ của chúng tôi",
+      "apply": {
+        "title": "Ứng tuyển",
+        "description": "Gửi đơn ứng tuyển của bạn qua cổng thông tin của chúng tôi"
+      },
+      "review": {
+        "title": "Xem xét",
+        "description": "Đội ngũ của chúng tôi xem xét đơn ứng tuyển của bạn"
+      },
+      "interview": {
+        "title": "Phỏng vấn",
+        "description": "Gặp gỡ các thành viên trong đội ngũ của chúng tôi"
+      },
+      "offer": {
+        "title": "Đề nghị",
+        "description": "Nhận đề nghị của bạn và tham gia đội ngũ của chúng tôi"
+      }
+    },
+    "cta": {
+      "title": "Sẵn sàng Bắt đầu Hành trình của Bạn?",
+      "description": "Không thấy vị trí phù hợp với kỹ năng của bạn? Chúng tôi luôn tìm kiếm những cá nhân tài năng để tham gia đội ngũ của chúng tôi.",
+      "sendResume": "Gửi CV của Bạn cho Chúng tôi",
+      "learnMore": "Tìm hiểu thêm về Chúng tôi"
+    }
+  },
+  "solutions": {
+    "hero": {
+      "title": "Giải pháp của Chúng tôi",
+      "subtitle": "Giải pháp công nghệ toàn diện được điều chỉnh theo nhu cầu kinh doanh của bạn",
+      "getStarted": "Bắt đầu"
+    },
+    "title": "Giải pháp của Chúng tôi",
+    "subtitle": "Giải pháp công nghệ toàn diện được điều chỉnh theo nhu cầu kinh doanh của bạn",
+    "keyFeatures": "Tính năng Chính",
+    "keyBenefits": "Lợi ích Chính",
+    "readyToTransform": "Sẵn sàng chuyển đổi doanh nghiệp của bạn với",
+    "getStarted": "Bắt đầu",
+    "learnMore": "Tìm hiểu thêm"
+  },
+  "common": {
+    "loading": "Đang tải...",
+    "error": "Lỗi",
+    "success": "Thành công",
+    "readMore": "Đọc thêm",
+    "viewDetails": "Xem chi tiết",
+    "back": "Quay lại",
+    "next": "Tiếp theo",
+    "previous": "Trước",
+    "learnMore": "Tìm hiểu thêm"
+  },
+  "services": {
+    "enterpriseSolutions": "Giải pháp Doanh nghiệp",
+    "crmSystems": "Hệ thống CRM",
+    "aiMachineLearning": "AI & Học máy",
+    "cloudInfrastructure": "Hạ tầng Điện toán đám mây",
+    "iotSolutions": "Giải pháp IoT",
+    "cybersecurity": "An ninh mạng",
+    "digitalTransformation": "Chuyển đổi Số"
+  },
+  "messages": {
+    "invalidEmail": "Vui lòng nhập địa chỉ email hợp lệ",
+    "subscribeSuccess": "Đăng ký nhận bản tin thành công!",
+    "subscribeError": "Đăng ký thất bại. Vui lòng thử lại."
+  },
+  "productDetail": {
+    "notFound": "Không tìm thấy sản phẩm",
+    "backToProducts": "Quay lại Sản phẩm",
+    "coreFeatures": "Tính năng cốt lõi",
+    "benefits": "Giá trị mang lại",
+    "shareProduct": "Chia sẻ sản phẩm này",
+    "requestDemo": "Yêu cầu Demo",
+    "contactSales": "Liên hệ Bán hàng",
+    "readyToTransform": "Sẵn sàng Chuyển đổi Doanh nghiệp của Bạn?",
+    "getStartedWith": "Bắt đầu với {{product}} ngay hôm nay và trải nghiệm sự khác biệt",
+    "scheduleDemo": "Đặt lịch Demo",
+    "viewAllProducts": "Xem tất cả Sản phẩm"
+  },
+  "projectDetail": {
+    "notFound": "Không tìm thấy dự án",
+    "backToProjects": "Quay lại Dự án",
+    "overview": "Tổng quan Dự án",
+    "solutionDelivered": "Giải pháp Đã Triển khai",
+    "resultsAchieved": "Kết quả Đạt được",
+    "impactBenefits": "Tác động & Lợi ích",
+    "impactDescription": "Dự án này đã mang lại giá trị đáng kể cho {{client}}, chuyển đổi hoạt động kinh doanh của họ và thúc đẩy những cải thiện có thể đo lường được trên các chỉ số hiệu suất chính.",
+    "shareProject": "Chia sẻ dự án này",
+    "readyToStart": "Sẵn sàng Bắt đầu Dự án của Bạn?",
+    "letsDiscuss": "Hãy thảo luận về cách chúng tôi có thể giúp chuyển đổi doanh nghiệp của bạn",
+    "contactUs": "Liên hệ Chúng tôi",
+    "viewAllProjects": "Xem tất cả Dự án",
+    "interestedInSimilar": "Quan tâm đến các giải pháp tương tự cho tổ chức của bạn?",
+    "benefit1": "Tối ưu hóa quy trình và quy trình làm việc kinh doanh",
+    "benefit2": "Nâng cao hiệu quả và năng suất hoạt động",
+    "benefit3": "Cải thiện việc ra quyết định với thông tin chi tiết theo thời gian thực",
+    "benefit4": "Hạ tầng có thể mở rộng cho tăng trưởng tương lai"
+  },
+  "newsDetail": {
+    "notFound": "Không tìm thấy bài viết",
+    "backToNews": "Quay lại Tin tức",
+    "keyHighlights": "Điểm Nổi bật",
+    "lookingAhead": "Nhìn về Phía trước",
+    "shareArticle": "Chia sẻ bài viết này",
+    "exploreMore": "Khám phá Thêm Tin tức & Thông tin Chi tiết",
+    "stayUpdated": "Cập nhật với tin tức, thông tin chi tiết và sự kiện mới nhất của chúng tôi",
+    "viewAllNews": "Xem tất cả Tin tức",
+    "subscribeNewsletter": "Đăng ký Nhận bản tin"
+  }
+}

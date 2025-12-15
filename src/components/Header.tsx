@@ -1,25 +1,31 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, Drawer } from "antd";
 import { CloseOutlined, EllipsisOutlined } from "@ant-design/icons";
 import type { MenuProps } from "antd";
-
-const menuItems: MenuProps["items"] = [
-  { key: "/", label: <Link to="/">Home</Link> },
-  { key: "/about", label: <Link to="/about">About</Link> },
-  { key: "/solutions", label: <Link to="/solutions">Solutions</Link> },
-  { key: "/products", label: <Link to="/products">Products</Link> },
-  { key: "/projects", label: <Link to="/projects">Projects</Link> },
-  { key: "/news", label: <Link to="/news">News</Link> },
-  { key: "/careers", label: <Link to="/careers">Careers</Link> },
-  { key: "/contact", label: <Link to="/contact">Contact</Link> },
-];
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Header() {
+  const { t, i18n } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const location = useLocation();
   const pathname = location.pathname;
+
+  const menuItems: MenuProps["items"] = useMemo(
+    () => [
+      { key: "/", label: <Link to="/">{t("nav.home")}</Link> },
+      { key: "/about", label: <Link to="/about">{t("nav.about")}</Link> },
+      { key: "/solutions", label: <Link to="/solutions">{t("nav.solutions")}</Link> },
+      { key: "/products", label: <Link to="/products">{t("nav.products")}</Link> },
+      { key: "/projects", label: <Link to="/projects">{t("nav.projects")}</Link> },
+      { key: "/news", label: <Link to="/news">{t("nav.news")}</Link> },
+      { key: "/careers", label: <Link to="/careers">{t("nav.careers")}</Link> },
+      { key: "/contact", label: <Link to="/contact">{t("nav.contact")}</Link> },
+    ],
+    [t, i18n.language]
+  );
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,7 +45,7 @@ export default function Header() {
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-end h-20">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <img
@@ -68,6 +74,11 @@ export default function Header() {
               overflowedIndicator={<EllipsisOutlined />}
             />
           </nav>
+
+          {/* Language Switcher */}
+          <div className="flex items-center gap-4">
+            <LanguageSwitcher />
+          </div>
 
           {/* Mobile Menu Button */}
           {/* <Button

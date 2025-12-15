@@ -14,22 +14,24 @@ import {
   SendOutlined,
   ArrowRightOutlined,
 } from "@ant-design/icons";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
 
   const handleSubscribe = async () => {
     if (!email || !/\S+@\S+\.\S+/.test(email)) {
-      message.error("Please enter a valid email address");
+      message.error(t("messages.invalidEmail"));
       return;
     }
 
     setLoading(true);
     // Simulate API call
     setTimeout(() => {
-      message.success("Successfully subscribed to our newsletter!");
+      message.success(t("messages.subscribeSuccess"));
       setEmail("");
       setLoading(false);
     }, 1500);
@@ -110,24 +112,25 @@ export default function Footer() {
               transition={{ duration: 0.2 }}
             >
               <RocketOutlined className="!text-2xl !text-blue-400" />
-              <span className="!text-sm !font-semibold !text-blue-400">Stay Updated</span>
+              <span className="!text-sm !font-semibold !text-blue-400">
+                {t("footer.stayUpdated")}
+              </span>
             </motion.div>
 
             <h3 className="!text-4xl md:!text-5xl !font-bold !mb-6">
               <span className="!bg-gradient-to-r !from-blue-400 !via-cyan-400 !to-purple-400 !bg-clip-text !text-transparent">
-                Subscribe
+                {t("footer.subscribe")}
               </span>{" "}
-              to Our Newsletter
+              {t("footer.toOurNewsletter")}
             </h3>
             <p className="!text-gray-400 !text-lg !mb-10 !leading-relaxed">
-              Get the latest updates on technology trends, insights, and exclusive offers delivered
-              straight to your inbox.
+              {t("footer.newsletterDescription")}
             </p>
 
             <div className="!flex !flex-col sm:!flex-row !gap-4 !max-w-xl !mx-auto">
               <Input
                 size="large"
-                placeholder="Enter your email address"
+                placeholder={t("footer.enterEmail")}
                 prefix={<MailOutlined className="!text-gray-400" />}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -142,13 +145,11 @@ export default function Footer() {
                 className="!rounded-xl !bg-gradient-to-r !from-blue-500 !to-cyan-500 !border-0 hover:!from-blue-600 hover:!to-cyan-600 !font-semibold !px-8 !py-4 !h-auto !shadow-lg !shadow-blue-500/30 hover:!shadow-blue-500/50 !transition-all"
                 icon={<SendOutlined />}
               >
-                Subscribe
+                {t("footer.subscribeButton")}
               </Button>
             </div>
 
-            <p className="!text-gray-500 !text-sm !mt-4">
-              We respect your privacy. Unsubscribe at any time.
-            </p>
+            <p className="!text-gray-500 !text-sm !mt-4">{t("footer.privacyNote")}</p>
           </div>
         </motion.div>
 
@@ -174,8 +175,7 @@ export default function Footer() {
               </motion.div>
             </Link>
             <p className="!text-gray-400 !text-base !leading-relaxed !mb-8">
-              Transforming businesses with cutting-edge technology solutions and innovative digital
-              experiences.
+              {t("footer.companyDescription")}
             </p>
             <div className="!flex !gap-3">
               {[
@@ -223,18 +223,18 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h3 className="!text-xl !font-bold !mb-6 !relative !inline-block">
-              Quick Links
+              {t("footer.quickLinks")}
               <span className="!absolute !bottom-0 !left-0 !w-12 !h-1 !bg-gradient-to-r !from-blue-500 !to-cyan-500 !rounded-full"></span>
             </h3>
             <ul className="!space-y-3">
               {[
-                { label: "About Us", href: "/about" },
-                { label: "Solutions", href: "/solutions" },
-                { label: "Products", href: "/products" },
-                { label: "Projects", href: "/projects" },
-                { label: "News", href: "/news" },
-                { label: "Careers", href: "/careers" },
-                { label: "Contact", href: "/contact" },
+                { label: t("nav.about"), href: "/about" },
+                { label: t("nav.solutions"), href: "/solutions" },
+                { label: t("nav.products"), href: "/products" },
+                { label: t("nav.projects"), href: "/projects" },
+                { label: t("nav.news"), href: "/news" },
+                { label: t("nav.careers"), href: "/careers" },
+                { label: t("nav.contact"), href: "/contact" },
               ].map((link, index) => (
                 <motion.li
                   key={link.href}
@@ -263,18 +263,18 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <h3 className="!text-xl !font-bold !mb-6 !relative !inline-block">
-              Services
+              {t("footer.services")}
               <span className="!absolute !bottom-0 !left-0 !w-12 !h-1 !bg-gradient-to-r !from-blue-500 !to-cyan-500 !rounded-full"></span>
             </h3>
             <ul className="!space-y-3">
               {[
-                "Enterprise Solutions",
-                "CRM Systems",
-                "AI & Machine Learning",
-                "Cloud Infrastructure",
-                "IoT Solutions",
-                "Cybersecurity",
-                "Digital Transformation",
+                t("services.enterpriseSolutions"),
+                t("services.crmSystems"),
+                t("services.aiMachineLearning"),
+                t("services.cloudInfrastructure"),
+                t("services.iotSolutions"),
+                t("services.cybersecurity"),
+                t("services.digitalTransformation"),
               ].map((service, index) => (
                 <motion.li
                   key={service}
@@ -300,7 +300,7 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <h3 className="!text-xl !font-bold !mb-6 !relative !inline-block">
-              Contact Us
+              {t("footer.contactUs")}
               <span className="!absolute !bottom-0 !left-0 !w-12 !h-1 !bg-gradient-to-r !from-blue-500 !to-cyan-500 !rounded-full"></span>
             </h3>
             <ul className="!space-y-5">
@@ -353,7 +353,7 @@ export default function Footer() {
                   href="mailto:info@nexacore.com"
                   className="!text-sm hover:!text-blue-400 !transition-colors"
                 >
-                  nexacore@gmail.com
+                  support@nexacore.vn
                 </a>
               </motion.li>
             </ul>
@@ -374,14 +374,14 @@ export default function Footer() {
               <span className="!font-semibold !bg-gradient-to-r !from-blue-400 !to-cyan-400 !bg-clip-text !text-transparent">
                 NexaCore
               </span>
-              . All rights reserved.
+              . {t("footer.allRightsReserved")}
             </p>
             <div className="!flex !flex-wrap !justify-center !gap-6 !text-sm">
               {[
-                { label: "Privacy Policy", href: "/privacy" },
-                { label: "Terms of Service", href: "/terms" },
-                { label: "Cookie Policy", href: "/cookies" },
-                { label: "Sitemap", href: "/sitemap" },
+                { label: t("footer.privacyPolicy"), href: "/privacy" },
+                { label: t("footer.termsOfService"), href: "/terms" },
+                { label: t("footer.cookiePolicy"), href: "/cookies" },
+                { label: t("footer.sitemap"), href: "/sitemap" },
               ].map((link) => (
                 <Link
                   key={link.href}

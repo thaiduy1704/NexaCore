@@ -3,100 +3,106 @@ import { Card, Button, Tag, Badge, Input, Select } from "antd";
 import * as Icons from "@ant-design/icons";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import HeroBanner from "@/components/HeroBanner";
 import SectionTitle from "@/components/SectionTitle";
+import SeoHelmet from "@/components/SeoHelmet";
 import { jobs } from "@/lib/mockData";
+import { careersMetadata } from "@/lib/metadata";
 
 const { Search } = Input;
 const { Option } = Select;
 
-const benefits = [
-  {
-    icon: "DollarCircleOutlined",
-    title: "Competitive Salary",
-    description: "Market-leading compensation packages",
-  },
-  {
-    icon: "HeartOutlined",
-    title: "Health & Wellness",
-    description: "Comprehensive health insurance and wellness programs",
-  },
-  {
-    icon: "CarOutlined",
-    title: "Flexible Work",
-    description: "Remote and hybrid work options",
-  },
-  {
-    icon: "RocketOutlined",
-    title: "Career Growth",
-    description: "Professional development and training opportunities",
-  },
-  {
-    icon: "TeamOutlined",
-    title: "Great Team",
-    description: "Work with talented and passionate colleagues",
-  },
-  {
-    icon: "GiftOutlined",
-    title: "Time Off",
-    description: "Generous vacation and personal time off",
-  },
-];
-
-const culturePoints = [
-  {
-    title: "Innovation First",
-    description: "We encourage experimentation and creative problem-solving",
-    icon: "BulbOutlined",
-  },
-  {
-    title: "Work-Life Balance",
-    description: "We believe in sustainable productivity and personal well-being",
-    icon: "BalanceScaleOutlined",
-  },
-  {
-    title: "Diversity & Inclusion",
-    description: "We celebrate diverse perspectives and backgrounds",
-    icon: "GlobalOutlined",
-  },
-  {
-    title: "Continuous Learning",
-    description: "We invest in your growth with training and conferences",
-    icon: "BookOutlined",
-  },
-];
-
-const applicationSteps = [
-  {
-    step: 1,
-    title: "Apply",
-    description: "Submit your application through our portal",
-    icon: "FileTextOutlined",
-  },
-  {
-    step: 2,
-    title: "Review",
-    description: "Our team reviews your application",
-    icon: "EyeOutlined",
-  },
-  {
-    step: 3,
-    title: "Interview",
-    description: "Meet with our team members",
-    icon: "VideoCameraOutlined",
-  },
-  {
-    step: 4,
-    title: "Offer",
-    description: "Receive your offer and join our team",
-    icon: "CheckCircleOutlined",
-  },
-];
+// Benefits, culture points, and application steps will be defined inside component to use translations
 
 export default function CareersPage() {
+  const { t } = useTranslation();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedDepartment, setSelectedDepartment] = useState<string>("all");
   const [selectedLocation, setSelectedLocation] = useState<string>("all");
+
+  const benefits = [
+    {
+      icon: "DollarCircleOutlined",
+      title: t("careers.whyJoin.competitiveSalary.title"),
+      description: t("careers.whyJoin.competitiveSalary.description"),
+    },
+    {
+      icon: "HeartOutlined",
+      title: t("careers.whyJoin.healthWellness.title"),
+      description: t("careers.whyJoin.healthWellness.description"),
+    },
+    {
+      icon: "CarOutlined",
+      title: t("careers.whyJoin.flexibleWork.title"),
+      description: t("careers.whyJoin.flexibleWork.description"),
+    },
+    {
+      icon: "RocketOutlined",
+      title: t("careers.whyJoin.careerGrowth.title"),
+      description: t("careers.whyJoin.careerGrowth.description"),
+    },
+    {
+      icon: "TeamOutlined",
+      title: t("careers.whyJoin.greatTeam.title"),
+      description: t("careers.whyJoin.greatTeam.description"),
+    },
+    {
+      icon: "GiftOutlined",
+      title: t("careers.whyJoin.timeOff.title"),
+      description: t("careers.whyJoin.timeOff.description"),
+    },
+  ];
+
+  const culturePoints = [
+    {
+      title: t("careers.culture.innovationFirst.title"),
+      description: t("careers.culture.innovationFirst.description"),
+      icon: "BulbOutlined",
+    },
+    {
+      title: t("careers.culture.workLifeBalance.title"),
+      description: t("careers.culture.workLifeBalance.description"),
+      icon: "BalanceScaleOutlined",
+    },
+    {
+      title: t("careers.culture.diversityInclusion.title"),
+      description: t("careers.culture.diversityInclusion.description"),
+      icon: "GlobalOutlined",
+    },
+    {
+      title: t("careers.culture.continuousLearning.title"),
+      description: t("careers.culture.continuousLearning.description"),
+      icon: "BookOutlined",
+    },
+  ];
+
+  const applicationSteps = [
+    {
+      step: 1,
+      title: t("careers.applicationProcess.apply.title"),
+      description: t("careers.applicationProcess.apply.description"),
+      icon: "FileTextOutlined",
+    },
+    {
+      step: 2,
+      title: t("careers.applicationProcess.review.title"),
+      description: t("careers.applicationProcess.review.description"),
+      icon: "EyeOutlined",
+    },
+    {
+      step: 3,
+      title: t("careers.applicationProcess.interview.title"),
+      description: t("careers.applicationProcess.interview.description"),
+      icon: "VideoCameraOutlined",
+    },
+    {
+      step: 4,
+      title: t("careers.applicationProcess.offer.title"),
+      description: t("careers.applicationProcess.offer.description"),
+      icon: "CheckCircleOutlined",
+    },
+  ];
 
   // Get unique departments and locations
   const departments = Array.from(new Set(jobs.map((job) => job.department)));
@@ -114,10 +120,15 @@ export default function CareersPage() {
 
   return (
     <div className="pt-20">
+      <SeoHelmet
+        title={careersMetadata.title}
+        description={careersMetadata.description}
+        keywords={careersMetadata.keywords}
+      />
       <HeroBanner
-        title="Join Our Team"
-        subtitle="Build your career with a global leader in digital transformation"
-        ctaText="View Open Positions"
+        title={t("careers.hero.title")}
+        subtitle={t("careers.hero.subtitle")}
+        ctaText={t("careers.hero.viewPositions")}
         ctaLink="#positions"
       />
 
@@ -143,8 +154,8 @@ export default function CareersPage() {
             className="mb-20 md:mb-24"
           >
             <SectionTitle
-              title="Why Join NexaCore?"
-              subtitle="We offer more than just a job - we offer a career with purpose and growth"
+              title={t("careers.whyJoin.title")}
+              subtitle={t("careers.whyJoin.subtitle")}
             />
           </motion.div>
 
@@ -199,8 +210,8 @@ export default function CareersPage() {
             className="!mb-20 md:!mb-24"
           >
             <SectionTitle
-              title="Open Positions"
-              subtitle="Explore opportunities to join our growing team"
+              title={t("careers.positions.title")}
+              subtitle={t("careers.positions.subtitle")}
             />
           </motion.div>
 
@@ -216,7 +227,7 @@ export default function CareersPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div className="lg:col-span-2">
                   <Search
-                    placeholder="Search jobs by title or description..."
+                    placeholder={t("careers.positions.searchPlaceholder")}
                     allowClear
                     size="large"
                     value={searchTerm}
@@ -227,13 +238,13 @@ export default function CareersPage() {
                 </div>
                 <Select
                   size="large"
-                  placeholder="All Departments"
+                  placeholder={t("careers.positions.allDepartments")}
                   value={selectedDepartment}
                   onChange={setSelectedDepartment}
                   className="w-full"
                   suffixIcon={<Icons.BranchesOutlined />}
                 >
-                  <Option value="all">All Departments</Option>
+                  <Option value="all">{t("careers.positions.allDepartments")}</Option>
                   {departments.map((dept) => (
                     <Option key={dept} value={dept}>
                       {dept}
@@ -242,13 +253,13 @@ export default function CareersPage() {
                 </Select>
                 <Select
                   size="large"
-                  placeholder="All Locations"
+                  placeholder={t("careers.positions.allLocations")}
                   value={selectedLocation}
                   onChange={setSelectedLocation}
                   className="w-full"
                   suffixIcon={<Icons.EnvironmentOutlined />}
                 >
-                  <Option value="all">All Locations</Option>
+                  <Option value="all">{t("careers.positions.allLocations")}</Option>
                   {locations.map((loc) => (
                     <Option key={loc} value={loc}>
                       {loc}
@@ -268,8 +279,8 @@ export default function CareersPage() {
                 className="text-center !py-20"
               >
                 <Icons.InboxOutlined className="text-7xl text-gray-300 !mb-6 !mx-auto" />
-                <h3 className="text-2xl font-bold text-gray-700 mb-2">No jobs found</h3>
-                <p className="text-lg text-gray-500">Try adjusting your search criteria</p>
+                <h3 className="text-2xl font-bold text-gray-700 mb-2">{t("careers.positions.emptyState.title")}</h3>
+                <p className="text-lg text-gray-500">{t("careers.positions.emptyState.description")}</p>
               </motion.div>
             ) : (
               <div className="space-y-5">
@@ -322,7 +333,7 @@ export default function CareersPage() {
                               </p>
                               <div className="!flex !flex-wrap !items-center !gap-2">
                                 <span className="!text-xs !font-semibold !text-gray-700">
-                                  Requirements:
+                                  {t("careers.positions.requirements")}:
                                 </span>
                                 {job.requirements.slice(0, 3).map((req, idx) => (
                                   <Tag
@@ -344,14 +355,14 @@ export default function CareersPage() {
                             className="!bg-gradient-to-r !from-blue-500 !to-indigo-600 !border-0 !h-11 !font-semibold !rounded-lg !shadow-md hover:!shadow-lg !transition-all"
                             iconPosition="end"
                           >
-                            Apply Now
+                            {t("careers.positions.applyNow")}
                           </Button>
                           <Button
                             size="large"
                             icon={<Icons.EyeOutlined />}
                             className="!border !border-gray-300 !text-gray-700 hover:!border-blue-500 hover:!text-blue-600 !h-11 !font-semibold !rounded-lg !transition-all !bg-white"
                           >
-                            View Details
+                            {t("careers.positions.viewDetails")}
                           </Button>
                         </div>
                       </div>
@@ -374,7 +385,7 @@ export default function CareersPage() {
             transition={{ duration: 0.8 }}
             className="!mb-20 md:!mb-24"
           >
-            <SectionTitle title="Our Culture" subtitle="What makes working at NexaCore special" />
+            <SectionTitle title={t("careers.culture.title")} subtitle={t("careers.culture.subtitle")} />
           </motion.div>
 
           <div className="!grid !grid-cols-1 md:!grid-cols-2 lg:!grid-cols-4 !gap-6 lg:!gap-6 !max-w-6xl !mx-auto">
@@ -420,7 +431,7 @@ export default function CareersPage() {
             transition={{ duration: 0.8 }}
             className="!mb-20 md:!mb-24"
           >
-            <SectionTitle title="Application Process" subtitle="Simple steps to join our team" />
+            <SectionTitle title={t("careers.applicationProcess.title")} subtitle={t("careers.applicationProcess.subtitle")} />
           </motion.div>
 
           <div className="!max-w-5xl !mx-auto">
@@ -513,11 +524,10 @@ export default function CareersPage() {
             className="text-center max-w-4xl !mx-auto"
           >
             <h2 className="!text-3xl md:!text-4xl lg:!text-5xl !font-extrabold !text-white !mb-6 !leading-tight">
-              Ready to Start Your Journey?
+              {t("careers.cta.title")}
             </h2>
             <p className="!text-lg md:!text-xl !text-white/90 !mb-10 !leading-relaxed">
-              Don't see a position that matches your skills? We're always looking for talented
-              individuals to join our team.
+              {t("careers.cta.description")}
             </p>
             <div className="!flex !flex-col sm:!flex-row !gap-4 !justify-center">
               <Link to="/contact">
@@ -529,7 +539,7 @@ export default function CareersPage() {
                     className="!bg-white !text-blue-600 !border-0 !h-12 !px-8 !text-base !font-bold !shadow-xl hover:!shadow-2xl !rounded-xl"
                     iconPosition="end"
                   >
-                    Send Us Your Resume
+                    {t("careers.cta.sendResume")}
                   </Button>
                 </motion.div>
               </Link>
@@ -539,7 +549,7 @@ export default function CareersPage() {
                     size="large"
                     className="!bg-white/10 !backdrop-blur-lg !text-white !border-2 !border-white/30 hover:!bg-white/20 !h-12 !px-8 !text-base !font-bold !rounded-xl !transition-all"
                   >
-                    Learn More About Us
+                    {t("careers.cta.learnMore")}
                   </Button>
                 </motion.div>
               </Link>

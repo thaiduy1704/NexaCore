@@ -26,6 +26,7 @@ export interface Product {
   description: string;
   image: string;
   features: string[];
+  benefits: string[];
   category: string;
 }
 

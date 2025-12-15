@@ -3,6 +3,7 @@ import { ArrowRightOutlined, RocketOutlined, StarFilled } from "@ant-design/icon
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 interface HeroBannerProps {
   title: string;
@@ -21,6 +22,7 @@ export default function HeroBanner({
   secondaryCtaText,
   secondaryCtaLink,
 }: HeroBannerProps) {
+  const { t } = useTranslation();
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -133,7 +135,7 @@ export default function HeroBanner({
             transition={{ duration: 0.6 }}
           >
             <RocketOutlined className="text-yellow-300" />
-            <span className="text-sm font-medium">Leading Innovation in Technology</span>
+            <span className="text-sm font-medium">{t("home.hero.badge")}</span>
             <StarFilled className="text-yellow-300 text-xs" />
           </motion.div>
 
@@ -212,17 +214,17 @@ export default function HeroBanner({
           >
             <div className="flex items-center gap-2">
               <StarFilled className="text-yellow-300" />
-              <span className="text-sm">500+ Projects</span>
+              <span className="text-sm">{t("home.hero.projectsCount")}</span>
             </div>
             <div className="w-px h-4 bg-white/30" />
             <div className="flex items-center gap-2">
               <StarFilled className="text-yellow-300" />
-              <span className="text-sm">200+ Clients</span>
+              <span className="text-sm">{t("home.hero.clientsCount")}</span>
             </div>
             <div className="w-px h-4 bg-white/30" />
             <div className="flex items-center gap-2">
               <StarFilled className="text-yellow-300" />
-              <span className="text-sm">10+ Years Experience</span>
+              <span className="text-sm">{t("home.hero.yearsExperience")}</span>
             </div>
           </motion.div>
         </div>

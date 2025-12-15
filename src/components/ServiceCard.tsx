@@ -14,7 +14,8 @@ interface ServiceCardProps {
 type AntIconType = React.ComponentType<{ style?: React.CSSProperties; className?: string }>;
 
 export default function ServiceCard({ title, description, icon, link }: ServiceCardProps) {
-  const IconComponent = (Icons as Record<string, AntIconType>)[icon] || Icons.AppstoreOutlined;
+  const IconComponent =
+    (Icons as unknown as Record<string, AntIconType>)[icon] || Icons.AppstoreOutlined;
 
   return (
     <motion.div whileHover={{ y: -8 }} transition={{ duration: 0.3 }} className="h-full">

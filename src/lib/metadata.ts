@@ -1,6 +1,11 @@
-import type { Metadata } from "next";
+// Metadata types for SEO - not using Next.js Metadata type
+export interface PageMetadata {
+  title: string;
+  description: string;
+  keywords: string[];
+}
 
-export const aboutMetadata: Metadata = {
+export const aboutMetadata: PageMetadata = {
   title: "About Us - NexaCore",
   description:
     "Learn about NexaCore's mission, vision, values, and leadership team. We are a global technology leader specializing in digital transformation solutions.",
@@ -13,7 +18,7 @@ export const aboutMetadata: Metadata = {
   ],
 };
 
-export const solutionsMetadata: Metadata = {
+export const solutionsMetadata: PageMetadata = {
   title: "Solutions & Services - NexaCore",
   description:
     "Explore NexaCore's comprehensive technology solutions including ERP, CRM, AI/ML, Cloud Infrastructure, IoT, and Cybersecurity services.",
@@ -28,7 +33,7 @@ export const solutionsMetadata: Metadata = {
   ],
 };
 
-export const productsMetadata: Metadata = {
+export const productsMetadata: PageMetadata = {
   title: "Products - NexaCore",
   description:
     "Discover NexaCore's enterprise-grade software products including NexaFlow ERP, NexaConnect CRM, and NexaGuard Security solutions.",
@@ -42,7 +47,7 @@ export const productsMetadata: Metadata = {
   ],
 };
 
-export const projectsMetadata: Metadata = {
+export const projectsMetadata: PageMetadata = {
   title: "Case Studies & Projects - NexaCore",
   description:
     "Explore successful digital transformation projects and case studies from NexaCore clients across various industries worldwide.",
@@ -55,7 +60,7 @@ export const projectsMetadata: Metadata = {
   ],
 };
 
-export const newsMetadata: Metadata = {
+export const newsMetadata: PageMetadata = {
   title: "News & Events - NexaCore",
   description:
     "Stay updated with the latest news, announcements, and insights from NexaCore. Read about our innovations, partnerships, and industry leadership.",
@@ -68,7 +73,7 @@ export const newsMetadata: Metadata = {
   ],
 };
 
-export const careersMetadata: Metadata = {
+export const careersMetadata: PageMetadata = {
   title: "Careers - Join NexaCore",
   description:
     "Explore exciting career opportunities at NexaCore. Join our team of innovators and help shape the future of digital transformation.",
@@ -82,7 +87,7 @@ export const careersMetadata: Metadata = {
   ],
 };
 
-export const contactMetadata: Metadata = {
+export const contactMetadata: PageMetadata = {
   title: "Contact Us - NexaCore",
   description:
     "Get in touch with NexaCore. Contact our team to discuss your digital transformation needs, request a demo, or learn more about our solutions.",

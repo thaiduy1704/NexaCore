@@ -9,9 +9,12 @@ import {
 } from "@ant-design/icons";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import HeroBanner from "@/components/HeroBanner";
 import SectionTitle from "@/components/SectionTitle";
 import ContactForm from "@/components/ContactForm";
+import SeoHelmet from "@/components/SeoHelmet";
+import { contactMetadata } from "@/lib/metadata";
 
 const contactGradients = [
   "from-violet-600 via-purple-600 to-indigo-600",
@@ -21,12 +24,13 @@ const contactGradients = [
 ];
 
 export default function ContactPage() {
+  const { t } = useTranslation();
   const [hoveredContact, setHoveredContact] = useState<number | null>(null);
 
   const contactInfo = [
     {
       icon: EnvironmentOutlined,
-      title: "Headquarters",
+      title: t("contact.info.headquarters"),
       gradient: contactGradients[0],
       content: [
         "49/35/19 Đường Giang Cự Vọng",
@@ -36,34 +40,40 @@ export default function ContactPage() {
     },
     {
       icon: PhoneOutlined,
-      title: "Phone",
+      title: t("contact.info.phone"),
       gradient: contactGradients[1],
-      content: ["Sales: 	0924600029", "Support:	0924600029", "General: 	0924600029"],
+      content: [
+        `${t("contact.info.sales")}: 092 460 0029`,
+        `${t("contact.info.support")}: 092 460 0029`,
+        `${t("contact.info.general")}: 098 346 0137`,
+      ],
     },
     {
       icon: MailOutlined,
-      title: "Email",
+      title: t("contact.info.email"),
       gradient: contactGradients[2],
-      content: ["General: nexacore@gmail.com"],
+      content: [`${t("contact.info.general")}: support@nexacore.vn`],
     },
     {
       icon: ClockCircleOutlined,
-      title: "Business Hours",
+      title: t("contact.info.businessHours"),
       gradient: contactGradients[3],
       content: [
-        "Monday - Friday: 9:00 AM - 6:00 PM PST",
-        "Saturday: 10:00 AM - 2:00 PM PST",
-        "Sunday: Closed",
+        t("contact.info.mondayFriday"),
+        t("contact.info.saturday"),
+        t("contact.info.sunday"),
       ],
     },
   ];
 
   return (
     <div className="!pt-20">
-      <HeroBanner
-        title="Contact Us"
-        subtitle="Get in touch with our team to discuss your digital transformation needs"
+      <SeoHelmet
+        title={contactMetadata.title}
+        description={contactMetadata.description}
+        keywords={contactMetadata.keywords}
       />
+      <HeroBanner title={t("contact.hero.title")} subtitle={t("contact.hero.subtitle")} />
 
       {/* Main Contact Section */}
       <section className="!py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50">
@@ -83,11 +93,11 @@ export default function ContactPage() {
                       <div className="!w-12 !h-12 rounded-2xl bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center">
                         <SendOutlined className="!text-2xl text-white" />
                       </div>
-                      <h2 className="!text-3xl font-extrabold text-gray-900">Send Us a Message</h2>
+                      <h2 className="!text-3xl font-extrabold text-gray-900">
+                        {t("contact.form.title")}
+                      </h2>
                     </div>
-                    <p className="text-gray-600 !text-lg">
-                      Fill out the form and we&apos;ll get back to you within 24 hours
-                    </p>
+                    <p className="text-gray-600 !text-lg">{t("contact.form.description")}</p>
                   </div>
                   <ContactForm />
                 </div>
@@ -105,11 +115,11 @@ export default function ContactPage() {
                     <div className="!w-12 !h-12 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center">
                       <CustomerServiceOutlined className="!text-2xl text-white" />
                     </div>
-                    <h2 className="!text-3xl font-extrabold text-gray-900">Contact Information</h2>
+                    <h2 className="!text-3xl font-extrabold text-gray-900">
+                      {t("contact.info.title")}
+                    </h2>
                   </div>
-                  <p className="text-gray-600 !text-lg">
-                    Reach out to us through any of these channels
-                  </p>
+                  <p className="text-gray-600 !text-lg">{t("contact.info.description")}</p>
                 </div>
 
                 <div className="!space-y-6">
@@ -177,7 +187,10 @@ export default function ContactPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <SectionTitle title="Our Location" subtitle="Visit us at our headquarters" />
+            <SectionTitle
+              title={t("contact.location.title")}
+              subtitle={t("contact.location.subtitle")}
+            />
             <div className="!max-w-6xl !mx-auto !mt-12">
               <div className="aspect-video bg-gradient-to-br from-indigo-600 to-purple-600 rounded-3xl overflow-hidden shadow-2xl relative">
                 {/* Map Overlay with gradient border */}
@@ -228,11 +241,11 @@ export default function ContactPage() {
                 </motion.div>
 
                 <h2 className="!text-5xl md:text-6xl font-extrabold text-white !mb-6">
-                  Need Immediate Assistance?
+                  {t("contact.cta.title")}
                 </h2>
 
                 <p className="!text-2xl text-white/95 !mb-12 !max-w-3xl !mx-auto leading-relaxed">
-                  Our support team is available 24/7 to help you with any questions or concerns
+                  {t("contact.cta.description")}
                 </p>
 
                 <div className="flex flex-wrap !gap-4 justify-center">
@@ -243,7 +256,7 @@ export default function ContactPage() {
                     className="inline-flex items-center !gap-3 !px-10 !py-5 bg-white text-indigo-900 rounded-2xl font-bold !text-lg shadow-2xl hover:shadow-white/50 transition-all"
                   >
                     <PhoneOutlined className="!text-xl" />
-                    <span>Call Now</span>
+                    <span>{t("contact.cta.callNow")}</span>
                   </motion.a>
 
                   <motion.a
@@ -253,7 +266,7 @@ export default function ContactPage() {
                     className="inline-flex items-center !gap-3 !px-10 !py-5 bg-white/10 backdrop-blur-lg text-white rounded-2xl font-bold !text-lg !border-2 border-white/30 hover:bg-white/20 transition-all"
                   >
                     <MailOutlined className="!text-xl" />
-                    <span>Email Support</span>
+                    <span>{t("contact.cta.emailSupport")}</span>
                   </motion.a>
                 </div>
               </div>
