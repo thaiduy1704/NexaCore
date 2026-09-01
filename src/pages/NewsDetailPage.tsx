@@ -67,8 +67,16 @@ export default function NewsDetailPage() {
   return (
     <div className="!pt-20 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50">
       <SeoHelmet
-        title={`${article.title} | NexaCore News`}
-        description={article.excerpt}
+        title={`${(() => {
+          const titleKey = `news.items.${article.id}.title`;
+          const translated = t(titleKey);
+          return translated !== titleKey ? translated : article.title;
+        })()} | NexaCore News`}
+        description={(() => {
+          const excerptKey = `news.items.${article.id}.excerpt`;
+          const translated = t(excerptKey);
+          return translated !== excerptKey ? translated : article.excerpt;
+        })()}
         image={article.image}
         url={canonicalUrl}
         type="article"
@@ -108,7 +116,13 @@ export default function NewsDetailPage() {
                 transition={{ delay: 0.2 }}
                 className="inline-flex items-center !gap-2 !px-6 !py-3 bg-white/20 backdrop-blur-lg rounded-full border border-white/30 !mb-8"
               >
-                <span className="text-white font-bold">{article.category}</span>
+                <span className="text-white font-bold">
+                  {(() => {
+                    const categoryKey = `news.items.${article.id}.category`;
+                    const translated = t(categoryKey);
+                    return translated !== categoryKey ? translated : article.category;
+                  })()}
+                </span>
               </motion.div>
 
               {/* Title */}
@@ -118,7 +132,11 @@ export default function NewsDetailPage() {
                 transition={{ delay: 0.3 }}
                 className="!text-5xl md:text-6xl font-extrabold !mb-8 leading-tight"
               >
-                {article.title}
+                {(() => {
+                  const titleKey = `news.items.${article.id}.title`;
+                  const translated = t(titleKey);
+                  return translated !== titleKey ? translated : article.title;
+                })()}
               </motion.h1>
 
               {/* Meta Info */}
@@ -130,7 +148,13 @@ export default function NewsDetailPage() {
               >
                 <div className="flex items-center !gap-2 bg-white/10 backdrop-blur-lg !px-4 !py-2 rounded-full">
                   <UserOutlined />
-                  <span>{article.author}</span>
+                  <span>
+                    {(() => {
+                      const authorKey = `news.items.${article.id}.author`;
+                      const translated = t(authorKey);
+                      return translated !== authorKey ? translated : article.author;
+                    })()}
+                  </span>
                 </div>
                 <div className="flex items-center !gap-2 bg-white/10 backdrop-blur-lg !px-4 !py-2 rounded-full">
                   <CalendarOutlined />
@@ -173,7 +197,11 @@ export default function NewsDetailPage() {
                 <div className="aspect-video rounded-3xl shadow-2xl overflow-hidden relative">
                   <img
                     src={article.image}
-                    alt={article.title}
+                    alt={(() => {
+                      const titleKey = `news.items.${article.id}.title`;
+                      const translated = t(titleKey);
+                      return translated !== titleKey ? translated : article.title;
+                    })()}
                     className="w-full h-full object-cover"
                     onError={() => setImageError(true)}
                   />
@@ -188,7 +216,12 @@ export default function NewsDetailPage() {
                     <div className="absolute !bottom-0 !left-0 !w-48 !h-48 bg-white rounded-full blur-3xl"></div>
                   </div>
                   <span className="text-white !text-9xl font-bold opacity-20 relative z-10">
-                    {article.title.charAt(0)}
+                    {(() => {
+                      const titleKey = `news.items.${article.id}.title`;
+                      const translated = t(titleKey);
+                      const displayTitle = translated !== titleKey ? translated : article.title;
+                      return displayTitle.charAt(0);
+                    })()}
                   </span>
                 </div>
               )}
@@ -204,64 +237,23 @@ export default function NewsDetailPage() {
             >
               <div className="prose prose-lg !max-w-none">
                 <p className="!text-2xl text-gray-700 font-medium !mb-8 leading-relaxed">
-                  {article.excerpt}
+                  {(() => {
+                    const excerptKey = `news.items.${article.id}.excerpt`;
+                    const translated = t(excerptKey);
+                    return translated !== excerptKey ? translated : article.excerpt;
+                  })()}
                 </p>
 
-                <p className="text-gray-600 !mb-6 leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-
-                <h2
-                  className={`!text-3xl font-extrabold !mt-12 !mb-6 bg-gradient-to-r ${gradient} bg-clip-text text-transparent`}
-                >
-                  {t("newsDetail.keyHighlights")}
-                </h2>
-                <p className="text-gray-600 !mb-6 leading-relaxed">
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                  fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                  culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-
-                <ul className="!space-y-4 !mb-8">
-                  {[
-                    "Advanced technology solutions driving digital transformation",
-                    "Innovative approaches to enterprise challenges",
-                    "Strategic partnerships with industry leaders",
-                    "Commitment to sustainable and responsible growth",
-                  ].map((item, index) => (
-                    <motion.li
-                      key={index}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: index * 0.1 }}
-                      className="flex items-start !gap-3 text-gray-700"
-                    >
-                      <div
-                        className={`!w-2 !h-2 rounded-full bg-gradient-to-br ${gradient} !mt-2 flex-shrink-0`}
-                      ></div>
-                      <span className="leading-relaxed">{item}</span>
-                    </motion.li>
-                  ))}
-                </ul>
-
-                <h2
-                  className={`!text-3xl font-extrabold !mt-12 !mb-6 bg-gradient-to-r ${gradient} bg-clip-text text-transparent`}
-                >
-                  {t("newsDetail.lookingAhead")}
-                </h2>
-                <p className="text-gray-600 !mb-6 leading-relaxed">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-                  veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                </p>
-
-                <p className="text-gray-600 !mb-6 leading-relaxed">
-                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed
-                  quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-                </p>
+                <div
+                  className="text-gray-600 !mb-6 leading-relaxed"
+                  dangerouslySetInnerHTML={{ 
+                    __html: (() => {
+                      const contentKey = `news.items.${article.id}.content`;
+                      const translated = t(contentKey);
+                      return translated !== contentKey ? translated : article.content;
+                    })()
+                  }}
+                />
               </div>
 
               {/* Share Section */}

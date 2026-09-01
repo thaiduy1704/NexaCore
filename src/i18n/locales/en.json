@@ -27,15 +27,71 @@
     "cookiePolicy": "Cookie Policy",
     "sitemap": "Sitemap"
   },
+  "privacy": {
+    "seo": {
+      "title": "Privacy Policy - NexaCore",
+      "description": "Learn how NexaCore collects, uses, and protects your information when you use our website and mobile applications."
+    },
+    "badge": "Privacy",
+    "title": "Privacy Policy",
+    "subtitle": "This page describes how we collect, use, share, and protect information when you use our services.",
+    "lastUpdatedLabel": "Last updated:",
+    "lastUpdatedValue": "April 1, 2026",
+    "tocTitle": "On this page",
+    "bodyTitle": "Your Privacy Matters",
+    "bodySubtitle": "Clear, practical information for users and app store review.",
+    "sections": {
+      "overview": "Overview",
+      "dataWeCollect": "Information we collect",
+      "howWeUse": "How we use information",
+      "sharing": "Sharing & third parties",
+      "security": "Security",
+      "retention": "Data retention",
+      "children": "Children’s privacy",
+      "yourRights": "Your rights",
+      "changes": "Changes to this policy",
+      "contact": "Contact us"
+    },
+    "content": {
+      "overview": "We value your privacy. This Privacy Policy explains what data we may collect, why we collect it, and how we handle it across our website and mobile applications.",
+      "dataWeCollect": {
+        "item1": "Account and contact information you provide (such as name, email, phone) when you contact us or sign up.",
+        "item2": "Usage information (such as pages viewed and basic device/browser data) for improving performance and reliability.",
+        "item3": "Information you submit through forms, support requests, or chat features."
+      },
+      "howWeUse": {
+        "item1": "Provide and operate our services (including customer support).",
+        "item2": "Improve product experience, performance, and security.",
+        "item3": "Communicate important updates and respond to inquiries.",
+        "item4": "Comply with legal obligations and enforce our terms."
+      },
+      "sharing": "We do not sell personal data. We may share information with trusted service providers (for hosting, analytics, and support) only as needed to operate our services, and under appropriate safeguards.",
+      "security": "We use reasonable technical and organizational measures to protect data. However, no method of transmission or storage is 100% secure.",
+      "retention": "We retain information only as long as necessary for the purposes described in this policy, unless a longer retention period is required by law.",
+      "children": "Our services are not directed to children under 13. We do not knowingly collect personal data from children.",
+      "yourRights": {
+        "item1": "Request access to the personal data we have about you.",
+        "item2": "Request correction of inaccurate or incomplete data.",
+        "item3": "Request deletion of your data, where applicable.",
+        "item4": "Withdraw consent where processing is based on consent."
+      },
+      "changes": "We may update this policy from time to time. When we do, we will update the “Last updated” date on this page.",
+      "contactPrefix": "If you have any questions about this Privacy Policy, please contact us at"
+    }
+  },
   "home": {
+    "seo": {
+      "title": "NexaCore | Nexa Core - Digital Transformation Solutions",
+      "description": "NexaCore (Nexa Core) provides leading ERP, CRM, data infrastructure and cloud solutions. Digital transformation for businesses with Nexa Core - Comprehensive technology solutions for enterprises."
+    },
     "hero": {
       "title": "Transform Your Business with Intelligent Solutions",
       "subtitle": "NexaCore empowers organizations with cutting-edge technology that drives digital excellence and operational efficiency.",
       "getStarted": "Get Started",
       "learnMore": "Learn More",
       "badge": "Leading Innovation in Technology",
-      "projectsCount": "500+ Projects",
-      "clientsCount": "200+ Clients",
+      "projectsCount": "100+ Projects",
+      "clientsCount": "50+ Clients",
       "yearsExperience": "10+ Years Experience"
     },
     "about": {
@@ -44,12 +100,12 @@
       "transformation": "Transformation",
       "description": "For over a decade, NexaCore has been at the forefront of technological innovation, helping organizations navigate the complexities of digital transformation with confidence and clarity.",
       "awardWinning": "Award-Winning Solutions",
-      "awardWinningDesc": "Trusted by Fortune 500 companies worldwide",
+      "awardWinningDesc": "Trusted by Fortune 50 companies worldwide",
       "globalPresence": "Global Presence",
-      "globalPresenceDesc": "Offices in 15+ countries across 5 continents",
+      "globalPresenceDesc": "Offices in 2+ countries across 5 continents",
       "provenTrack": "Proven Track Record",
-      "provenTrackDesc": "500+ successful digital transformation projects",
-      "yearsOfExcellence": "Years of Excellence",
+      "provenTrackDesc": "1O0+ successful digital transformation projects",
+      "yearsOfExcellence": "Years of Experience",
       "clients": "Clients",
       "projects": "Projects",
       "countries": "Countries",
@@ -58,7 +114,31 @@
     "solutions": {
       "title": "Our Solutions",
       "subtitle": "Comprehensive technology solutions tailored to your business needs",
-      "viewAll": "View All Solutions"
+      "viewAll": "View All Solutions",
+      "erp": {
+        "title": "Enterprise Resource Planning",
+        "description": "Streamline your business operations with integrated ERP solutions that enhance productivity and visibility."
+      },
+      "crm": {
+        "title": "Customer Relationship Management",
+        "description": "Build stronger customer relationships with intelligent CRM systems that drive growth and satisfaction."
+      },
+      "ai": {
+        "title": "AI & Machine Learning",
+        "description": "Leverage AI and machine learning to unlock insights, automate processes, and make data-driven decisions."
+      },
+      "cloud": {
+        "title": "Cloud Infrastructure",
+        "description": "Modernize your IT infrastructure with scalable, secure, and cost-effective cloud solutions."
+      },
+      "iot": {
+        "title": "Internet of Things",
+        "description": "Connect devices and systems to create intelligent ecosystems that drive operational efficiency."
+      },
+      "security": {
+        "title": "Cybersecurity Solutions",
+        "description": "Protect your digital assets with comprehensive security solutions and risk management strategies."
+      }
     },
     "projects": {
       "title": "Featured Projects",
@@ -66,7 +146,40 @@
       "projectsDelivered": "Projects Delivered",
       "clientSatisfaction": "Client Satisfaction",
       "countriesWorldwide": "Countries Worldwide",
-      "viewAll": "View All Projects"
+      "viewAll": "View All Projects",
+      "goToSlide": "Go to slide {{number}}",
+      "items": {
+        "1": {
+          "title": "Retail ERP Implementation for Supermarket Chain",
+          "client": "National Retail Group",
+          "industry": "Retail",
+          "description": "Comprehensive Retail ERP system deployment for supermarket chain with over 200 points of sale, integrating multi-channel management and optimizing customer experience."
+        },
+        "2": {
+          "title": "Manufacturing ERP Deployment for Textile Factory",
+          "client": "Leading Textile Company",
+          "industry": "Manufacturing",
+          "description": "Intelligent Manufacturing ERP system deployment with deep integration from planning to quality control, WIP/FG production management and Barcode system."
+        },
+        "3": {
+          "title": "Budget Management System for Corporation",
+          "client": "Multi-industry Corporation",
+          "industry": "Finance",
+          "description": "Comprehensive Budget Management solution deployment with real-time spending control and detailed variance analysis reporting."
+        },
+        "7": {
+          "title": "DMS Deployment for FMCG Company",
+          "client": "Consumer Goods Company",
+          "industry": "FMCG",
+          "description": "Distribution Management System (DMS) deployment comprehensively digitizing sales processes and distribution channel management, optimizing field operation efficiency."
+        },
+        "8": {
+          "title": "E-commerce Platform Deployment for Fashion Brand",
+          "client": "International Fashion Brand",
+          "industry": "Fashion",
+          "description": "Powerful E-commerce platform deployment with deep ERP & CRM integration, supporting multi-language, multi-currency and performance optimization."
+        }
+      }
     },
     "clients": {
       "title": "Trusted by Industry Leaders",
@@ -87,8 +200,8 @@
     },
     "intro": {
       "title": "Leading the Future of Technology",
-      "description1": "NexaCore is a global technology leader specializing in digital transformation solutions. We combine deep industry expertise with cutting-edge technology to help organizations navigate the complexities of the digital age.",
-      "description2": "With offices in 15+ countries and a team of 2,000+ professionals, we've delivered over 500 successful projects for clients ranging from Fortune 500 companies to innovative startups."
+      "description1": "NexaCore is a global technology leader specializing in digital transformation solutions. We combine deep industry expertise with cutting-edge technology to help organizations navigate the complexities of the digital age."
+     
     },
     "visionMission": {
       "title": "Our Vision, Mission & Values",
@@ -119,7 +232,7 @@
       "subtitle": "Meet the visionaries leading NexaCore's global operations"
     },
     "stats": {
-      "yearsOfExcellence": "Years of Excellence",
+      "yearsOfExcellence": "Years of Experience",
       "globalClients": "Global Clients",
       "teamMembers": "Team Members",
       "countries": "Countries"
@@ -160,6 +273,7 @@
       "title": "Contact Information",
       "description": "Reach out to us through any of these channels",
       "headquarters": "Headquarters",
+      "address": "Trung My Tay Ward, Ho Chi Minh City, Vietnam",
       "phone": "Phone",
       "email": "Email",
       "businessHours": "Business Hours",
@@ -190,7 +304,235 @@
     "title": "Innovative Software Solutions",
     "subtitle": "Powerful products designed to accelerate your digital transformation",
     "learnMore": "Learn More",
-    "more": "more"
+    "more": "more",
+    "items": {
+      "1": {
+        "title": "Retail ERP",
+        "description": "Specialized ERP solution helping retail businesses efficiently manage multi-channel operations and optimize customer experience.",
+        "category": "Enterprise Resource Planning (ERP) Systems",
+        "features": [
+          "Multi-Channel Management (Omnichannel)",
+          "Inventory & Supply Optimization",
+          "Promotion & Customer Management"
+        ],
+        "benefits": [
+          "Synchronize inventory, pricing, and orders across all sales points (stores, online, social media).",
+          "Accurate demand forecasting, detailed inventory management by location, batch, expiry date, minimizing storage costs and stockout risks.",
+          "Integrated mini CRM, effectively set up and track complex promotion programs, enhance customer retention and lifetime value (CLV)."
+        ]
+      },
+      "2": {
+        "title": "Manufacturing ERP",
+        "description": "Intelligent manufacturing execution system with deep integration from planning to actual quality control on the factory floor.",
+        "category": "Enterprise Resource Planning (ERP) Systems",
+        "features": [
+          "Advanced Production Planning",
+          "Industrial Engineering Development (IED Tool)",
+          "Quality Control (Inspection Tool)",
+          "WIP/FG Output Recording",
+          "Barcode System"
+        ],
+        "benefits": [
+          "Master Production Schedule (MPS) tool, order allocation, material synchronization. Automatically integrate plans between departments (Spinning, Knitting, Sewing), ensuring optimal capacity and meeting critical path.",
+          "Build and store Standard Time Allowance (SMV/SAM/SAH) library detailed by style. Directly integrate with costing, salary/bonus systems, ensuring accurate production cost calculation.",
+          "Defect entry via touch screen. Automatically evaluate fabric quality (Fabric Gradation) based on defect count, supporting selection of suitable fabric rolls for the most effective cutting plan (Marker & Cutting Plan).",
+          "Real-time output recording via touch devices, automatically synchronize warehouse documents (GRN Output/Pick List) with ERP, eliminating manual data entry and reducing data management costs.",
+          "Encode product information with barcodes, enabling quick retrieval and tracking of Work-in-Progress (WIP) or Finished Goods (FG) inventory, improving inventory accuracy and minimizing errors."
+        ]
+      },
+      "3": {
+        "title": "Budget Management",
+        "description": "Proactive financial control solution helping businesses maintain discipline and efficiency in all spending activities.",
+        "category": "Specialized Solutions",
+        "features": [
+          "Budget Planning & Allocation",
+          "Real-time Spending Control",
+          "Variance Analysis & Reporting"
+        ],
+        "benefits": [
+          "Support overall budget building, detailed by department, project, or cost center.",
+          "Automate approval processes, reconcile with approved budgets to prevent overspending from the start.",
+          "Provide in-depth reports comparing actual budgets with forecasts, supporting investment decisions and accurate resource allocation."
+        ]
+      },
+      "4": {
+        "title": "Customer Relationship Management (CRM)",
+        "description": "System helping build a 360-degree view of customers, optimize sales processes and enhance service quality.",
+        "category": "Specialized Solutions",
+        "features": [
+          "Complete Customer Journey Management",
+          "Sales Process Automation",
+          "Enhanced Customer Service"
+        ],
+        "benefits": [
+          "Track all interactions from Marketing, Sales to Service.",
+          "Standardize and automate steps in the sales process, helping Sales teams focus on closing deals.",
+          "Manage, categorize and prioritize resolution of requests/complaints (tickets), ensuring fast response speed and consistent service quality."
+        ]
+      },
+      "5": {
+        "title": "Data Warehouse",
+        "description": "Strategic centralized data platform, transforming raw information into deep business intelligence.",
+        "category": "Data Infrastructure & Storage",
+        "features": [
+          "Multi-source Data Integration",
+          "Strategic Decision Support",
+          "High Performance Analytics"
+        ],
+        "benefits": [
+          "Collect, clean and consolidate data from ERP, CRM, and other systems into a single, centralized warehouse.",
+          "Provide clean, structured data platform to serve Business Intelligence (BI) tools and predictive analytics.",
+          "Optimized for complex queries and large reports, ensuring fast analysis speed."
+        ]
+      },
+      "6": {
+        "title": "Cloud Storage Private",
+        "description": "Independent cloud storage solution prioritizing security and data control capabilities.",
+        "category": "Data Infrastructure & Storage",
+        "features": [
+          "Maximum Security & Full Control",
+          "Flexible Scalability",
+          "Availability & Redundancy Assurance"
+        ],
+        "benefits": [
+          "Provide independent storage environment, ensuring compliance with strict data security regulations.",
+          "Easily expand capacity and resources according to growth needs without large investment in physical hardware.",
+          "Data backed up and redundant across multiple regions, ensuring business continuity."
+        ]
+      },
+      "7": {
+        "title": "Distribution Management System (DMS)",
+        "description": "Comprehensive digitalization solution for sales processes and distribution channel management, optimizing field operation efficiency for consumer goods/manufacturing industries.",
+        "category": "Data Infrastructure & Storage",
+        "features": [
+          "Field Force Management",
+          "Distribution Channel & Sales Route Management",
+          "Channel Inventory Tracking (Secondary Sales)"
+        ],
+        "benefits": [
+          "Monitor activities, sales routes and order performance of field sales reps (Sales Reps) via mobile app.",
+          "Track market coverage, evaluate performance of each Distributor (NPP) and optimize customer visit routes.",
+          "Update inventory, display status, and orders at point of sale/NPP in real-time, reducing stockout risks and dead inventory."
+        ]
+      },
+      "8": {
+        "title": "E-commerce Platform",
+        "description": "Powerful e-commerce platform designed to seamlessly integrate with enterprise core systems.",
+        "category": "Data Infrastructure & Storage",
+        "features": [
+          "Deep Integration with ERP & CRM",
+          "Highly Customizable Platform",
+          "Performance Optimization & Growth"
+        ],
+        "benefits": [
+          "Orders, inventory, customer information automatically synchronized, eliminating errors and ensuring accurate sales data.",
+          "Allow building unique interfaces and user experiences, meeting complex B2B/B2C business models.",
+          "Support multi-language, multi-currency, integrate marketing tools (SEO, links), helping businesses expand markets and grow online revenue."
+        ]
+      },
+      "9": {
+        "title": "Software Development Outsourcing Service",
+        "description": "Provide professional IT personnel to develop software for businesses, helping you focus on core business operations.",
+        "category": "Outsourcing Services",
+        "features": [
+          "Professional Personnel Team",
+          "Flexible According to Needs",
+          "Standard Development Process",
+          "Security & Information Protection"
+        ],
+        "benefits": [
+          "Provide experienced programmers and software engineers with diverse skills (Front-end, Back-end, Full-stack, Mobile, DevOps) to participate in business software development projects.",
+          "Flexible in adjusting personnel scale according to each project phase, from initial development to maintenance and upgrades, helping optimize costs and efficiency.",
+          "Apply professional software development processes (Agile, Scrum, DevOps), ensuring code quality, project progress and future scalability.",
+          "Ensure information and data security of businesses through NDA agreements, safe work processes and compliance with international security standards."
+        ]
+      },
+      "10": {
+        "title": "IT Hardware Service",
+        "description": "Comprehensive IT hardware supply and management for businesses, ensuring stable and efficient technology infrastructure.",
+        "category": "IT Services",
+        "features": [
+          "Infrastructure Consulting & Design",
+          "Quality Equipment Supply",
+          "Installation & Configuration",
+          "Warranty & Maintenance"
+        ],
+        "benefits": [
+          "Consult and design hardware infrastructure suitable for business needs and budget, ensuring scalability and investment efficiency.",
+          "Provide high-quality hardware equipment from reputable manufacturers (servers, workstations, storage, networking equipment) at competitive prices.",
+          "Perform professional installation and configuration, ensuring system stability from the start and optimal performance.",
+          "Provide warranty, periodic maintenance and 24/7 technical support, helping businesses maintain continuous operations and minimize downtime."
+        ]
+      },
+      "11": {
+        "title": "IT Network Service",
+        "description": "Design, deploy and manage enterprise network systems, ensuring stable, secure and high-performance connectivity.",
+        "category": "IT Services",
+        "features": [
+          "Enterprise Network Design",
+          "Network Infrastructure Deployment",
+          "Management & Monitoring",
+          "Performance Optimization"
+        ],
+        "benefits": [
+          "Design network architecture suitable for business scale and requirements, including LAN, WAN, WiFi, and remote connection solutions.",
+          "Deploy and configure network devices (routers, switches, firewalls, access points) according to industry standards, ensuring stability and security.",
+          "Establish centralized network monitoring and management system, track performance, detect issues early and support quick resolution.",
+          "Optimize bandwidth, QoS (Quality of Service), and network configurations to ensure maximum performance for critical business applications."
+        ]
+      },
+      "12": {
+        "title": "IT Helpdesk Service",
+        "description": "Professional IT technical support service, quickly resolving technical issues and ensuring users can work efficiently.",
+        "category": "IT Services",
+        "features": [
+          "24/7 Technical Support",
+          "System Ticket Management",
+          "Multi-channel Support",
+          "Reporting & Analytics"
+        ],
+        "benefits": [
+          "Provide 24/7 technical support through multiple channels (phone, email, chat, remote desktop), ensuring quick response and timely problem resolution.",
+          "Manage and track support requests through professional ticket system, ensuring nothing is missed and tracking resolution progress.",
+          "Support diverse issues from hardware, software, network, email, to enterprise applications, helping users focus on main work.",
+          "Provide periodic reports on support status, response time, resolution rate and trend analysis to continuously improve services."
+        ]
+      },
+      "13": {
+        "title": "Cyber Security Service",
+        "description": "Consult, design, deploy and operate comprehensive network security solutions, protecting businesses from cybersecurity threats.",
+        "category": "IT Services",
+        "features": [
+          "Security Consulting",
+          "Solution Design",
+          "System Deployment",
+          "Operations & Monitoring"
+        ],
+        "benefits": [
+          "Assess and consult on current security status of businesses, identify vulnerabilities and risks, propose suitable security solutions.",
+          "Design comprehensive security architecture including firewall, IDS/IPS, endpoint protection, email security, and other security solutions as needed.",
+          "Deploy and configure professional security solutions, ensuring seamless integration with existing infrastructure and no impact on business operations.",
+          "Operate and monitor security systems 24/7, detect and respond to threats, periodic security updates and ensure compliance with security standards."
+        ]
+      },
+      "14": {
+        "title": "DevOps & Cloud Service",
+        "description": "Consult, design, deploy and operate modern cloud solutions, helping businesses leverage the power of cloud computing and DevOps.",
+        "category": "IT Services",
+        "features": [
+          "Cloud Strategy Consulting",
+          "Cloud Architecture Design",
+          "Deployment & Migration",
+          "Operations & Optimization"
+        ],
+        "benefits": [
+          "Consult cloud transformation strategy suitable for businesses, select appropriate cloud models (Public, Private, Hybrid) and providers (AWS, Azure, GCP).",
+          "Design optimal cloud architecture, ensuring availability, scalability, security and cost efficiency, suitable for specific business requirements.",
+          "Safely migrate applications and data to cloud, set up CI/CD pipeline, containerization (Docker, Kubernetes) and DevOps tools.",
+          "Continuously operate and optimize cloud environment, monitor performance, manage costs, ensure security and update latest cloud services to maximize investment value."
+        ]
+      }
+    }
   },
   "projects": {
     "hero": {
@@ -211,6 +553,53 @@
       "happyClients": "Happy clients",
       "awardsWon": "Awards Won",
       "industryRecognition": "Industry recognition"
+    },
+    "items": {
+      "1": {
+        "title": "Retail ERP Implementation for Supermarket Chain",
+        "client": "National Retail Group",
+        "industry": "Retail",
+        "description": "Comprehensive Retail ERP system deployment for supermarket chain with over 200 points of sale, integrating multi-channel management and optimizing customer experience.",
+        "solution": "Retail ERP, Cloud Infrastructure",
+        "result": "100% multi-channel data synchronization, 35% reduction in inventory costs, 50% increase in promotion management efficiency",
+        "content": "<p>National Retail Group is one of Vietnam's largest supermarket chains with over 200 points of sale nationwide. Managing multi-channel operations and synchronizing data between sales points is a major challenge they face.</p><h2>Initial Challenges</h2><p>Before implementing ERP, the Group faced many difficulties: inventory data was not synchronized between sales points, high inventory costs, and difficulties in managing multi-channel promotions. The old system could not meet the development needs at large scale.</p><h2>Solution Deployment</h2><p>NexaCore deployed a comprehensive Retail ERP solution, integrating all sales points, online systems and social media sales channels into a unified platform. The system was deployed in phases to ensure no disruption to business operations.</p><h2>Outstanding Features</h2><p>NexaCore's Retail ERP system integrates advanced features such as real-time inventory management, multi-channel data synchronization, and 360-degree customer management. With AI and Machine Learning technology, the system can forecast demand, optimize pricing and suggest effective promotion strategies.</p><h2>Impressive Results</h2><p>After 6 months of deployment, the Group achieved impressive results: 100% multi-channel data synchronization, 35% reduction in inventory costs, and 50% increase in promotion management efficiency. The system helped the Group optimize operations and significantly enhance customer experience.</p>"
+      },
+      "2": {
+        "title": "Manufacturing ERP Deployment for Textile Factory",
+        "client": "Leading Textile Company",
+        "industry": "Manufacturing",
+        "description": "Intelligent Manufacturing ERP system deployment with deep integration from planning to quality control, WIP/FG production management and Barcode system.",
+        "solution": "Manufacturing ERP, Manufacturing",
+        "result": "40% production capacity optimization, 30% reduction in material waste, 25% increase in inventory accuracy",
+        "content": "<p>Leading Textile Company is one of Vietnam's largest textile manufacturers with complex production processes from spinning, knitting to sewing. Managing and optimizing production processes is a major challenge.</p><h2>Production Challenges</h2><p>Before implementing ERP, the factory faced many difficulties: high raw material waste, suboptimal production capacity, and difficulties in quality control. The old system could not meet the requirements for detailed management across each production stage.</p><h2>Manufacturing ERP Solution</h2><p>NexaCore deployed a Manufacturing ERP solution with IED Tool and Inspection Tool technology, helping the factory optimize processes from planning to quality control. The system features deep integration with factory floor equipment and detailed management of WIP/FG output.</p><h2>IED Tool and Inspection Tool Technology</h2><p>The system integrates the IED (Industrial Engineering Data) tool to help build and manage a standard time library (SMV/SAM/SAH) detailed by design. The Inspection Tool allows error data entry via touch screen and automatically assesses fabric quality based on the number of defects.</p><h2>Results Exceeded Expectations</h2><p>After deployment, the factory achieved impressive results: 40% production capacity optimization, 30% reduction in raw material waste, and 25% increase in inventory accuracy. The system helped the factory enhance its competitiveness and meet international standards.</p>"
+      },
+      "3": {
+        "title": "Budget Management System for Corporation",
+        "client": "Multi-industry Corporation",
+        "industry": "Finance",
+        "description": "Comprehensive Budget Management solution deployment with real-time spending control and detailed variance analysis reporting.",
+        "solution": "Budget Management, Financial Management",
+        "result": "45% reduction in overspending, 60% increase in forecast accuracy, 50% improvement in approval speed",
+        "content": "<p>Multi-industry Corporation with many subsidiaries and different departments needs a centralized and efficient budget management system. Controlling spending and budget allocation is a major challenge.</p><h2>Budget Management Issues</h2><p>Before deployment, the Corporation faced many difficulties: frequent overspending, low forecast accuracy, and slow approval processes. The old system could not meet the centralized management requirements for many subsidiaries.</p><h2>Budget Management Solution</h2><p>NexaCore deployed a comprehensive Budget Management solution, allowing the Corporation to control spending in real-time and allocate budgets effectively. The system automates approval processes and alerts when there is a risk of overspending.</p><h2>Real-time Spending Control</h2><p>The system automates approval processes, reconciles with approved budgets to prevent overspending from the start. All transactions are tracked and alerted immediately when there is a risk of exceeding budget.</p><h2>Variance Analysis and Reporting</h2><p>The solution provides in-depth reports comparing actual budgets with forecasts, supporting investment decisions and accurate resource allocation. Visual dashboards help leaders quickly grasp the financial situation.</p><h2>Successful Results</h2><p>After deployment, the Corporation achieved impressive results: 45% reduction in overspending, 60% increase in forecast accuracy, and 50% improvement in approval speed. The system helped the Corporation maintain financial discipline and optimize resource utilization efficiency.</p>"
+      },
+      "7": {
+        "title": "DMS Deployment for FMCG Company",
+        "client": "Consumer Goods Company",
+        "industry": "FMCG",
+        "description": "Comprehensive Distribution Management System (DMS) deployment, digitizing sales processes and distribution channel management, optimizing field operation efficiency.",
+        "solution": "DMS, Distribution Management",
+        "result": "45% increase in market coverage, 35% reduction in dead inventory, 50% improvement in sales team performance",
+        "content": "<p>Consumer Goods Company is one of Vietnam's largest FMCG manufacturers with a wide distribution network. Managing distribution channels and sales teams is a major challenge.</p><h2>Distribution Management Challenges</h2><p>Before deploying DMS, the Company faced many difficulties: low market coverage, high dead inventory, and difficulties in managing sales teams. The old system could not meet real-time management requirements for thousands of sales points.</p><h2>DMS Deployment</h2><p>NexaCore deployed a comprehensive DMS system, helping the Company manage sales force, track channel inventory and optimize operational efficiency. The system is integrated with mobile applications for sales teams.</p><h2>Sales Force Management</h2><p>DMS helps monitor activities, sales routes and order performance of field sales reps (Sales Reps) via mobile app. The system tracks GPS location, customer visit time and sales results, helping optimize work efficiency.</p><h2>Channel Inventory Tracking</h2><p>The system updates inventory, display status, and orders at point of sale/NPP in real-time, reducing stockout risks and dead inventory. Data is automatically synchronized with the central ERP system.</p><h2>Outstanding Results</h2><p>After deployment, the Company achieved outstanding results: 45% increase in market coverage, 35% reduction in dead inventory, and 50% improvement in sales team performance. The system helped the Company optimize distribution processes and enhance business efficiency.</p>"
+      },
+      "8": {
+        "title": "E-commerce Platform Deployment for Fashion Brand",
+        "client": "International Fashion Brand",
+        "industry": "Fashion",
+        "description": "Powerful E-commerce platform deployment with deep ERP & CRM integration, supporting multi-language, multi-currency and performance optimization.",
+        "solution": "E-commerce Platform, Digital Commerce",
+        "result": "120% increase in online revenue, 40% reduction in order processing time, 65% improvement in user experience",
+        "content": "<p>International Fashion Brand is one of the world's famous fashion brands with global presence. Developing online sales channels is a top priority to expand markets.</p><h2>E-commerce Development Needs</h2><p>Before deploying the E-commerce platform, the Brand faced many difficulties: low online revenue, poor user experience, and difficulties in managing multi-channel orders. The old system could not meet development requirements.</p><h2>E-commerce Platform Deployment</h2><p>NexaCore deployed a powerful E-commerce platform, deeply integrated with ERP & CRM, supporting multi-language, multi-currency and performance optimization. The system is customized to fit the Brand's business model.</p><h2>Deep Integration with ERP & CRM</h2><p>Orders, inventory, customer information are automatically synchronized, eliminating errors and ensuring accurate sales data. The system automatically updates inventory when new orders arrive and synchronizes customer information with CRM.</p><h2>Highly Customizable Platform</h2><p>Allows building unique interfaces and user experiences, meeting complex B2B/B2C business models. The system supports multi-language, multi-currency, and integrates marketing tools (SEO, links).</p><h2>Spectacular Results</h2><p>After deployment, the Brand achieved spectacular results: 120% increase in online revenue, 40% reduction in order processing time, and 65% improvement in user experience. The system helped the Brand expand markets and significantly grow online revenue.</p>"
+      }
     }
   },
   "news": {
@@ -234,6 +623,134 @@
       "title": "Stay Updated",
       "description": "Subscribe to our newsletter and never miss the latest news, insights, and updates",
       "subscribeNow": "Subscribe Now"
+    },
+    "items": {
+      "1": {
+        "title": "NexaCore Launches Effective Retail ERP Solution for Businesses",
+        "excerpt": "NexaCore's new Retail ERP solution helps businesses manage multi-channel operations efficiently, optimize inventory and enhance customer experience.",
+        "category": "Product News",
+        "author": "NexaCore Team",
+        "content": "<p>NexaCore proudly introduces the latest Retail ERP solution, specially designed to meet the complex management needs of modern retail businesses. This solution provides comprehensive multi-channel management capabilities, from traditional stores to e-commerce and social media sales channels.</p><h2>Outstanding Features</h2><p>NexaCore's Retail ERP system integrates advanced features such as real-time inventory management, multi-channel data synchronization, and 360-degree customer management. With AI and Machine Learning technology, the system can forecast demand, optimize pricing and suggest effective promotion strategies.</p><h2>Benefits for Businesses</h2><p>Businesses using this solution have recorded significant improvements: 35% reduction in inventory costs, 50% increase in promotion management efficiency, and 40% improvement in customer experience. The system helps automate processes from order to delivery, minimizing errors and speeding up order processing.</p><h2>Future of Retail</h2><p>With the increasing trend of digitalization, NexaCore's Retail ERP solution will be a solid platform helping businesses develop sustainably and compete effectively in the modern market.</p>"
+      },
+      "2": {
+        "title": "Smart Manufacturing ERP: Comprehensive Solution for Textile Industry",
+        "excerpt": "Manufacturing ERP system with IED Tool and Inspection Tool technology helps textile factories optimize production processes and quality control.",
+        "category": "Technology",
+        "author": "NexaCore Team",
+        "content": "<p>Vietnam's textile industry is facing many challenges in managing complex production, from production planning to quality control. NexaCore's smart Manufacturing ERP solution is specially developed to solve these problems.</p><h2>IED Tool and Inspection Tool Technology</h2><p>The system integrates the IED (Industrial Engineering Data) tool to help build and manage a standard time library (SMV/SAM/SAH) detailed by design. The Inspection Tool allows error data entry via touch screen and automatically assesses fabric quality based on the number of defects.</p><h2>Real Results</h2><p>Textile factories that have deployed this solution recorded impressive improvements: 40% production capacity optimization, 30% reduction in raw material waste, and 25% increase in inventory accuracy. The system helps automate processes from planning to quality control.</p><h2>Future of Textile Industry</h2><p>With the support of smart ERP technology, textile factories can enhance competitiveness, meet international standards and develop sustainably in the global market.</p>"
+      },
+      "3": {
+        "title": "Professional Budget Management: Key to Business Success",
+        "excerpt": "Budget Management solution helps businesses control spending in real-time, prevent overspending and optimize resource allocation.",
+        "category": "Product News",
+        "author": "NexaCore Team",
+        "content": "<p>Effective budget management is a key factor determining the success of every business. NexaCore's Budget Management solution provides comprehensive tools for businesses to control finances proactively and accurately.</p><h2>Real-time Spending Control</h2><p>The system automates approval processes, reconciles with approved budgets to prevent overspending from the start. All transactions are tracked and alerted immediately when there is a risk of exceeding budget.</p><h2>Variance Analysis and Reporting</h2><p>The solution provides in-depth reports comparing actual budgets with forecasts, supporting investment decisions and accurate resource allocation. Visual dashboards help leaders quickly grasp the financial situation.</p><h2>Real Results</h2><p>Businesses using this solution have reduced overspending by 45%, increased forecast accuracy by 60%, and improved approval speed by 50%. The system helps businesses maintain financial discipline and optimize resource utilization efficiency.</p>"
+      },
+      "4": {
+        "title": "360-Degree CRM: Comprehensive Customer Management Solution",
+        "excerpt": "NexaCore's new CRM system provides a 360-degree view of customers, automates sales processes and enhances service quality.",
+        "category": "Product News",
+        "author": "NexaCore Team",
+        "content": "<p>In the digital age, understanding customers is a key success factor. NexaCore's 360-degree CRM system provides a comprehensive view of all customer interactions, from marketing to sales and service.</p><h2>360-Degree Customer View</h2><p>The system integrates data from all customer touchpoints, creating a complete and detailed customer profile. From purchase history, social media interactions, to support requests, everything is recorded and analyzed.</p><h2>Sales Process Automation</h2><p>360-degree CRM automates steps in the sales process, from lead generation to closing deals. The system suggests next actions based on customer behavior and preferences, helping sales teams focus on closing deals.</p><h2>Enhanced Service Quality</h2><p>The system manages, categorizes and prioritizes resolution of requests/complaints (tickets), ensuring fast response speed and consistent service quality. All customer interactions are tracked and evaluated.</p>"
+      },
+      "5": {
+        "title": "Data Warehouse: Digital Transformation Trend 2024",
+        "excerpt": "Centralized data warehouses are becoming an important platform for businesses wanting to leverage the power of Business Intelligence and data analytics.",
+        "category": "Technology",
+        "author": "NexaCore Team",
+        "content": "<p>In the digital era, data has become the most valuable asset of businesses. Data Warehouse is becoming a strategic platform helping businesses transform raw data into deep business intelligence.</p><h2>Importance of Data Warehouse</h2><p>Data Warehouse centralizes data from various sources (ERP, CRM, sales systems, etc.) into a single warehouse, organized and cleaned for analysis. This helps businesses have a comprehensive view of business operations.</p><h2>Business Intelligence and Data Analytics</h2><p>With Data Warehouse, businesses can deploy Business Intelligence (BI) tools to analyze trends, forecast the future and make data-driven decisions. The system is optimized for complex queries and large reports, ensuring fast analysis speed.</p><h2>2024 Trends</h2><p>2024 sees strong development of Data Warehouse with AI and Machine Learning integration, enabling more accurate predictive analytics and automated decision-making processes. Businesses investing in Data Warehouse will have significant competitive advantages.</p>"
+      },
+      "6": {
+        "title": "Cloud Storage Private: Maximum Security for Sensitive Data",
+        "excerpt": "NexaCore's private cloud storage solution ensures maximum security, compliance with strict regulations and high availability.",
+        "category": "Technology",
+        "author": "NexaCore Team",
+        "content": "<p>With the increase in security threats and increasingly strict compliance requirements, Cloud Storage Private is becoming the top choice for organizations handling sensitive data.</p><h2>Maximum Security</h2><p>NexaCore's Cloud Storage Private provides an independent storage environment, ensuring compliance with strict data security regulations such as GDPR, PCI-DSS. Data is encrypted end-to-end and can only be accessed by authorized parties.</p><h2>Flexible Scalability</h2><p>The solution allows businesses to easily expand capacity and resources according to growth needs without large investment in physical hardware. The system automatically adjusts to meet actual needs.</p><h2>Availability Assurance</h2><p>Data is backed up and redundant across multiple regions, ensuring business continuity with 99.99% uptime. The system automatically detects and resolves issues, ensuring data is always available when needed.</p>"
+      },
+      "7": {
+        "title": "DMS: Comprehensive Distribution Channel Digitization",
+        "excerpt": "Distribution Management System (DMS) helps FMCG businesses manage sales force, track channel inventory and optimize operational efficiency.",
+        "category": "Product News",
+        "author": "NexaCore Team",
+        "content": "<p>The fast-moving consumer goods (FMCG) industry is facing the challenge of managing complex distribution channels with thousands of sales points and large sales teams. NexaCore's DMS (Distribution Management System) solves these challenges comprehensively.</p><h2>Sales Force Management</h2><p>DMS helps monitor activities, sales routes and order performance of field sales reps (Sales Reps) via mobile app. The system tracks GPS location, customer visit time and sales results, helping optimize work efficiency.</p><h2>Channel Inventory Tracking</h2><p>The system updates inventory, display status, and orders at point of sale/NPP in real-time, reducing stockout risks and dead inventory. Data is automatically synchronized with the central ERP system.</p><h2>Real Results</h2><p>FMCG businesses using DMS have recorded significant improvements: 45% increase in market coverage, 35% reduction in dead inventory, and 50% improvement in sales team performance. The system helps optimize processes from order to delivery.</p>"
+      },
+      "8": {
+        "title": "E-commerce Platform: Online Revenue Growth",
+        "excerpt": "E-commerce solution deeply integrated with ERP & CRM, supporting multi-language, multi-currency and performance optimization for businesses.",
+        "category": "Product News",
+        "author": "NexaCore Team",
+        "content": "<p>E-commerce is becoming the most important sales channel in the digital age. NexaCore's E-commerce platform is designed to seamlessly integrate with enterprise core systems, creating an excellent shopping experience for customers.</p><h2>Deep Integration with ERP & CRM</h2><p>Orders, inventory, customer information are automatically synchronized, eliminating errors and ensuring accurate sales data. The system automatically updates inventory when new orders arrive and synchronizes customer information with CRM.</p><h2>Highly Customizable Platform</h2><p>Allows building unique interfaces and user experiences, meeting complex B2B/B2C business models. The system supports multi-language, multi-currency, and integrates marketing tools (SEO, links).</p><h2>Revenue Growth</h2><p>Businesses using this platform have recorded significant online revenue growth, with the ability to expand markets and reach global customers. The system optimizes performance and page load speed, improving user experience.</p>"
+      },
+      "9": {
+        "title": "Successful ERP Deployment for Leading Supermarket Chain",
+        "excerpt": "Retail ERP deployment project for National Retail Group achieved impressive results: 100% multi-channel data synchronization and 35% reduction in inventory costs.",
+        "category": "Case Study",
+        "author": "NexaCore Team",
+        "content": "<p>National Retail Group is one of Vietnam's largest supermarket chains with over 200 points of sale nationwide. Managing multi-channel operations and synchronizing data between sales points is a major challenge they face.</p><h2>Initial Challenges</h2><p>Before implementing ERP, the Group faced many difficulties: inventory data was not synchronized between sales points, high inventory costs, and difficulties in managing multi-channel promotions. The old system could not meet development needs.</p><h2>Solution Deployment</h2><p>NexaCore deployed a comprehensive Retail ERP solution, integrating all sales points, online systems and social media sales channels into a unified platform. The system was deployed in phases to ensure no disruption to business operations.</p><h2>Impressive Results</h2><p>After 6 months of deployment, the Group achieved impressive results: 100% multi-channel data synchronization, 35% reduction in inventory costs, and 50% increase in promotion management efficiency. The system helped the Group optimize operations and enhance customer experience.</p>"
+      },
+      "10": {
+        "title": "Manufacturing ERP Helps Textile Factory Optimize Efficiency",
+        "excerpt": "Leading Textile Company successfully deployed Manufacturing ERP, optimizing 40% production capacity and reducing 30% material waste.",
+        "category": "Case Study",
+        "author": "NexaCore Team",
+        "content": "<p>Leading Textile Company is one of Vietnam's largest textile manufacturers with complex production processes from spinning, knitting to sewing. Managing and optimizing production processes is a major challenge.</p><h2>Production Challenges</h2><p>Before implementing ERP, the factory faced many difficulties: high raw material waste, suboptimal production capacity, and difficulties in quality control. The old system could not meet detailed management requirements.</p><h2>Manufacturing ERP Solution</h2><p>NexaCore deployed a Manufacturing ERP solution with IED Tool and Inspection Tool technology, helping the factory optimize processes from planning to quality control. The system features deep integration with factory floor equipment.</p><h2>Results Exceeded Expectations</h2><p>After deployment, the factory achieved impressive results: 40% production capacity optimization, 30% reduction in raw material waste, and 25% increase in inventory accuracy. The system helped the factory enhance its competitiveness and meet international standards.</p>"
+      },
+      "11": {
+        "title": "Budget Management: Solution for Multi-industry Corporation",
+        "excerpt": "Budget Management system helps Multi-industry Corporation reduce 45% overspending and increase 60% forecast accuracy.",
+        "category": "Case Study",
+        "author": "NexaCore Team",
+        "content": "<p>Multi-industry Corporation with many subsidiaries and different departments needs a centralized and efficient budget management system. Controlling spending and budget allocation is a major challenge.</p><h2>Budget Management Issues</h2><p>Before deployment, the Corporation faced many difficulties: frequent overspending, low forecast accuracy, and slow approval processes. The old system could not meet centralized management requirements.</p><h2>Budget Management Solution</h2><p>NexaCore deployed a comprehensive Budget Management solution, allowing the Corporation to control spending in real-time and allocate budgets effectively. The system automates approval processes and alerts when there is a risk of overspending.</p><h2>Successful Results</h2><p>After deployment, the Corporation achieved impressive results: 45% reduction in overspending, 60% increase in forecast accuracy, and 50% improvement in approval speed. The system helped the Corporation maintain financial discipline and optimize resource utilization efficiency.</p>"
+      },
+      "12": {
+        "title": "Bank Digital Transformation: Successful Data Warehouse Construction",
+        "excerpt": "Commercial Bank successfully built Data Warehouse platform, increasing 70% data analysis speed and improving 80% forecast accuracy.",
+        "category": "Case Study",
+        "author": "NexaCore Team",
+        "content": "<p>Commercial Bank is one of Vietnam's largest banks with massive data volumes from various systems. Analyzing data and making data-driven decisions is a major challenge.</p><h2>Data Analysis Challenges</h2><p>Before building Data Warehouse, the Bank faced many difficulties: data scattered across multiple systems, slow analysis speed, and low forecast accuracy. Data-driven decision making was not effective.</p><h2>Building Data Warehouse</h2><p>NexaCore built a centralized Data Warehouse platform, integrating data from all Bank systems. The system is optimized for complex queries and large data analysis.</p><h2>Impressive Results</h2><p>After deployment, the Bank achieved impressive results: 70% increase in data analysis speed, 80% improvement in forecast accuracy, and enhanced data-driven decision-making capabilities. The system helped the Bank improve service quality and optimize business operations.</p>"
+      },
+      "13": {
+        "title": "Cloud Storage Private: Solution for Government Organizations",
+        "excerpt": "Government Agency successfully deployed Cloud Storage Private, achieving 99.99% uptime and 100% compliance with data security regulations.",
+        "category": "Case Study",
+        "author": "NexaCore Team",
+        "content": "<p>Government Agency handles large amounts of sensitive data and needs a storage solution ensuring maximum security and compliance with strict regulations. Cloud Storage Private is the appropriate choice.</p><h2>Strict Security Requirements</h2><p>Government Agency has very high security requirements and needs to comply with data protection regulations. The storage solution must ensure security, availability and complete control.</p><h2>Cloud Storage Private Deployment</h2><p>NexaCore deployed Cloud Storage Private solution with an independent storage environment, ensuring compliance with data security regulations. The system is encrypted end-to-end and can only be accessed by authorized parties.</p><h2>Excellent Results</h2><p>After deployment, the Agency achieved excellent results: 99.99% uptime, 100% compliance with data security regulations, and 60% reduction in storage costs. The system helps the Agency ensure availability and security of important data.</p>"
+      },
+      "14": {
+        "title": "DMS Helps FMCG Company Increase 45% Market Coverage",
+        "excerpt": "Consumer Goods Company successfully deployed DMS, increasing 45% market coverage and reducing 35% dead inventory.",
+        "category": "Case Study",
+        "author": "NexaCore Team",
+        "content": "<p>Consumer Goods Company is one of Vietnam's largest FMCG manufacturers with a wide distribution network. Managing distribution channels and sales teams is a major challenge.</p><h2>Distribution Management Challenges</h2><p>Before deploying DMS, the Company faced many difficulties: low market coverage, high dead inventory, and difficulties in managing sales teams. The old system could not meet real-time management requirements.</p><h2>DMS Deployment</h2><p>NexaCore deployed a comprehensive DMS system, helping the Company manage sales force, track channel inventory and optimize operational efficiency. The system is integrated with mobile applications for sales teams.</p><h2>Outstanding Results</h2><p>After deployment, the Company achieved outstanding results: 45% increase in market coverage, 35% reduction in dead inventory, and 50% improvement in sales team performance. The system helps the Company optimize distribution processes and enhance business efficiency.</p>"
+      },
+      "15": {
+        "title": "E-commerce Platform: Fashion Brand Increases 120% Revenue",
+        "excerpt": "International Fashion Brand deployed E-commerce platform, increasing 120% online revenue and improving 65% user experience.",
+        "category": "Case Study",
+        "author": "NexaCore Team",
+        "content": "<p>International Fashion Brand is one of the world's famous fashion brands with global presence. Developing online sales channels is a top priority to expand markets.</p><h2>E-commerce Development Needs</h2><p>Before deploying the E-commerce platform, the Brand faced many difficulties: low online revenue, poor user experience, and difficulties in managing multi-channel orders. The old system could not meet development requirements.</p><h2>E-commerce Platform Deployment</h2><p>NexaCore deployed a powerful E-commerce platform, deeply integrated with ERP & CRM, supporting multi-language, multi-currency and performance optimization. The system is customized to fit the Brand's business model.</p><h2>Spectacular Results</h2><p>After deployment, the Brand achieved spectacular results: 120% increase in online revenue, 40% reduction in order processing time, and 65% improvement in user experience. The system helped the Brand expand markets and significantly grow online revenue.</p>"
+      },
+      "16": {
+        "title": "Technology Trends 2024: Comprehensive Digital Transformation",
+        "excerpt": "Outstanding technology trends in 2024 include smart ERP, Cloud Storage, Data Warehouse and comprehensive digitalization solutions.",
+        "category": "Technology",
+        "author": "NexaCore Team",
+        "content": "<p>2024 sees strong development of digital transformation technologies, with many new trends shaping the future of businesses. Smart ERP solutions, Cloud Storage, and Data Warehouse are becoming important platforms.</p><h2>Smart ERP with AI</h2><p>Smart ERP with AI and Machine Learning integration is becoming a major trend. The system can automate processes, forecast trends and optimize business efficiency. Businesses investing in smart ERP will have significant competitive advantages.</p><h2>Cloud Storage and Data Warehouse</h2><p>Cloud Storage and Data Warehouse are becoming strategic platforms for businesses wanting to leverage the power of data. These solutions help businesses store, analyze and make data-driven decisions effectively.</p><h2>Future of Digital Transformation</h2><p>With the development of new technologies, digital transformation will continue to be a top priority for businesses. Comprehensive digitalization solutions will help businesses enhance competitiveness and develop sustainably in the modern market.</p>"
+      },
+      "17": {
+        "title": "NexaCore Partners with New Strategic Partners",
+        "excerpt": "NexaCore announces partnership with leading technology partners to expand services and enhance solution quality for customers.",
+        "category": "Company News",
+        "author": "NexaCore Team",
+        "content": "<p>NexaCore proudly announces strategic partnerships with leading technology partners in the industry, opening a new chapter in the company's development and innovation journey.</p><h2>Strategic Partners</h2><p>Through these partnerships, NexaCore will expand service scope and enhance solution quality for customers. Partners will provide advanced technology and deep expertise to support NexaCore in developing the best solutions.</p><h2>Benefits for Customers</h2><p>NexaCore customers will benefit from improved solutions, latest technology and better services. This partnership will help NexaCore better meet customer needs and deliver greater value.</p><h2>Future Development</h2><p>With these strategic partnerships, NexaCore will continue to lead in technology innovation and provide the best solutions for customers. The company is committed to investing in development and innovation to deliver long-term value.</p>"
+      },
+      "18": {
+        "title": "Future ERP Solutions: AI and Machine Learning Integration",
+        "excerpt": "The future of ERP will deeply integrate with AI and Machine Learning to automate processes, forecast trends and optimize business efficiency.",
+        "category": "Technology",
+        "author": "NexaCore Team",
+        "content": "<p>The future of ERP is being shaped by deep integration with AI and Machine Learning. Smart ERP solutions will automate processes, forecast trends and optimize business efficiency like never before.</p><h2>AI and Machine Learning Integration</h2><p>ERP with AI and Machine Learning can automate complex processes, from production planning to inventory management. The system can learn from historical data and provide smart suggestions to optimize operations.</p><h2>Forecasting and Optimization</h2><p>With the ability to analyze big data, smart ERP can forecast market trends, customer demand and potential risks. The system automatically optimizes processes to achieve highest efficiency.</p><h2>Future of Businesses</h2><p>Businesses investing in smart ERP will have significant competitive advantages in the modern market. The system will help businesses react quickly to changes, optimize operations and develop sustainably.</p>"
+      }
     }
   },
   "careers": {
@@ -329,6 +846,172 @@
       "description": "Don't see a position that matches your skills? We're always looking for talented individuals to join our team.",
       "sendResume": "Send Us Your Resume",
       "learnMore": "Learn More About Us"
+    },
+    "seo": {
+      "title": "Careers - Join NexaCore | Nexa Core Jobs",
+      "description": "Explore exciting career opportunities at NexaCore (Nexa Core). Join our innovative team and help shape the future of digital transformation."
+    },
+    "items": {
+      "1": {
+        "title": "Senior Full Stack Developer",
+        "department": "Engineering",
+        "location": "Remote / Viet Nam",
+        "type": "Full-time",
+        "description": "We are looking for an experienced Senior Full Stack Developer to join our engineering team and build cutting-edge technology solutions. You will work with the latest technologies and have opportunities to grow your career in a dynamic, creative environment.",
+        "requirements": [
+          "5+ years of full-stack development experience",
+          "Proficient in React, Node.js, and TypeScript",
+          "Experience with cloud platforms (AWS/Azure/GCP)",
+          "Strong problem-solving skills",
+          "Excellent communication skills",
+          "Experience with databases (PostgreSQL, MongoDB)",
+          "Understanding of CI/CD and DevOps practices"
+        ],
+        "responsibilities": [
+          "Design and develop scalable web applications",
+          "Collaborate with cross-functional teams",
+          "Write clean, maintainable code",
+          "Participate in code reviews and architecture discussions",
+          "Mentor junior developers",
+          "Optimize application performance",
+          "Research and apply new technologies"
+        ],
+        "salary": "25,000,000 - 40,000,000 VNĐ/month",
+        "experienceLevel": "Senior (5+ years)",
+        "skills": [
+          "React",
+          "Node.js",
+          "TypeScript",
+          "PostgreSQL",
+          "MongoDB",
+          "AWS",
+          "Docker",
+          "Git",
+          "RESTful API",
+          "GraphQL"
+        ],
+        "benefits": [
+          "Competitive salary and regular reviews",
+          "Full insurance (Social, Health, Unemployment)",
+          "Flexible remote work",
+          "Training and skill development",
+          "Young, dynamic work environment",
+          "Project and performance bonuses"
+        ]
+      },
+      "2": {
+        "title": "AI/ML Engineer",
+        "department": "AI Research",
+        "location": "Hybrid / Viet Nam",
+        "type": "Full-time",
+        "description": "Join our AI research team to develop innovative machine learning solutions for enterprise clients. You will work on advanced AI/ML projects and have opportunities to research and develop new algorithms.",
+        "requirements": [
+          "Master's or PhD in Computer Science or related field",
+          "3+ years of experience in machine learning",
+          "Strong foundation in Python, TensorFlow/PyTorch",
+          "Experience with NLP and computer vision",
+          "Published research is an advantage",
+          "Understanding of MLOps and model deployment",
+          "Strong mathematical and statistical skills"
+        ],
+        "responsibilities": [
+          "Develop and deploy ML models",
+          "Research new AI algorithms and techniques",
+          "Collaborate with product teams",
+          "Optimize model performance",
+          "Present results to stakeholders",
+          "Build end-to-end ML pipelines",
+          "Monitor and improve models in production"
+        ],
+        "salary": "30,000,000 - 50,000,000 VNĐ/month",
+        "experienceLevel": "Mid to Senior (3+ years)",
+        "skills": [
+          "Python",
+          "TensorFlow",
+          "PyTorch",
+          "Scikit-learn",
+          "NLP",
+          "Computer Vision",
+          "MLOps",
+          "Docker",
+          "Kubernetes",
+          "Data Science"
+        ],
+        "benefits": [
+          "High salary and project bonuses",
+          "Full insurance and healthcare",
+          "Flexible hybrid work",
+          "Budget for research and learning",
+          "Participation in AI/ML conferences",
+          "Opportunities to publish research"
+        ]
+      },
+      "3": {
+        "title": "Product Manager",
+        "department": "Product",
+        "location": "Hybrid / Viet Nam",
+        "type": "Full-time",
+        "description": "Lead product strategy and execution for our enterprise software solutions. You will work with cross-functional teams to shape the future of products and ensure market success.",
+        "requirements": [
+          "5+ years of product management experience",
+          "Experience with enterprise software products",
+          "Strong analytical and strategic thinking",
+          "Excellent stakeholder management skills",
+          "Technical background preferred",
+          "Experience with Agile/Scrum",
+          "Good communication and presentation skills"
+        ],
+        "responsibilities": [
+          "Define product vision and roadmap",
+          "Gather and prioritize product requirements",
+          "Work with engineering and design teams",
+          "Analyze market trends and competitors",
+          "Drive product launches and growth",
+          "Manage backlog and sprint planning",
+          "Track product metrics and KPIs"
+        ],
+        "salary": "35,000,000 - 55,000,000 VNĐ/month",
+        "experienceLevel": "Senior (5+ years)",
+        "skills": [
+          "Product Strategy",
+          "Agile/Scrum",
+          "User Research",
+          "Data Analysis",
+          "Stakeholder Management",
+          "Roadmap Planning",
+          "A/B Testing",
+          "Product Metrics",
+          "Jira",
+          "Figma"
+        ],
+        "benefits": [
+          "High salary and performance bonuses",
+          "Full insurance and welfare fund",
+          "Flexible hybrid work",
+          "Training and professional development",
+          "Participation in events and conferences",
+          "Fast promotion opportunities"
+        ]
+      }
+    },
+    "detail": {
+      "jobDescription": "Job Description",
+      "responsibilities": "Responsibilities",
+      "requirements": "Requirements",
+      "requiredSkills": "Required Skills",
+      "benefits": "Benefits",
+      "salary": "Salary",
+      "postedDate": "Posted",
+      "applicationDeadline": "Application Deadline",
+      "close": "Close",
+      "applyNow": "Apply Now"
+    },
+    "careerDetail": {
+      "notFound": "Position Not Found",
+      "backToCareers": "Back to Careers",
+      "sharePosition": "Share this Position",
+      "readyToApply": "Ready to Apply?",
+      "applyDescription": "Join our team and help shape the future of digital transformation."
     }
   },
   "solutions": {
@@ -343,7 +1026,119 @@
     "keyBenefits": "Key Benefits",
     "readyToTransform": "Ready to transform your business with",
     "getStarted": "Get Started",
-    "learnMore": "Learn More"
+    "learnMore": "Learn More",
+    "solutionDetails": "Solution Details",
+    "solutionDetailsSubtitle": "Explore each solution in detail to understand how we can help your business",
+    "details": {
+      "erp": {
+        "title": "Enterprise Resource Planning",
+        "description": "Streamline your business operations with integrated ERP solutions.",
+        "features": [
+          "Financial Management & Accounting",
+          "Supply Chain & Inventory Management",
+          "Human Resource Management",
+          "Manufacturing & Production Planning",
+          "Business Intelligence & Analytics",
+          "Multi-entity & Multi-currency Support"
+        ],
+        "benefits": [
+          "40% reduction in operational costs",
+          "Real-time visibility across all departments",
+          "Improved decision-making with data analytics",
+          "Automated workflows and processes"
+        ]
+      },
+      "crm": {
+        "title": "Customer Relationship Management",
+        "description": "Build stronger customer relationships with intelligent CRM systems.",
+        "features": [
+          "360° Customer View",
+          "Sales Force Automation",
+          "Marketing Campaign Management",
+          "Customer Service & Support",
+          "Lead & Opportunity Management",
+          "Mobile CRM Access"
+        ],
+        "benefits": [
+          "35% increase in sales productivity",
+          "Better customer retention and satisfaction",
+          "Automated marketing campaigns",
+          "Improved collaboration across teams"
+        ]
+      },
+      "ai": {
+        "title": "Artificial Intelligence & Machine Learning",
+        "description": "Leverage AI and ML to unlock insights and automate processes.",
+        "features": [
+          "Predictive Analytics",
+          "Natural Language Processing",
+          "Computer Vision",
+          "Recommendation Engines",
+          "Automated Decision Making",
+          "Custom ML Model Development"
+        ],
+        "benefits": [
+          "50% faster decision-making",
+          "Automated repetitive tasks",
+          "Data-driven insights and predictions",
+          "Enhanced customer experiences"
+        ]
+      },
+      "cloud": {
+        "title": "Cloud Infrastructure",
+        "description": "Modernize your IT infrastructure with scalable cloud solutions.",
+        "features": [
+          "Cloud Migration & Strategy",
+          "Multi-cloud Architecture",
+          "DevOps & CI/CD",
+          "Cloud Security & Compliance",
+          "Infrastructure as Code",
+          "Cost Optimization"
+        ],
+        "benefits": [
+          "60% reduction in infrastructure costs",
+          "99.99% uptime guarantee",
+          "Scalable and flexible resources",
+          "Enhanced security and compliance"
+        ]
+      },
+      "iot": {
+        "title": "Internet of Things",
+        "description": "Connect devices and systems to create intelligent ecosystems.",
+        "features": [
+          "IoT Device Management",
+          "Real-time Data Collection",
+          "Edge Computing Solutions",
+          "Predictive Maintenance",
+          "Smart Manufacturing",
+          "Connected Supply Chain"
+        ],
+        "benefits": [
+          "30% reduction in maintenance costs",
+          "Real-time monitoring and alerts",
+          "Improved operational efficiency",
+          "Data-driven insights from connected devices"
+        ]
+      },
+      "security": {
+        "title": "Cybersecurity Solutions",
+        "description": "Protect your digital assets with comprehensive security solutions.",
+        "features": [
+          "Threat Detection & Response",
+          "Identity & Access Management",
+          "Data Encryption & Privacy",
+          "Security Compliance",
+          "Penetration Testing",
+          "24/7 Security Monitoring"
+        ],
+        "benefits": [
+          "Zero security breaches",
+          "Compliance with industry standards",
+          "Real-time threat detection",
+          "Comprehensive security coverage"
+        ]
+      }
+    }
   },
   "common": {
     "loading": "Loading...",

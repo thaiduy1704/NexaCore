@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://nexacore.com/</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nexacore.com/?lang=vi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nexacore.com/?lang=en"/>
+  </url>
+  
+  <!-- About Page -->
+  <url>
+    <loc>https://nexacore.com/about</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nexacore.com/about?lang=vi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nexacore.com/about?lang=en"/>
+  </url>
+  
+  <!-- Solutions Page -->
+  <url>
+    <loc>https://nexacore.com/solutions</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nexacore.com/solutions?lang=vi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nexacore.com/solutions?lang=en"/>
+  </url>
+  
+  <!-- Products Page -->
+  <url>
+    <loc>https://nexacore.com/products</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nexacore.com/products?lang=vi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nexacore.com/products?lang=en"/>
+  </url>
+  
+  <!-- Projects Page -->
+  <url>
+    <loc>https://nexacore.com/projects</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nexacore.com/projects?lang=vi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nexacore.com/projects?lang=en"/>
+  </url>
+  
+  <!-- News Page -->
+  <url>
+    <loc>https://nexacore.com/news</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nexacore.com/news?lang=vi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nexacore.com/news?lang=en"/>
+  </url>
+  
+  <!-- Careers Page -->
+  <url>
+    <loc>https://nexacore.com/careers</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nexacore.com/careers?lang=vi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nexacore.com/careers?lang=en"/>
+  </url>
+  
+  <!-- Contact Page -->
+  <url>
+    <loc>https://nexacore.com/contact</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://nexacore.com/contact?lang=vi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nexacore.com/contact?lang=en"/>
+  </url>
+  
+</urlset>
+

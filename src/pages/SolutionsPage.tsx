@@ -238,29 +238,42 @@ export default function SolutionsPage() {
             <SectionTitle title={t("solutions.title")} subtitle={t("solutions.subtitle")} />
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
-            {solutions.map((solution, index) => (
-              <motion.div
-                key={solution.id}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{
-                  duration: 0.6,
-                  delay: index * 0.08,
-                  type: "spring",
-                  stiffness: 100,
-                }}
-                whileHover={{ y: -8, scale: 1.02 }}
-                className="h-full"
-              >
-                <ServiceCard
-                  title={solution.title}
-                  description={solution.description}
-                  icon={solution.icon}
-                  link={solution.link}
-                />
-              </motion.div>
-            ))}
+            {solutions.map((solution, index) => {
+              // Map solution IDs to translation keys
+              const translationKeyMap: Record<string, string> = {
+                "1": "erp",
+                "2": "crm",
+                "3": "ai",
+                "4": "cloud",
+                "5": "iot",
+                "6": "security",
+              };
+              const translationKey = translationKeyMap[solution.id] || "erp";
+
+              return (
+                <motion.div
+                  key={solution.id}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{
+                    duration: 0.6,
+                    delay: index * 0.08,
+                    type: "spring",
+                    stiffness: 100,
+                  }}
+                  whileHover={{ y: -8, scale: 1.02 }}
+                  className="h-full"
+                >
+                  <ServiceCard
+                    title={t(`home.solutions.${translationKey}.title`)}
+                    description={t(`home.solutions.${translationKey}.description`)}
+                    icon={solution.icon}
+                    link={solution.link}
+                  />
+                </motion.div>
+              );
+            })}
           </div>
         </div>
 
@@ -307,8 +320,8 @@ export default function SolutionsPage() {
             className="mb-20 md:mb-24"
           >
             <SectionTitle
-              title="Solution Details"
-              subtitle="Explore each solution in detail to understand how we can help your business"
+              title={t("solutions.solutionDetails")}
+              subtitle={t("solutions.solutionDetailsSubtitle")}
             />
           </motion.div>
 
@@ -454,7 +467,7 @@ export default function SolutionsPage() {
                             transition={{ delay: 0.2, duration: 0.6 }}
                             className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-5 leading-tight drop-shadow-xl"
                           >
-                            {detail.title}
+                            {t(`solutions.details.${detail.id}.title`)}
                           </motion.h2>
                           <motion.p
                             initial={{ opacity: 0, y: 20 }}
@@ -463,7 +476,7 @@ export default function SolutionsPage() {
                             transition={{ delay: 0.3, duration: 0.6 }}
                             className="text-base md:text-lg lg:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed font-normal drop-shadow-md"
                           >
-                            {detail.description}
+                            {t(`solutions.details.${detail.id}.description`)}
                           </motion.p>
                         </div>
 
@@ -510,7 +523,11 @@ export default function SolutionsPage() {
                               </span>
                             </motion.h3>
                             <ul className="space-y-3">
-                              {detail.features.map((feature, idx) => (
+                              {(
+                                t(`solutions.details.${detail.id}.features`, {
+                                  returnObjects: true,
+                                }) as string[]
+                              ).map((feature, idx) => (
                                 <motion.li
                                   key={idx}
                                   initial={{ opacity: 0, x: -20 }}
@@ -557,11 +574,15 @@ export default function SolutionsPage() {
                                 <Icons.TrophyOutlined className="text-white text-xl relative z-10" />
                               </motion.div>
                               <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 bg-clip-text text-transparent font-extrabold">
-                                Key Benefits
+                                {t("solutions.keyBenefits")}
                               </span>
                             </motion.h3>
                             <ul className="space-y-3">
-                              {detail.benefits.map((benefit, idx) => (
+                              {(
+                                t(`solutions.details.${detail.id}.benefits`, {
+                                  returnObjects: true,
+                                }) as string[]
+                              ).map((benefit, idx) => (
                                 <motion.li
                                   key={idx}
                                   initial={{ opacity: 0, x: -20 }}
@@ -623,7 +644,7 @@ export default function SolutionsPage() {
                             <span
                               className={`bg-gradient-to-r ${detail.gradient} bg-clip-text text-transparent font-semibold`}
                             >
-                              {detail.title}
+                              {t(`solutions.details.${detail.id}.title`)}
                             </span>
                             ?
                           </motion.p>
@@ -637,20 +658,20 @@ export default function SolutionsPage() {
                                   className={`bg-gradient-to-r ${detail.gradient} border-0 h-12 px-8 text-base font-semibold shadow-lg hover:shadow-xl transition-all rounded-xl`}
                                   iconPosition="end"
                                 >
-                                  Get Started
+                                  {t("solutions.getStarted")}
                                 </Button>
                               </motion.div>
                             </Link>
-                            <Link to="/contact">
+                            {/* <Link to="/contact">
                               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                                 <Button
                                   size="large"
                                   className={`border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 hover:border-gray-400 h-12 px-8 text-base font-semibold rounded-xl transition-all shadow-sm hover:shadow-md`}
                                 >
-                                  Learn More
+                                  {t("solutions.learnMore")}
                                 </Button>
                               </motion.div>
-                            </Link>
+                            </Link> */}
                           </div>
                         </motion.div>
                       </div>

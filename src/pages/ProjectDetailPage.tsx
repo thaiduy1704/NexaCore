@@ -73,8 +73,16 @@ export default function ProjectDetailPage() {
   return (
     <div className="!pt-20 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50">
       <SeoHelmet
-        title={`${project.title} | NexaCore Projects`}
-        description={project.description}
+        title={`${(() => {
+          const titleKey = `projects.items.${project.id}.title`;
+          const translated = t(titleKey);
+          return translated !== titleKey ? translated : project.title;
+        })()} | NexaCore Projects`}
+        description={(() => {
+          const descKey = `projects.items.${project.id}.description`;
+          const translated = t(descKey);
+          return translated !== descKey ? translated : project.description;
+        })()}
         url={canonicalUrl}
         type="article"
       />
@@ -114,7 +122,13 @@ export default function ProjectDetailPage() {
                 className="inline-flex items-center !gap-2 !px-6 !py-3 bg-white/20 backdrop-blur-lg rounded-full border border-white/30 !mb-8"
               >
                 <TeamOutlined className="text-white" />
-                <span className="text-white font-bold">{project.industry}</span>
+                <span className="text-white font-bold">
+                  {(() => {
+                    const industryKey = `projects.items.${project.id}.industry`;
+                    const translated = t(industryKey);
+                    return translated !== industryKey ? translated : project.industry;
+                  })()}
+                </span>
               </motion.div>
 
               {/* Title */}
@@ -124,7 +138,11 @@ export default function ProjectDetailPage() {
                 transition={{ delay: 0.3 }}
                 className="!text-5xl md:text-6xl font-extrabold !mb-8 leading-tight"
               >
-                {project.title}
+                {(() => {
+                  const titleKey = `projects.items.${project.id}.title`;
+                  const translated = t(titleKey);
+                  return translated !== titleKey ? translated : project.title;
+                })()}
               </motion.h1>
 
               {/* Meta Info */}
@@ -136,7 +154,13 @@ export default function ProjectDetailPage() {
               >
                 <div className="flex items-center !gap-2 bg-white/10 backdrop-blur-lg !px-4 !py-2 rounded-full">
                   <TeamOutlined />
-                  <span>{project.client}</span>
+                  <span>
+                    {(() => {
+                      const clientKey = `projects.items.${project.id}.client`;
+                      const translated = t(clientKey);
+                      return translated !== clientKey ? translated : project.client;
+                    })()}
+                  </span>
                 </div>
                 <div className="flex items-center !gap-2 bg-white/10 backdrop-blur-lg !px-4 !py-2 rounded-full">
                   <TrophyOutlined />
@@ -175,17 +199,34 @@ export default function ProjectDetailPage() {
               transition={{ duration: 0.6 }}
               className="!mb-12"
             >
-              <div
-                className={`aspect-video bg-gradient-to-br ${gradient} rounded-3xl shadow-2xl flex items-center justify-center overflow-hidden relative`}
-              >
-                {/* Background Pattern */}
-                <div className="absolute inset-0 !opacity-10">
-                  <div className="absolute !top-0 !right-0 !w-64 !h-64 bg-white rounded-full blur-3xl"></div>
-                  <div className="absolute !bottom-0 !left-0 !w-48 !h-48 bg-white rounded-full blur-3xl"></div>
-                </div>
-                <span className="text-white !text-9xl font-bold opacity-20 relative z-10">
-                  {project.title.charAt(0)}
-                </span>
+              <div className="aspect-video rounded-3xl shadow-2xl overflow-hidden relative">
+                <img
+                  src={project.image}
+                  alt={(() => {
+                    const titleKey = `projects.items.${project.id}.title`;
+                    const translated = t(titleKey);
+                    return translated !== titleKey ? translated : project.title;
+                  })()}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.src = "";
+                    e.currentTarget.style.display = "none";
+                    const titleKey = `projects.items.${project.id}.title`;
+                    const translated = t(titleKey);
+                    const displayTitle = translated !== titleKey ? translated : project.title;
+                    e.currentTarget.parentElement!.innerHTML = `
+                      <div class="aspect-video bg-gradient-to-br ${gradient} rounded-3xl shadow-2xl flex items-center justify-center overflow-hidden relative">
+                        <div class="absolute inset-0 opacity-10">
+                          <div class="absolute top-0 right-0 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+                          <div class="absolute bottom-0 left-0 w-48 h-48 bg-white rounded-full blur-3xl"></div>
+                        </div>
+                        <span class="text-white text-9xl font-bold opacity-20 relative z-10">
+                          ${displayTitle.charAt(0)}
+                        </span>
+                      </div>
+                    `;
+                  }}
+                />
               </div>
             </motion.div>
 
@@ -198,73 +239,106 @@ export default function ProjectDetailPage() {
               className="bg-white rounded-3xl shadow-xl !p-12"
             >
               <div className="prose prose-lg !max-w-none">
-                <h2 className="!text-3xl font-extrabold !mb-6 text-gray-900">
-                  {t("projectDetail.overview")}
-                </h2>
-                <p className="!text-xl text-gray-700 !mb-8 leading-relaxed">
-                  {project.description}
-                </p>
+                {(() => {
+                  const contentKey = `projects.items.${project.id}.content`;
+                  const translated = t(contentKey);
+                  const content = translated !== contentKey ? translated : project.content;
+                  return content ? (
+                    <div dangerouslySetInnerHTML={{ __html: content }}></div>
+                  ) : (
+                    <>
+                      <h2 className="!text-3xl font-extrabold !mb-6 text-gray-900">
+                        {t("projectDetail.overview")}
+                      </h2>
+                      <p className="!text-xl text-gray-700 !mb-8 leading-relaxed">
+                        {(() => {
+                          const descKey = `projects.items.${project.id}.description`;
+                          const translated = t(descKey);
+                          return translated !== descKey ? translated : project.description;
+                        })()}
+                      </p>
 
-                <h3
-                  className={`!text-2xl font-bold !mb-4 !mt-12 text-gray-900 flex items-center !gap-3`}
-                >
-                  <div
-                    className={`!w-10 !h-10 rounded-lg bg-gradient-to-br ${gradient} flex items-center justify-center`}
-                  >
-                    <CheckCircleOutlined className="text-white" />
-                  </div>
-                  {t("projectDetail.solutionDelivered")}
-                </h3>
-                <p className="text-gray-600 !mb-6 leading-relaxed">{project.solution}</p>
+                      <h3
+                        className={`!text-2xl font-bold !mb-4 !mt-12 text-gray-900 flex items-center !gap-3`}
+                      >
+                        <div
+                          className={`!w-10 !h-10 rounded-lg bg-gradient-to-br ${gradient} flex items-center justify-center`}
+                        >
+                          <CheckCircleOutlined className="text-white" />
+                        </div>
+                        {t("projectDetail.solutionDelivered")}
+                      </h3>
+                      <p className="text-gray-600 !mb-6 leading-relaxed">
+                        {(() => {
+                          const solutionKey = `projects.items.${project.id}.solution`;
+                          const translated = t(solutionKey);
+                          return translated !== solutionKey ? translated : project.solution;
+                        })()}
+                      </p>
 
-                <h3
-                  className={`!text-2xl font-bold !mb-4 !mt-12 text-gray-900 flex items-center !gap-3`}
-                >
-                  <div
-                    className={`!w-10 !h-10 rounded-lg bg-gradient-to-br ${gradient} flex items-center justify-center`}
-                  >
-                    <TrophyOutlined className="text-white" />
-                  </div>
-                  {t("projectDetail.resultsAchieved")}
-                </h3>
-                <div className="flex items-start !gap-4 p-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl">
-                  <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
-                    <CheckCircleOutlined className="text-white text-xl" />
-                  </div>
-                  <p className="text-gray-700 text-lg pt-1 leading-relaxed">{project.result}</p>
-                </div>
+                      <h3
+                        className={`!text-2xl font-bold !mb-4 !mt-12 text-gray-900 flex items-center !gap-3`}
+                      >
+                        <div
+                          className={`!w-10 !h-10 rounded-lg bg-gradient-to-br ${gradient} flex items-center justify-center`}
+                        >
+                          <TrophyOutlined className="text-white" />
+                        </div>
+                        {t("projectDetail.resultsAchieved")}
+                      </h3>
+                      <div className="flex items-start !gap-4 p-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl">
+                        <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
+                          <CheckCircleOutlined className="text-white text-xl" />
+                        </div>
+                        <p className="text-gray-700 text-lg pt-1 leading-relaxed">
+                          {(() => {
+                            const resultKey = `projects.items.${project.id}.result`;
+                            const translated = t(resultKey);
+                            return translated !== resultKey ? translated : project.result;
+                          })()}
+                        </p>
+                      </div>
 
-                <h2
-                  className={`!text-3xl font-extrabold !mt-12 !mb-6 bg-gradient-to-r ${gradient} bg-clip-text text-transparent`}
-                >
-                  {t("projectDetail.impactBenefits")}
-                </h2>
-                <p className="text-gray-600 !mb-6 leading-relaxed">
-                  {t("projectDetail.impactDescription", { client: project.client })}
-                </p>
+                      <h2
+                        className={`!text-3xl font-extrabold !mt-12 !mb-6 bg-gradient-to-r ${gradient} bg-clip-text text-transparent`}
+                      >
+                        {t("projectDetail.impactBenefits")}
+                      </h2>
+                      <p className="text-gray-600 !mb-6 leading-relaxed">
+                        {t("projectDetail.impactDescription", {
+                          client: (() => {
+                            const clientKey = `projects.items.${project.id}.client`;
+                            const translated = t(clientKey);
+                            return translated !== clientKey ? translated : project.client;
+                          })(),
+                        })}
+                      </p>
 
-                <ul className="!space-y-4 !mb-8">
-                  {[
-                    t("projectDetail.benefit1"),
-                    t("projectDetail.benefit2"),
-                    t("projectDetail.benefit3"),
-                    t("projectDetail.benefit4"),
-                  ].map((item, index) => (
-                    <motion.li
-                      key={index}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: index * 0.1 }}
-                      className="flex items-start !gap-3 text-gray-700"
-                    >
-                      <div
-                        className={`!w-2 !h-2 rounded-full bg-gradient-to-br ${gradient} !mt-2 flex-shrink-0`}
-                      ></div>
-                      <span className="leading-relaxed">{item}</span>
-                    </motion.li>
-                  ))}
-                </ul>
+                      <ul className="!space-y-4 !mb-8">
+                        {[
+                          t("projectDetail.benefit1"),
+                          t("projectDetail.benefit2"),
+                          t("projectDetail.benefit3"),
+                          t("projectDetail.benefit4"),
+                        ].map((item, index) => (
+                          <motion.li
+                            key={index}
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: index * 0.1 }}
+                            className="flex items-start !gap-3 text-gray-700"
+                          >
+                            <div
+                              className={`!w-2 !h-2 rounded-full bg-gradient-to-br ${gradient} !mt-2 flex-shrink-0`}
+                            ></div>
+                            <span className="leading-relaxed">{item}</span>
+                          </motion.li>
+                        ))}
+                      </ul>
+                    </>
+                  );
+                })()}
               </div>
 
               {/* Share Section */}

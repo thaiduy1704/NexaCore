@@ -1,8 +1,9 @@
-import { Button, Carousel } from "antd";
+import { Button } from "antd";
 import { ArrowRightOutlined, CheckCircleOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { useState, useEffect } from "react";
 import HeroBanner from "@/components/HeroBanner";
 import SectionTitle from "@/components/SectionTitle";
 import ServiceCard from "@/components/ServiceCard";
@@ -10,15 +11,132 @@ import ProjectCard from "@/components/ProjectCard";
 import SeoHelmet from "@/components/SeoHelmet";
 import { solutions, projects } from "@/lib/mockData";
 
+function ProjectsCarousel() {
+  const { t } = useTranslation();
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [itemsToShow, setItemsToShow] = useState(3);
+  const [isPaused, setIsPaused] = useState(false);
+
+  useEffect(() => {
+    // Responsive items to show
+    const updateItemsToShow = () => {
+      if (window.innerWidth < 768) {
+        setItemsToShow(1);
+      } else if (window.innerWidth < 1024) {
+        setItemsToShow(2);
+      } else {
+        setItemsToShow(3);
+      }
+    };
+
+    updateItemsToShow();
+    window.addEventListener("resize", updateItemsToShow);
+    return () => window.removeEventListener("resize", updateItemsToShow);
+  }, []);
+
+  useEffect(() => {
+    if (isPaused) return;
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => {
+        const nextIndex = prev + 1;
+        // Reset to start when reaching the end of original projects for infinite loop
+        if (nextIndex >= projects.length) {
+          return 0;
+        }
+        return nextIndex;
+      });
+    }, 3000); // Auto play every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [isPaused]);
+
+  const getVisibleProjects = () => {
+    const visible = [];
+    for (let i = 0; i < itemsToShow; i++) {
+      const index = (currentIndex + i) % projects.length;
+      visible.push(projects[index]);
+    }
+    return visible;
+  };
+
+  return (
+    <motion.div
+      className="!max-w-7xl !mx-auto !mb-12"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay: 0.4 }}
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
+      <div className="!bg-white/60 !backdrop-blur-sm !rounded-3xl !p-8 !shadow-2xl">
+        <div className="relative overflow-hidden">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentIndex}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -50 }}
+              transition={{ duration: 0.6, ease: "easeInOut" }}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            >
+              {getVisibleProjects().map((project, index) => (
+                <motion.div
+                  key={`${project.id}-${currentIndex}-${index}`}
+                  className="!px-2"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                >
+                  <ProjectCard project={project} />
+                </motion.div>
+              ))}
+            </motion.div>
+          </AnimatePresence>
+        </div>
+        {/* Dots indicator */}
+        <div className="flex justify-center !mt-6 gap-2">
+          {projects.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                index === currentIndex ? "bg-blue-600 w-8" : "bg-gray-300 hover:bg-gray-400"
+              }`}
+              aria-label={t("home.projects.goToSlide", { number: index + 1 })}
+            />
+          ))}
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
 export default function HomePage() {
   const { t } = useTranslation();
 
   return (
     <>
       <SeoHelmet
-        title="NexaCore | Digital Transformation Solutions"
-        description="NexaCore cung cấp giải pháp ERP, CRM, hạ tầng dữ liệu và đám mây giúp doanh nghiệp tối ưu vận hành và tăng trưởng bền vững."
-        keywords={["NexaCore", "ERP", "CRM", "Data Platform", "Cloud", "Digital Transformation"]}
+        title={t("home.seo.title")}
+        description={t("home.seo.description")}
+        keywords={[
+          "nexa core",
+          "nexacore",
+          "Nexa Core",
+          "NexaCore",
+          "nexa core solutions",
+          "nexa core ERP",
+          "nexa core CRM",
+          "ERP",
+          "CRM",
+          "Data Platform",
+          "Cloud",
+          "Digital Transformation",
+          "chuyển đổi số",
+          "giải pháp công nghệ",
+        ]}
       />
       <div className="pt-20">
         {/* Hero Section */}
@@ -89,23 +207,6 @@ export default function HomePage() {
                       className="flex items-start !mt-2 !gap-5 bg-white rounded-2xl p-7 shadow-sm hover:shadow-lg transition-all duration-300"
                       whileHover={{ x: 5 }}
                     >
-                      <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
-                        <CheckCircleOutlined className="text-white text-2xl" />
-                      </div>
-                      <div>
-                        <h4 className="text-xl font-bold text-gray-900 mb-2">
-                          {t("home.about.globalPresence")}
-                        </h4>
-                        <p className="text-base text-gray-600 leading-relaxed">
-                          {t("home.about.globalPresenceDesc")}
-                        </p>
-                      </div>
-                    </motion.div>
-
-                    <motion.div
-                      className="flex items-start !mt-2 !gap-5 bg-white rounded-2xl p-7 shadow-sm hover:shadow-lg transition-all duration-300"
-                      whileHover={{ x: 5 }}
-                    >
                       <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center">
                         <CheckCircleOutlined className="text-white text-2xl" />
                       </div>
@@ -150,15 +251,15 @@ export default function HomePage() {
 
                       <div className="grid grid-cols-3 gap-5">
                         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
-                          <div className="text-5xl font-bold mb-2">200+</div>
+                          <div className="text-5xl font-bold mb-2">50+</div>
                           <div className="text-lg opacity-90">{t("home.about.clients")}</div>
                         </div>
                         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
-                          <div className="text-5xl font-bold mb-2">500+</div>
+                          <div className="text-5xl font-bold mb-2">100+</div>
                           <div className="text-lg opacity-90">{t("home.about.projects")}</div>
                         </div>
                         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
-                          <div className="text-5xl font-bold mb-2">15+</div>
+                          <div className="text-5xl font-bold mb-2">2+</div>
                           <div className="text-lg opacity-90">{t("home.about.countries")}</div>
                         </div>
                       </div>
@@ -205,23 +306,36 @@ export default function HomePage() {
               subtitle={t("home.solutions.subtitle")}
             />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-              {solutions.map((solution, index) => (
-                <motion.div
-                  key={solution.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="h-full"
-                >
-                  <ServiceCard
-                    title={solution.title}
-                    description={solution.description}
-                    icon={solution.icon}
-                    link={solution.link}
-                  />
-                </motion.div>
-              ))}
+              {solutions.map((solution, index) => {
+                // Map solution IDs to translation keys
+                const translationKeyMap: Record<string, string> = {
+                  "1": "erp",
+                  "2": "crm",
+                  "3": "ai",
+                  "4": "cloud",
+                  "5": "iot",
+                  "6": "security",
+                };
+                const translationKey = translationKeyMap[solution.id] || "erp";
+
+                return (
+                  <motion.div
+                    key={solution.id}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="h-full"
+                  >
+                    <ServiceCard
+                      title={t(`home.solutions.${translationKey}.title`)}
+                      description={t(`home.solutions.${translationKey}.description`)}
+                      icon={solution.icon}
+                      link={solution.link}
+                    />
+                  </motion.div>
+                );
+              })}
             </div>
             <div className="text-center !mt-16">
               <Link to="/solutions">
@@ -314,7 +428,7 @@ export default function HomePage() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.3, type: "spring" }}
                   >
-                    500+
+                    100+
                   </motion.div>
                   <div className="!text-xl !font-semibold !opacity-90">
                     {t("home.projects.projectsDelivered")}
@@ -352,7 +466,7 @@ export default function HomePage() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.5, type: "spring" }}
                   >
-                    50+
+                    2+
                   </motion.div>
                   <div className="!text-xl !font-semibold !opacity-90">
                     {t("home.projects.countriesWorldwide")}
@@ -362,28 +476,7 @@ export default function HomePage() {
             </motion.div>
 
             {/* Projects Carousel */}
-            <motion.div
-              className="!max-w-7xl !mx-auto !mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
-              <div className="!bg-white/60 !backdrop-blur-sm !rounded-3xl !p-8 !shadow-2xl">
-                <Carousel
-                  autoplay
-                  dots={{ className: "custom-dots" }}
-                  className="project-carousel"
-                  autoplaySpeed={4000}
-                >
-                  {projects.map((project) => (
-                    <div key={project.id} className="!px-2">
-                      <ProjectCard project={project} />
-                    </div>
-                  ))}
-                </Carousel>
-              </div>
-            </motion.div>
+            <ProjectsCarousel />
 
             {/* CTA Button */}
             <motion.div

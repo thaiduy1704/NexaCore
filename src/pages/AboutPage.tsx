@@ -1,11 +1,11 @@
-import { Card, Avatar } from "antd";
+import { Card } from "antd";
 import { TrophyOutlined, EyeOutlined, HeartOutlined, RocketOutlined } from "@ant-design/icons";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import HeroBanner from "@/components/HeroBanner";
 import SectionTitle from "@/components/SectionTitle";
 import SeoHelmet from "@/components/SeoHelmet";
-import { teamMembers } from "@/lib/mockData";
+// import { teamMembers } from "@/lib/mockData";
 import { aboutMetadata } from "@/lib/metadata";
 
 export default function AboutPage() {
@@ -39,7 +39,7 @@ export default function AboutPage() {
               >
                 <h2 className="text-4xl font-bold text-[#1A1A1A] mb-6">{t("about.intro.title")}</h2>
                 <p className="text-xl text-gray-600 mb-8">{t("about.intro.description1")}</p>
-                <p className="text-lg text-gray-600">{t("about.intro.description2")}</p>
+                {/* <p className="text-lg text-gray-600">{t("about.intro.description2")}</p> */}
               </motion.div>
             </div>
           </div>
@@ -173,11 +173,10 @@ export default function AboutPage() {
         </section>
 
         {/* Leadership Team */}
-        <section className="!py-32 md:py-40 bg-gradient-to-b from-gray-50 to-white">
+        {/* <section className="!py-32 md:py-40 bg-gradient-to-b from-gray-50 to-white">
           <div className="container mx-auto px-4">
             <SectionTitle title={t("about.team.title")} subtitle={t("about.team.subtitle")} />
             <div className="max-w-7xl mx-auto">
-              {/* CEO Card - Centered on top */}
               <div className="flex justify-center mb-12">
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
@@ -210,7 +209,6 @@ export default function AboutPage() {
                 </motion.div>
               </div>
 
-              {/* Other Team Members - 4 columns */}
               <div className="!mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {teamMembers.slice(1).map((member, index) => (
                   <motion.div
@@ -239,7 +237,7 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Stats Section */}
         <section className="!py-20 bg-gradient-to-br from-[#0052CC] to-[#1890FF] text-white">
@@ -247,9 +245,9 @@ export default function AboutPage() {
             <div className="max-w-6xl !mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               {[
                 { label: t("about.stats.yearsOfExcellence"), value: "10+" },
-                { label: t("about.stats.globalClients"), value: "500+" },
-                { label: t("about.stats.teamMembers"), value: "2,000+" },
-                { label: t("about.stats.countries"), value: "15+" },
+                { label: t("about.stats.globalClients"), value: "50+" },
+                { label: t("about.stats.teamMembers"), value: "100+" },
+                { label: t("about.stats.countries"), value: "2+" },
               ].map((stat, index) => (
                 <motion.div
                   key={index}

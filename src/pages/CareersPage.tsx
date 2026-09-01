@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Card, Button, Tag, Badge, Input, Select } from "antd";
+import { Card, Button, Tag, Badge, Input, Select, Modal, Divider } from "antd";
 import * as Icons from "@ant-design/icons";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -9,6 +9,7 @@ import SectionTitle from "@/components/SectionTitle";
 import SeoHelmet from "@/components/SeoHelmet";
 import { jobs } from "@/lib/mockData";
 import { careersMetadata } from "@/lib/metadata";
+import type { Job } from "@/types";
 
 const { Search } = Input;
 const { Option } = Select;
@@ -20,6 +21,8 @@ export default function CareersPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedDepartment, setSelectedDepartment] = useState<string>("all");
   const [selectedLocation, setSelectedLocation] = useState<string>("all");
+  const [selectedJob, setSelectedJob] = useState<Job | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const benefits = [
     {
@@ -110,19 +113,33 @@ export default function CareersPage() {
 
   // Filter jobs
   const filteredJobs = jobs.filter((job) => {
+    const titleKey = `careers.items.${job.id}.title`;
+    const descKey = `careers.items.${job.id}.description`;
+    const translatedTitle = t(titleKey) !== titleKey ? t(titleKey) : job.title;
+    const translatedDesc = t(descKey) !== descKey ? t(descKey) : job.description;
     const matchesSearch =
-      job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      job.description.toLowerCase().includes(searchTerm.toLowerCase());
+      translatedTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      translatedDesc.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesDepartment = selectedDepartment === "all" || job.department === selectedDepartment;
     const matchesLocation = selectedLocation === "all" || job.location === selectedLocation;
     return matchesSearch && matchesDepartment && matchesLocation;
   });
 
+  // const handleViewDetails = (job: Job) => {
+  //   setSelectedJob(job);
+  //   setIsModalOpen(true);
+  // };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedJob(null);
+  };
+
   return (
     <div className="pt-20">
       <SeoHelmet
-        title={careersMetadata.title}
-        description={careersMetadata.description}
+        title={t("careers.seo.title")}
+        description={t("careers.seo.description")}
         keywords={careersMetadata.keywords}
       />
       <HeroBanner
@@ -279,8 +296,12 @@ export default function CareersPage() {
                 className="text-center !py-20"
               >
                 <Icons.InboxOutlined className="text-7xl text-gray-300 !mb-6 !mx-auto" />
-                <h3 className="text-2xl font-bold text-gray-700 mb-2">{t("careers.positions.emptyState.title")}</h3>
-                <p className="text-lg text-gray-500">{t("careers.positions.emptyState.description")}</p>
+                <h3 className="text-2xl font-bold text-gray-700 mb-2">
+                  {t("careers.positions.emptyState.title")}
+                </h3>
+                <p className="text-lg text-gray-500">
+                  {t("careers.positions.emptyState.description")}
+                </p>
               </motion.div>
             ) : (
               <div className="space-y-5">
@@ -303,7 +324,11 @@ export default function CareersPage() {
                             </div>
                             <div className="!flex-1">
                               <h3 className="!text-xl md:!text-2xl !font-bold !text-gray-900 !mb-3 group-hover:!text-blue-600 !transition-colors">
-                                {job.title}
+                                {(() => {
+                                  const titleKey = `careers.items.${job.id}.title`;
+                                  const translated = t(titleKey);
+                                  return translated !== titleKey ? translated : job.title;
+                                })()}
                               </h3>
                               <div className="!flex !flex-wrap !items-center !gap-2 !mb-4">
                                 <Tag
@@ -311,38 +336,62 @@ export default function CareersPage() {
                                   color="blue"
                                   className="!text-xs !px-3 !py-1 !rounded-md !font-medium"
                                 >
-                                  {job.department}
+                                  {(() => {
+                                    const deptKey = `careers.items.${job.id}.department`;
+                                    const translated = t(deptKey);
+                                    return translated !== deptKey ? translated : job.department;
+                                  })()}
                                 </Tag>
                                 <Tag
                                   icon={<Icons.EnvironmentOutlined />}
                                   color="green"
                                   className="!text-xs !px-3 !py-1 !rounded-md !font-medium"
                                 >
-                                  {job.location}
+                                  {(() => {
+                                    const locKey = `careers.items.${job.id}.location`;
+                                    const translated = t(locKey);
+                                    return translated !== locKey ? translated : job.location;
+                                  })()}
                                 </Tag>
                                 <Tag
                                   icon={<Icons.ClockCircleOutlined />}
                                   color="purple"
                                   className="!text-xs !px-3 !py-1 !rounded-md !font-medium"
                                 >
-                                  {job.type}
+                                  {(() => {
+                                    const typeKey = `careers.items.${job.id}.type`;
+                                    const translated = t(typeKey);
+                                    return translated !== typeKey ? translated : job.type;
+                                  })()}
                                 </Tag>
                               </div>
                               <p className="!text-gray-600 !leading-relaxed !mb-4 !text-sm md:!text-base">
-                                {job.description}
+                                {(() => {
+                                  const descKey = `careers.items.${job.id}.description`;
+                                  const translated = t(descKey);
+                                  return translated !== descKey ? translated : job.description;
+                                })()}
                               </p>
                               <div className="!flex !flex-wrap !items-center !gap-2">
                                 <span className="!text-xs !font-semibold !text-gray-700">
                                   {t("careers.positions.requirements")}:
                                 </span>
-                                {job.requirements.slice(0, 3).map((req, idx) => (
-                                  <Tag
-                                    key={idx}
-                                    className="!text-xs !bg-gray-50 !text-gray-600 !border-gray-200"
-                                  >
-                                    {req.split(" ").slice(0, 3).join(" ")}...
-                                  </Tag>
-                                ))}
+                                {(() => {
+                                  const reqKey = `careers.items.${job.id}.requirements`;
+                                  const translated = t(reqKey, { returnObjects: true });
+                                  const requirements =
+                                    Array.isArray(translated) && translated[0] !== reqKey
+                                      ? translated
+                                      : job.requirements;
+                                  return requirements.slice(0, 3).map((req, idx) => (
+                                    <Tag
+                                      key={idx}
+                                      className="!text-xs !bg-gray-50 !text-gray-600 !border-gray-200"
+                                    >
+                                      {req.split(" ").slice(0, 3).join(" ")}...
+                                    </Tag>
+                                  ));
+                                })()}
                               </div>
                             </div>
                           </div>
@@ -357,13 +406,15 @@ export default function CareersPage() {
                           >
                             {t("careers.positions.applyNow")}
                           </Button>
-                          <Button
-                            size="large"
-                            icon={<Icons.EyeOutlined />}
-                            className="!border !border-gray-300 !text-gray-700 hover:!border-blue-500 hover:!text-blue-600 !h-11 !font-semibold !rounded-lg !transition-all !bg-white"
-                          >
-                            {t("careers.positions.viewDetails")}
-                          </Button>
+                          <Link to={`/careers/${job.id}`}>
+                            <Button
+                              size="large"
+                              icon={<Icons.EyeOutlined />}
+                              className="!border !border-gray-300 !text-gray-700 hover:!border-blue-500 hover:!text-blue-600 !h-11 !font-semibold !rounded-lg !transition-all !bg-white !w-full"
+                            >
+                              {t("careers.positions.viewDetails")}
+                            </Button>
+                          </Link>
                         </div>
                       </div>
                     </Card>
@@ -385,7 +436,10 @@ export default function CareersPage() {
             transition={{ duration: 0.8 }}
             className="!mb-20 md:!mb-24"
           >
-            <SectionTitle title={t("careers.culture.title")} subtitle={t("careers.culture.subtitle")} />
+            <SectionTitle
+              title={t("careers.culture.title")}
+              subtitle={t("careers.culture.subtitle")}
+            />
           </motion.div>
 
           <div className="!grid !grid-cols-1 md:!grid-cols-2 lg:!grid-cols-4 !gap-6 lg:!gap-6 !max-w-6xl !mx-auto">
@@ -431,7 +485,10 @@ export default function CareersPage() {
             transition={{ duration: 0.8 }}
             className="!mb-20 md:!mb-24"
           >
-            <SectionTitle title={t("careers.applicationProcess.title")} subtitle={t("careers.applicationProcess.subtitle")} />
+            <SectionTitle
+              title={t("careers.applicationProcess.title")}
+              subtitle={t("careers.applicationProcess.subtitle")}
+            />
           </motion.div>
 
           <div className="!max-w-5xl !mx-auto">
@@ -557,6 +614,256 @@ export default function CareersPage() {
           </motion.div>
         </div>
       </section>
+
+      {/* Job Details Modal */}
+      <Modal
+        title={null}
+        open={isModalOpen}
+        onCancel={handleCloseModal}
+        footer={null}
+        width={900}
+        className="job-details-modal"
+      >
+        {selectedJob && (
+          <div className="!py-4">
+            <div className="!mb-6">
+              <h2 className="!text-3xl !font-bold !text-gray-900 !mb-4">
+                {(() => {
+                  const titleKey = `careers.items.${selectedJob.id}.title`;
+                  const translated = t(titleKey);
+                  return translated !== titleKey ? translated : selectedJob.title;
+                })()}
+              </h2>
+              <div className="!flex !flex-wrap !items-center !gap-3 !mb-4">
+                <Tag
+                  icon={<Icons.BranchesOutlined />}
+                  color="blue"
+                  className="!text-sm !px-3 !py-1"
+                >
+                  {(() => {
+                    const deptKey = `careers.items.${selectedJob.id}.department`;
+                    const translated = t(deptKey);
+                    return translated !== deptKey ? translated : selectedJob.department;
+                  })()}
+                </Tag>
+                <Tag
+                  icon={<Icons.EnvironmentOutlined />}
+                  color="green"
+                  className="!text-sm !px-3 !py-1"
+                >
+                  {(() => {
+                    const locKey = `careers.items.${selectedJob.id}.location`;
+                    const translated = t(locKey);
+                    return translated !== locKey ? translated : selectedJob.location;
+                  })()}
+                </Tag>
+                <Tag
+                  icon={<Icons.ClockCircleOutlined />}
+                  color="purple"
+                  className="!text-sm !px-3 !py-1"
+                >
+                  {(() => {
+                    const typeKey = `careers.items.${selectedJob.id}.type`;
+                    const translated = t(typeKey);
+                    return translated !== typeKey ? translated : selectedJob.type;
+                  })()}
+                </Tag>
+                {selectedJob.experienceLevel && (
+                  <Tag
+                    icon={<Icons.StarOutlined />}
+                    color="orange"
+                    className="!text-sm !px-3 !py-1"
+                  >
+                    {(() => {
+                      const expKey = `careers.items.${selectedJob.id}.experienceLevel`;
+                      const translated = t(expKey);
+                      return translated !== expKey ? translated : selectedJob.experienceLevel;
+                    })()}
+                  </Tag>
+                )}
+              </div>
+              {selectedJob.salary && (
+                <div className="!mb-4">
+                  <span className="!text-lg !font-semibold !text-gray-700">
+                    <Icons.DollarCircleOutlined className="!mr-2" />
+                    {t("careers.detail.salary")}:{" "}
+                    <span className="!text-blue-600">
+                      {(() => {
+                        const salaryKey = `careers.items.${selectedJob.id}.salary`;
+                        const translated = t(salaryKey);
+                        return translated !== salaryKey ? translated : selectedJob.salary;
+                      })()}
+                    </span>
+                  </span>
+                </div>
+              )}
+              {(selectedJob.postedDate || selectedJob.applicationDeadline) && (
+                <div className="!flex !flex-wrap !gap-4 !mb-4 !text-sm !text-gray-600">
+                  {selectedJob.postedDate && (
+                    <span>
+                      <Icons.CalendarOutlined className="!mr-1" />
+                      {t("careers.detail.postedDate")}:{" "}
+                      {new Date(selectedJob.postedDate).toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })}
+                    </span>
+                  )}
+                  {selectedJob.applicationDeadline && (
+                    <span>
+                      <Icons.ClockCircleOutlined className="!mr-1" />
+                      {t("careers.detail.applicationDeadline")}:{" "}
+                      {new Date(selectedJob.applicationDeadline).toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })}
+                    </span>
+                  )}
+                </div>
+              )}
+            </div>
+
+            <Divider />
+
+            <div className="!mb-6">
+              <h3 className="!text-xl !font-bold !text-gray-900 !mb-3">
+                <Icons.FileTextOutlined className="!mr-2" />
+                {t("careers.detail.jobDescription")}
+              </h3>
+              <p className="!text-gray-700 !leading-relaxed">
+                {(() => {
+                  const descKey = `careers.items.${selectedJob.id}.description`;
+                  const translated = t(descKey);
+                  return translated !== descKey ? translated : selectedJob.description;
+                })()}
+              </p>
+            </div>
+
+            <Divider />
+
+            <div className="!mb-6">
+              <h3 className="!text-xl !font-bold !text-gray-900 !mb-3">
+                <Icons.CheckCircleOutlined className="!mr-2" />
+                {t("careers.detail.responsibilities")}
+              </h3>
+              <ul className="!list-none !pl-0">
+                {(() => {
+                  const respKey = `careers.items.${selectedJob.id}.responsibilities`;
+                  const translated = t(respKey, { returnObjects: true });
+                  const responsibilities =
+                    Array.isArray(translated) && translated[0] !== respKey
+                      ? translated
+                      : selectedJob.responsibilities;
+                  return responsibilities.map((resp, idx) => (
+                    <li key={idx} className="!mb-2 !flex !items-start">
+                      <Icons.RightCircleOutlined className="!text-blue-500 !mr-2 !mt-1 !flex-shrink-0" />
+                      <span className="!text-gray-700">{resp}</span>
+                    </li>
+                  ));
+                })()}
+              </ul>
+            </div>
+
+            <Divider />
+
+            <div className="!mb-6">
+              <h3 className="!text-xl !font-bold !text-gray-900 !mb-3">
+                <Icons.StarOutlined className="!mr-2" />
+                {t("careers.detail.requirements")}
+              </h3>
+              <ul className="!list-none !pl-0">
+                {(() => {
+                  const reqKey = `careers.items.${selectedJob.id}.requirements`;
+                  const translated = t(reqKey, { returnObjects: true });
+                  const requirements =
+                    Array.isArray(translated) && translated[0] !== reqKey
+                      ? translated
+                      : selectedJob.requirements;
+                  return requirements.map((req, idx) => (
+                    <li key={idx} className="!mb-2 !flex !items-start">
+                      <Icons.RightCircleOutlined className="!text-green-500 !mr-2 !mt-1 !flex-shrink-0" />
+                      <span className="!text-gray-700">{req}</span>
+                    </li>
+                  ));
+                })()}
+              </ul>
+            </div>
+
+            {selectedJob.skills && selectedJob.skills.length > 0 && (
+              <>
+                <Divider />
+                <div className="!mb-6">
+                  <h3 className="!text-xl !font-bold !text-gray-900 !mb-3">
+                    <Icons.ToolOutlined className="!mr-2" />
+                    {t("careers.detail.requiredSkills")}
+                  </h3>
+                  <div className="!flex !flex-wrap !gap-2">
+                    {(() => {
+                      const skillsKey = `careers.items.${selectedJob.id}.skills`;
+                      const translated = t(skillsKey, { returnObjects: true });
+                      const skills =
+                        Array.isArray(translated) && translated[0] !== skillsKey
+                          ? translated
+                          : selectedJob.skills;
+                      return skills.map((skill, idx) => (
+                        <Tag key={idx} color="cyan" className="!text-sm !px-3 !py-1">
+                          {skill}
+                        </Tag>
+                      ));
+                    })()}
+                  </div>
+                </div>
+              </>
+            )}
+
+            {selectedJob.benefits && selectedJob.benefits.length > 0 && (
+              <>
+                <Divider />
+                <div className="!mb-6">
+                  <h3 className="!text-xl !font-bold !text-gray-900 !mb-3">
+                    <Icons.GiftOutlined className="!mr-2" />
+                    {t("careers.detail.benefits")}
+                  </h3>
+                  <ul className="!list-none !pl-0">
+                    {(() => {
+                      const benefitsKey = `careers.items.${selectedJob.id}.benefits`;
+                      const translated = t(benefitsKey, { returnObjects: true });
+                      const benefits =
+                        Array.isArray(translated) && translated[0] !== benefitsKey
+                          ? translated
+                          : selectedJob.benefits;
+                      return benefits.map((benefit, idx) => (
+                        <li key={idx} className="!mb-2 !flex !items-start">
+                          <Icons.RightCircleOutlined className="!text-purple-500 !mr-2 !mt-1 !flex-shrink-0" />
+                          <span className="!text-gray-700">{benefit}</span>
+                        </li>
+                      ));
+                    })()}
+                  </ul>
+                </div>
+              </>
+            )}
+
+            <Divider />
+
+            <div className="!flex !justify-end !gap-3 !mt-6">
+              <Button onClick={handleCloseModal} size="large">
+                {t("careers.detail.close")}
+              </Button>
+              <Button
+                type="primary"
+                size="large"
+                icon={<Icons.SendOutlined />}
+                className="!bg-gradient-to-r !from-blue-500 !to-indigo-600 !border-0"
+              >
+                {t("careers.detail.applyNow")}
+              </Button>
+            </div>
+          </div>
+        )}
+      </Modal>
     </div>
   );
 }

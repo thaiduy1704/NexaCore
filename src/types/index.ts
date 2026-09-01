@@ -17,6 +17,7 @@ export interface Project {
   solution: string;
   result: string;
   date: string;
+  content?: string;
 }
 
 export interface Product {
@@ -51,6 +52,12 @@ export interface Job {
   description: string;
   requirements: string[];
   responsibilities: string[];
+  salary?: string;
+  experienceLevel?: string;
+  skills?: string[];
+  benefits?: string[];
+  postedDate?: string;
+  applicationDeadline?: string;
 }
 
 export interface Solution {

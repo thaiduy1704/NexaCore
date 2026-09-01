@@ -206,7 +206,11 @@ export default function ProductsPage() {
                             className="px-4 py-2 bg-white/25 backdrop-blur-lg rounded-full border border-white/40 shadow-lg"
                           >
                             <span className="text-white font-bold text-xs md:text-sm">
-                              {product.category}
+                              {(() => {
+                                const categoryKey = `products.items.${product.id}.category`;
+                                const translated = t(categoryKey);
+                                return translated !== categoryKey ? translated : product.category;
+                              })()}
                             </span>
                           </motion.div>
                         </div>
@@ -254,15 +258,27 @@ export default function ProductsPage() {
                       {/* Product Content - Enhanced */}
                       <div className="p-8 bg-gradient-to-br from-white via-gray-50/50 to-white">
                         <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight">
-                          {product.title}
+                          {(() => {
+                            const titleKey = `products.items.${product.id}.title`;
+                            const translated = t(titleKey);
+                            return translated !== titleKey ? translated : product.title;
+                          })()}
                         </h3>
                         <p className="text-gray-600 mb-6 leading-relaxed text-base">
-                          {product.description}
+                          {(() => {
+                            const descKey = `products.items.${product.id}.description`;
+                            const translated = t(descKey);
+                            return translated !== descKey ? translated : product.description;
+                          })()}
                         </p>
 
                         {/* Features List - Enhanced */}
                         <div className="mb-6 space-y-2">
-                          {product.features.slice(0, 3).map((feature, idx) => (
+                          {(() => {
+                            const featuresKey = `products.items.${product.id}.features`;
+                            const translated = t(featuresKey, { returnObjects: true });
+                            const features = (Array.isArray(translated) && translated[0] !== featuresKey) ? translated : product.features;
+                            return features.slice(0, 3).map((feature, idx) => (
                             <motion.div
                               key={idx}
                               initial={{ opacity: 0, x: -10 }}
@@ -280,19 +296,25 @@ export default function ProductsPage() {
                                 {feature}
                               </span>
                             </motion.div>
-                          ))}
-                          {product.features.length > 3 && (
-                            <motion.div
-                              initial={{ opacity: 0 }}
-                              whileInView={{ opacity: 1 }}
-                              viewport={{ once: true }}
-                              className="flex items-center gap-2 pt-1"
-                            >
-                              <span className="text-gray-500 text-sm font-semibold">
-                                +{product.features.length - 3} {t("products.more")}
-                              </span>
-                            </motion.div>
-                          )}
+                            ));
+                          })()}
+                          {(() => {
+                            const featuresKey = `products.items.${product.id}.features`;
+                            const translated = t(featuresKey, { returnObjects: true });
+                            const features = (Array.isArray(translated) && translated[0] !== featuresKey) ? translated : product.features;
+                            return features.length > 3 && (
+                              <motion.div
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                viewport={{ once: true }}
+                                className="flex items-center gap-2 pt-1"
+                              >
+                                <span className="text-gray-500 text-sm font-semibold">
+                                  +{features.length - 3} {t("products.more")}
+                                </span>
+                              </motion.div>
+                            );
+                          })()}
                         </div>
 
                         {/* Enhanced CTA */}

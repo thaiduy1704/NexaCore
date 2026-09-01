@@ -27,29 +27,85 @@
     "cookiePolicy": "Chính sách cookie",
     "sitemap": "Sơ đồ trang web"
   },
+  "privacy": {
+    "seo": {
+      "title": "Chính sách bảo mật - NexaCore",
+      "description": "Tìm hiểu cách NexaCore thu thập, sử dụng và bảo vệ thông tin của bạn khi bạn sử dụng website và ứng dụng di động."
+    },
+    "badge": "Bảo mật",
+    "title": "Chính sách bảo mật",
+    "subtitle": "Trang này mô tả cách chúng tôi thu thập, sử dụng, chia sẻ và bảo vệ thông tin khi bạn sử dụng dịch vụ.",
+    "lastUpdatedLabel": "Cập nhật lần cuối:",
+    "lastUpdatedValue": "01/04/2026",
+    "tocTitle": "Mục lục",
+    "bodyTitle": "Quyền riêng tư của bạn",
+    "bodySubtitle": "Thông tin rõ ràng, phù hợp cho người dùng và quy trình duyệt App Store/Google Play.",
+    "sections": {
+      "overview": "Tổng quan",
+      "dataWeCollect": "Thông tin chúng tôi thu thập",
+      "howWeUse": "Cách chúng tôi sử dụng thông tin",
+      "sharing": "Chia sẻ & bên thứ ba",
+      "security": "Bảo mật",
+      "retention": "Lưu trữ dữ liệu",
+      "children": "Quyền riêng tư trẻ em",
+      "yourRights": "Quyền của bạn",
+      "changes": "Thay đổi chính sách",
+      "contact": "Liên hệ"
+    },
+    "content": {
+      "overview": "Chúng tôi tôn trọng quyền riêng tư của bạn. Chính sách này giải thích dữ liệu nào có thể được thu thập, lý do thu thập và cách chúng tôi xử lý dữ liệu trên website và ứng dụng di động.",
+      "dataWeCollect": {
+        "item1": "Thông tin tài khoản/liên hệ bạn cung cấp (ví dụ: tên, email, số điện thoại) khi liên hệ hoặc đăng ký.",
+        "item2": "Thông tin sử dụng (ví dụ: trang đã xem và dữ liệu cơ bản về thiết bị/trình duyệt) để cải thiện hiệu năng và độ ổn định.",
+        "item3": "Thông tin bạn gửi qua biểu mẫu, yêu cầu hỗ trợ hoặc các tính năng trò chuyện."
+      },
+      "howWeUse": {
+        "item1": "Cung cấp và vận hành dịch vụ (bao gồm hỗ trợ khách hàng).",
+        "item2": "Cải thiện trải nghiệm sản phẩm, hiệu năng và bảo mật.",
+        "item3": "Liên hệ phản hồi yêu cầu và thông báo các cập nhật quan trọng.",
+        "item4": "Tuân thủ nghĩa vụ pháp lý và thực thi điều khoản."
+      },
+      "sharing": "Chúng tôi không bán dữ liệu cá nhân. Chúng tôi có thể chia sẻ thông tin với các nhà cung cấp dịch vụ tin cậy (lưu trữ, phân tích, hỗ trợ) trong phạm vi cần thiết để vận hành dịch vụ và có biện pháp bảo vệ phù hợp.",
+      "security": "Chúng tôi áp dụng các biện pháp kỹ thuật và tổ chức hợp lý để bảo vệ dữ liệu. Tuy nhiên, không có phương thức truyền tải/lưu trữ nào an toàn tuyệt đối.",
+      "retention": "Chúng tôi chỉ lưu trữ thông tin trong khoảng thời gian cần thiết cho các mục đích nêu trong chính sách này, trừ khi pháp luật yêu cầu lưu trữ lâu hơn.",
+      "children": "Dịch vụ của chúng tôi không hướng đến trẻ em dưới 13 tuổi và chúng tôi không cố ý thu thập dữ liệu cá nhân từ trẻ em.",
+      "yourRights": {
+        "item1": "Yêu cầu truy cập dữ liệu cá nhân mà chúng tôi đang lưu giữ về bạn.",
+        "item2": "Yêu cầu chỉnh sửa dữ liệu không chính xác hoặc chưa đầy đủ.",
+        "item3": "Yêu cầu xoá dữ liệu (trong phạm vi áp dụng).",
+        "item4": "Rút lại sự đồng ý khi việc xử lý dựa trên sự đồng ý."
+      },
+      "changes": "Chúng tôi có thể cập nhật chính sách theo thời gian. Khi cập nhật, chúng tôi sẽ thay đổi ngày “Cập nhật lần cuối” trên trang này.",
+      "contactPrefix": "Nếu bạn có câu hỏi về Chính sách bảo mật, vui lòng liên hệ"
+    }
+  },
   "home": {
+    "seo": {
+      "title": "NexaCore | Nexa Core - Giải Pháp Chuyển Đổi Số",
+      "description": "NexaCore (Nexa Core) cung cấp giải pháp ERP, CRM, hạ tầng dữ liệu và đám mây hàng đầu. Chuyển đổi số doanh nghiệp với Nexa Core - Giải pháp công nghệ toàn diện cho doanh nghiệp."
+    },
     "hero": {
       "title": "Chuyển đổi doanh nghiệp của bạn với giải pháp thông minh",
-      "subtitle": "NexaCore cung cấp cho các doanh nghiệp với công nghệ tiên tiến thúc đẩy sự tiên tiến kỹ thuật số và hiệu quả kinh doanh.",
+      "subtitle": "NexaCore cung cấp cho các doanh nghiệp với công nghệ tiên tiến thúc đẩy phát triển kỹ thuật số và hiệu quả kinh doanh.",
       "getStarted": "Bắt đầu",
       "learnMore": "Tìm hiểu thêm",
       "badge": "Dẫn đầu Đổi mới Công nghệ",
-      "projectsCount": "500+ Dự án",
-      "clientsCount": "200+ Khách hàng",
+      "projectsCount": "100+ Dự án",
+      "clientsCount": "50+ Khách hàng",
       "yearsExperience": "10+ Năm Kinh nghiệm"
     },
     "about": {
       "badge": "Về NexaCore",
       "title": "Dẫn đầu Chuyển đổi",
       "transformation": "Số",
-      "description": "Trong hơn một thập kỷ, NexaCore đã đi đầu trong đổi mới công nghệ, giúp các tổ chức điều hướng sự phức tạp của chuyển đổi số với sự tự tin và rõ ràng.",
-      "awardWinning": "Giải pháp Đạt Giải thưởng",
-      "awardWinningDesc": "Được tin cậy bởi các công ty Fortune 500 trên toàn thế giới",
+      "description": "Trong hơn một thập kỷ, NexaCore đã đi đầu trong đổi mới công nghệ, giúp các tổ chức điều hướng sự phức tạp của chuyển đổi số với sự mạnh mẽ và rõ ràng.",
+      "awardWinning": "Giải pháp tiên tiến",
+      "awardWinningDesc": "Được tin cậy bởi các công ty trên toàn thế giới",
       "globalPresence": "Hiện diện Toàn cầu",
-      "globalPresenceDesc": "Văn phòng tại hơn 15 quốc gia trên 5 châu lục",
+      "globalPresenceDesc": "Văn phòng tại hơn 2 quốc gia trên 5 châu lục",
       "provenTrack": "Thành tích Đã được Chứng minh",
-      "provenTrackDesc": "Hơn 500 dự án chuyển đổi số thành công",
-      "yearsOfExcellence": "Năm Xuất sắc",
+      "provenTrackDesc": "Hơn 100 dự án chuyển đổi số thành công",
+      "yearsOfExcellence": "Năm Kinh nghiệm",
       "clients": "Khách hàng",
       "projects": "Dự án",
       "countries": "Quốc gia",
@@ -58,7 +114,31 @@
     "solutions": {
       "title": "Giải pháp của Chúng tôi",
       "subtitle": "Giải pháp công nghệ toàn diện được điều chỉnh theo nhu cầu kinh doanh của bạn",
-      "viewAll": "Xem tất cả Giải pháp"
+      "viewAll": "Xem tất cả Giải pháp",
+      "erp": {
+        "title": "Hoạch Định Nguồn Lực Doanh Nghiệp",
+        "description": "Tối ưu hóa hoạt động kinh doanh của bạn với các giải pháp ERP tích hợp giúp nâng cao năng suất và tầm nhìn."
+      },
+      "crm": {
+        "title": "Quản Lý Quan Hệ Khách Hàng",
+        "description": "Xây dựng mối quan hệ khách hàng bền chặt hơn với các hệ thống CRM thông minh thúc đẩy tăng trưởng và sự hài lòng."
+      },
+      "ai": {
+        "title": "AI & Machine Learning",
+        "description": "Tận dụng AI và học máy để khám phá thông tin chi tiết, tự động hóa quy trình và đưa ra quyết định dựa trên dữ liệu."
+      },
+      "cloud": {
+        "title": "Hạ Tầng Điện Toán Đám Mây",
+        "description": "Hiện đại hóa hạ tầng IT của bạn với các giải pháp đám mây có thể mở rộng, an toàn và tiết kiệm chi phí."
+      },
+      "iot": {
+        "title": "Internet Thông Minh",
+        "description": "Kết nối thiết bị và hệ thống để tạo ra các hệ sinh thái thông minh thúc đẩy hiệu quả hoạt động."
+      },
+      "security": {
+        "title": "Giải Pháp An Ninh Mạng",
+        "description": "Bảo vệ tài sản kỹ thuật số của bạn với các giải pháp bảo mật toàn diện và chiến lược quản lý rủi ro."
+      }
     },
     "projects": {
       "title": "Dự án Nổi bật",
@@ -66,7 +146,40 @@
       "projectsDelivered": "Dự án Đã Giao",
       "clientSatisfaction": "Sự Hài lòng của Khách hàng",
       "countriesWorldwide": "Quốc gia Trên toàn Thế giới",
-      "viewAll": "Xem tất cả Dự án"
+      "viewAll": "Xem tất cả Dự án",
+      "goToSlide": "Chuyển đến slide {{number}}",
+      "items": {
+        "1": {
+          "title": "Triển khai ERP Bán Lẻ cho Chuỗi Siêu thị",
+          "client": "Tập đoàn Bán lẻ Quốc gia",
+          "industry": "Bán lẻ",
+          "description": "Triển khai hệ thống ERP Bán Lẻ toàn diện cho chuỗi siêu thị với hơn 200 điểm bán, tích hợp quản lý đa kênh và tối ưu hóa trải nghiệm khách hàng."
+        },
+        "2": {
+          "title": "Triển khai ERP Sản Xuất cho Nhà máy Dệt may",
+          "client": "Công ty Dệt may Hàng đầu",
+          "industry": "Sản xuất",
+          "description": "Triển khai hệ thống ERP Sản Xuất thông minh với tích hợp sâu từ lập kế hoạch đến kiểm soát chất lượng, quản lý sản lượng WIP/FG và hệ thống Barcode."
+        },
+        "3": {
+          "title": "Hệ thống Quản Lý Ngân Sách cho Tập đoàn",
+          "client": "Tập đoàn Đa ngành",
+          "industry": "Tài chính",
+          "description": "Triển khai giải pháp Quản Lý Ngân Sách toàn diện với kiểm soát chi tiêu theo thời gian thực và báo cáo phân tích độ lệch chi tiết."
+        },
+        "7": {
+          "title": "Triển khai DMS cho Công ty FMCG",
+          "client": "Công ty Hàng tiêu dùng",
+          "industry": "FMCG",
+          "description": "Triển khai Hệ thống Quản Lý Phân Phối (DMS) số hóa toàn diện quy trình bán hàng và quản lý kênh phân phối, tối ưu hóa hiệu quả hoạt động ngoài thị trường."
+        },
+        "8": {
+          "title": "Triển khai Nền tảng E-commerce cho Thương hiệu Thời trang",
+          "client": "Thương hiệu Thời trang Quốc tế",
+          "industry": "Thời trang",
+          "description": "Triển khai nền tảng Thương mại Điện tử mạnh mẽ với tích hợp sâu ERP & CRM, hỗ trợ đa ngôn ngữ, đa tiền tệ và tối ưu hiệu suất."
+        }
+      }
     },
     "clients": {
       "title": "Được tin cậy bởi các Nhà lãnh đạo Ngành",
@@ -99,7 +212,7 @@
       },
       "mission": {
         "title": "Sứ mệnh của Chúng tôi",
-        "description": "Trao quyền cho các tổ chức với các giải pháp công nghệ thông minh thúc đẩy tăng trưởng bền vững, xuất sắc hoạt động và lợi thế cạnh tranh trong nền kinh tế số."
+        "description": "Trao quyền cho các tổ chức với các giải pháp công nghệ thông minh thúc đẩy tăng trưởng bền vững, xuất sắc trong hoạt động và lợi thế cạnh tranh trong nền kinh tế số."
       },
       "values": {
         "title": "Giá trị Cốt lõi",
@@ -119,7 +232,7 @@
       "subtitle": ""
     },
     "stats": {
-      "yearsOfExcellence": "Năm Xuất sắc",
+      "yearsOfExcellence": "Năm Kinh nghiệm",
       "globalClients": "Khách hàng Toàn cầu",
       "teamMembers": "Thành viên Đội ngũ",
       "countries": "Quốc gia"
@@ -160,6 +273,7 @@
       "title": "Thông tin Liên hệ",
       "description": "Liên hệ với chúng tôi qua bất kỳ kênh nào sau đây",
       "headquarters": "Trụ sở chính",
+      "address": "Phường Trung Mỹ Tây, Thành phố Hồ Chí Minh, Việt Nam",
       "phone": "Điện thoại",
       "email": "Email",
       "businessHours": "Giờ Làm việc",
@@ -190,7 +304,235 @@
     "title": "Giải pháp Phần mềm Sáng tạo",
     "subtitle": "Sản phẩm mạnh mẽ được thiết kế để tăng tốc chuyển đổi số của bạn",
     "learnMore": "Tìm hiểu thêm",
-    "more": "thêm"
+    "more": "thêm",
+    "items": {
+      "1": {
+        "title": "ERP Bán Lẻ (Retail ERP)",
+        "description": "Giải pháp ERP chuyên biệt, giúp doanh nghiệp bán lẻ quản lý hiệu quả hoạt động đa kênh và tối ưu hóa trải nghiệm khách hàng.",
+        "category": "Hệ Thống Hoạch Định Nguồn Lực Doanh Nghiệp (ERP)",
+        "features": [
+          "Quản lý Đa Kênh (Omnichannel)",
+          "Tối ưu Tồn kho & Cung ứng",
+          "Quản lý Khuyến mãi & Khách hàng"
+        ],
+        "benefits": [
+          "Đồng bộ hóa dữ liệu tồn kho, giá cả và đơn hàng trên mọi điểm bán (cửa hàng, online, mạng xã hội).",
+          "Dự báo nhu cầu chính xác, quản lý kho chi tiết theo vị trí, lô, hạn sử dụng, giảm thiểu chi phí lưu kho và rủi ro hết hàng.",
+          "Tích hợp CRM mini, thiết lập và theo dõi hiệu quả các chương trình khuyến mãi phức tạp, tăng cường giữ chân và giá trị trọn đời của khách hàng (CLV)."
+        ]
+      },
+      "2": {
+        "title": "ERP Sản Xuất (Manufacturing ERP)",
+        "description": "Hệ thống điều hành sản xuất thông minh, tích hợp sâu từ lập kế hoạch đến kiểm soát chất lượng thực tế trên sàn nhà máy.",
+        "category": "Hệ Thống Hoạch Định Nguồn Lực Doanh Nghiệp (ERP)",
+        "features": [
+          "Lập Kế hoạch Sản xuất Nâng cao (Planning)",
+          "Phát triển Kỹ thuật Công nghiệp (IED Tool)",
+          "Kiểm soát Chất lượng (Inspection Tool)",
+          "Ghi nhận Sản lượng WIP/FG (Output Record)",
+          "Hệ thống Barcode"
+        ],
+        "benefits": [
+          "Công cụ lập lịch trình tổng thể (MPS), phân bổ đơn hàng, đồng bộ nguyên vật liệu. Tự động tích hợp kế hoạch giữa các bộ phận (Spinning, Knitting, Sewing), đảm bảo tối ưu công suất và đáp ứng lộ trình quan trọng (Critical Path).",
+          "Xây dựng và lưu trữ thư viện Định mức Thời gian Chuẩn (SMV/SAM/SAH) chi tiết theo từng kiểu dáng. Tích hợp trực tiếp với hệ thống Tính giá thành, Lương/Thưởng, đảm bảo tính toán chi phí sản xuất chính xác.",
+          "Nhập liệu lỗi (Defect Entry) qua màn hình cảm ứng. Tự động đánh giá chất lượng vải (Fabric Gradation) dựa trên số lượng lỗi, hỗ trợ chọn cuộn vải phù hợp cho kế hoạch cắt (Marker & Cutting Plan) hiệu quả nhất.",
+          "Ghi nhận sản lượng theo thời gian thực (Real-time) qua thiết bị cảm ứng, tự động đồng bộ hóa các chứng từ xuất/nhập kho (GRN Output/Pick List) với ERP, loại bỏ nhập liệu thủ công và giảm chi phí quản lý dữ liệu.",
+          "Mã hóa thông tin sản phẩm bằng mã vạch, giúp truy xuất và theo dõi tồn kho Bán thành phẩm (WIP) hoặc Thành phẩm (FG) nhanh chóng, nâng cao độ chính xác kiểm kê và giảm thiểu sai sót."
+        ]
+      },
+      "3": {
+        "title": "Quản Lý Ngân Sách (Budget Management)",
+        "description": "Giải pháp kiểm soát tài chính chủ động, giúp doanh nghiệp duy trì tính kỷ luật và hiệu quả trong mọi hoạt động chi tiêu.",
+        "category": "Các Giải Pháp Chuyên Sâu",
+        "features": [
+          "Lập & Phân bổ Ngân sách",
+          "Kiểm soát Chi tiêu theo thời gian thực",
+          "Báo cáo & Phân tích Độ lệch"
+        ],
+        "benefits": [
+          "Hỗ trợ xây dựng ngân sách tổng thể, chi tiết theo phòng ban, dự án, hoặc trung tâm chi phí.",
+          "Tự động hóa quy trình phê duyệt, đối chiếu với ngân sách đã duyệt để ngăn chặn tình trạng vượt chi ngay từ đầu.",
+          "Cung cấp báo cáo chuyên sâu so sánh ngân sách thực tế với dự toán, hỗ trợ ra quyết định đầu tư và phân bổ nguồn lực chính xác."
+        ]
+      },
+      "4": {
+        "title": "Quản Lý Quan Hệ Khách Hàng (CRM)",
+        "description": "Hệ thống giúp xây dựng cái nhìn 360 độ về khách hàng, tối ưu hóa quy trình bán hàng và nâng cao chất lượng dịch vụ.",
+        "category": "Các Giải Pháp Chuyên Sâu",
+        "features": [
+          "Quản lý Trọn vẹn Hành trình Khách hàng",
+          "Tự động hóa Quy trình Bán hàng",
+          "Nâng cao Dịch vụ Khách hàng"
+        ],
+        "benefits": [
+          "Theo dõi mọi tương tác từ Marketing, Sales đến Service.",
+          "Chuẩn hóa và tự động hóa các bước trong quy trình bán hàng, giúp đội ngũ Sales tập trung vào chốt giao dịch.",
+          "Quản lý, phân loại và ưu tiên giải quyết các yêu cầu/khiếu nại (ticket), đảm bảo tốc độ phản hồi nhanh chóng và chất lượng dịch vụ đồng nhất."
+        ]
+      },
+      "5": {
+        "title": "Data Warehouse (Kho Dữ Liệu)",
+        "description": "Nền tảng tập trung dữ liệu chiến lược, biến thông tin thô thành tri thức kinh doanh sâu sắc.",
+        "category": "Hạ Tầng Dữ Liệu & Lưu Trữ",
+        "features": [
+          "Tích hợp Dữ liệu Đa nguồn",
+          "Hỗ trợ Ra quyết định Chiến lược",
+          "Hiệu suất Phân tích Cao"
+        ],
+        "benefits": [
+          "Thu thập, làm sạch và hợp nhất dữ liệu từ ERP, CRM, và các hệ thống khác vào một kho tập trung, duy nhất.",
+          "Cung cấp nền tảng dữ liệu sạch, có cấu trúc để phục vụ các công cụ Business Intelligence (BI) và phân tích dự báo.",
+          "Tối ưu hóa cho các truy vấn phức tạp và báo cáo lớn, đảm bảo tốc độ phân tích nhanh chóng."
+        ]
+      },
+      "6": {
+        "title": "Cloud Storage Private (Lưu Trữ Đám Mây Riêng)",
+        "description": "Giải pháp lưu trữ đám mây độc lập, đặt ưu tiên hàng đầu vào bảo mật và khả năng kiểm soát dữ liệu.",
+        "category": "Hạ Tầng Dữ Liệu & Lưu Trữ",
+        "features": [
+          "Bảo mật Tối đa & Kiểm soát Hoàn toàn",
+          "Khả năng Mở rộng Linh hoạt",
+          "Đảm bảo Tính sẵn sàng & Dự phòng"
+        ],
+        "benefits": [
+          "Cung cấp môi trường lưu trữ độc lập, đảm bảo tuân thủ các quy định bảo mật dữ liệu nghiêm ngặt.",
+          "Dễ dàng mở rộng dung lượng và tài nguyên theo nhu cầu tăng trưởng mà không cần đầu tư lớn vào phần cứng vật lý.",
+          "Dữ liệu được sao lưu và dự phòng tại nhiều khu vực, đảm bảo hoạt động liên tục (Business Continuity)."
+        ]
+      },
+      "7": {
+        "title": "Hệ Thống Quản Lý Phân Phối (DMS - Distribution Management System)",
+        "description": "Giải pháp số hóa toàn diện quy trình bán hàng và quản lý kênh phân phối, tối ưu hóa hiệu quả hoạt động ngoài thị trường cho ngành hàng tiêu dùng/sản xuất.",
+        "category": "Hạ Tầng Dữ Liệu & Lưu Trữ",
+        "features": [
+          "Quản lý Lực lượng Bán hàng (Field Force Mgmt)",
+          "Quản lý Kênh Phân phối & Tuyến bán hàng",
+          "Theo dõi Tồn kho Kênh (Secondary Sales)"
+        ],
+        "benefits": [
+          "Giám sát hoạt động, lộ trình bán hàng và hiệu suất đặt hàng của nhân viên thị trường (Sales Reps) qua ứng dụng di động.",
+          "Theo dõi độ phủ thị trường, đánh giá hiệu suất của từng Nhà phân phối (NPP) và tối ưu hóa tuyến thăm khách hàng.",
+          "Cập nhật tồn kho, tình trạng trưng bày, và đơn hàng tại điểm bán/NPP theo thời gian thực, giảm rủi ro thiếu hàng và tồn kho chết."
+        ]
+      },
+      "8": {
+        "title": "Giải Pháp Thương Mại Điện Tử (E-commerce Platform)",
+        "description": "Nền tảng thương mại điện tử mạnh mẽ, được thiết kế để tích hợp liền mạch với hệ thống lõi của doanh nghiệp.",
+        "category": "Hạ Tầng Dữ Liệu & Lưu Trữ",
+        "features": [
+          "Tích hợp Sâu với ERP & CRM",
+          "Nền tảng Tùy biến Cao",
+          "Tối ưu Hiệu suất & Tăng trưởng"
+        ],
+        "benefits": [
+          "Đơn hàng, tồn kho, thông tin khách hàng được đồng bộ tự động, loại bỏ sai sót và đảm bảo dữ liệu bán hàng chính xác.",
+          "Cho phép xây dựng giao diện và trải nghiệm người dùng độc đáo, đáp ứng các mô hình kinh doanh B2B/B2C phức tạp.",
+          "Hỗ trợ đa ngôn ngữ, đa tiền tệ, tích hợp các công cụ Marketing (SEO, liên kết), giúp doanh nghiệp mở rộng thị trường và tăng trưởng doanh thu online."
+        ]
+      },
+      "9": {
+        "title": "Dịch Vụ Outsourcing Phát Triển Phần Mềm",
+        "description": "Cung cấp nhân sự IT chuyên nghiệp để phát triển phần mềm cho doanh nghiệp, giúp bạn tập trung vào hoạt động kinh doanh cốt lõi.",
+        "category": "Dịch Vụ Outsourcing",
+        "features": [
+          "Đội Ngũ Nhân Sự Chuyên Nghiệp",
+          "Linh Hoạt Theo Nhu Cầu",
+          "Quy Trình Phát Triển Chuẩn",
+          "Bảo Mật & Bảo Mật Thông Tin"
+        ],
+        "benefits": [
+          "Cung cấp đội ngũ lập trình viên, kỹ sư phần mềm giàu kinh nghiệm với đa dạng kỹ năng (Front-end, Back-end, Full-stack, Mobile, DevOps) để tham gia vào các dự án phát triển phần mềm của doanh nghiệp.",
+          "Linh hoạt trong việc điều chỉnh quy mô nhân sự theo từng giai đoạn dự án, từ phát triển ban đầu đến bảo trì và nâng cấp, giúp tối ưu chi phí và hiệu quả.",
+          "Áp dụng các quy trình phát triển phần mềm chuyên nghiệp (Agile, Scrum, DevOps), đảm bảo chất lượng code, tiến độ dự án và khả năng mở rộng trong tương lai.",
+          "Đảm bảo bảo mật thông tin và dữ liệu của doanh nghiệp thông qua các thỏa thuận NDA, quy trình làm việc an toàn và tuân thủ các tiêu chuẩn bảo mật quốc tế."
+        ]
+      },
+      "10": {
+        "title": "Dịch Vụ IT Hardware",
+        "description": "Cung cấp và quản lý phần cứng IT toàn diện cho doanh nghiệp, đảm bảo hạ tầng công nghệ ổn định và hiệu quả.",
+        "category": "Dịch Vụ IT",
+        "features": [
+          "Tư Vấn & Thiết Kế Hạ Tầng",
+          "Cung Cấp Thiết Bị Chất Lượng",
+          "Lắp Đặt & Cấu Hình",
+          "Bảo Hành & Bảo Trì"
+        ],
+        "benefits": [
+          "Tư vấn và thiết kế hạ tầng phần cứng phù hợp với nhu cầu và ngân sách của doanh nghiệp, đảm bảo tính mở rộng và hiệu quả đầu tư.",
+          "Cung cấp các thiết bị phần cứng chất lượng cao từ các nhà sản xuất uy tín (servers, workstations, storage, networking equipment) với giá cả cạnh tranh.",
+          "Thực hiện lắp đặt và cấu hình chuyên nghiệp, đảm bảo hệ thống hoạt động ổn định ngay từ đầu và tối ưu hiệu suất.",
+          "Cung cấp dịch vụ bảo hành, bảo trì định kỳ và hỗ trợ kỹ thuật 24/7, giúp doanh nghiệp duy trì hoạt động liên tục và giảm thiểu downtime."
+        ]
+      },
+      "11": {
+        "title": "Dịch Vụ IT Network",
+        "description": "Thiết kế, triển khai và quản lý hệ thống mạng doanh nghiệp, đảm bảo kết nối ổn định, bảo mật và hiệu suất cao.",
+        "category": "Dịch Vụ IT",
+        "features": [
+          "Thiết Kế Mạng Doanh Nghiệp",
+          "Triển Khai Hạ Tầng Mạng",
+          "Quản Lý & Giám Sát",
+          "Tối Ưu Hiệu Suất"
+        ],
+        "benefits": [
+          "Thiết kế kiến trúc mạng phù hợp với quy mô và yêu cầu của doanh nghiệp, bao gồm LAN, WAN, WiFi, và các giải pháp kết nối từ xa.",
+          "Triển khai và cấu hình các thiết bị mạng (routers, switches, firewalls, access points) theo tiêu chuẩn công nghiệp, đảm bảo tính ổn định và bảo mật.",
+          "Thiết lập hệ thống giám sát và quản lý mạng tập trung, theo dõi hiệu suất, phát hiện sự cố sớm và hỗ trợ khắc phục nhanh chóng.",
+          "Tối ưu hóa băng thông, QoS (Quality of Service), và các cấu hình mạng để đảm bảo hiệu suất tối đa cho các ứng dụng quan trọng của doanh nghiệp."
+        ]
+      },
+      "12": {
+        "title": "Dịch Vụ IT Helpdesk",
+        "description": "Dịch vụ hỗ trợ kỹ thuật IT chuyên nghiệp, giải quyết nhanh chóng các vấn đề kỹ thuật và đảm bảo người dùng có thể làm việc hiệu quả.",
+        "category": "Dịch Vụ IT",
+        "features": [
+          "Hỗ Trợ Kỹ Thuật 24/7",
+          "Quản Lý Ticket Hệ Thống",
+          "Hỗ Trợ Đa Kênh",
+          "Báo Cáo & Phân Tích"
+        ],
+        "benefits": [
+          "Cung cấp dịch vụ hỗ trợ kỹ thuật 24/7 qua nhiều kênh (điện thoại, email, chat, remote desktop), đảm bảo phản hồi nhanh chóng và giải quyết vấn đề kịp thời.",
+          "Quản lý và theo dõi các yêu cầu hỗ trợ thông qua hệ thống ticket chuyên nghiệp, đảm bảo không bỏ sót và theo dõi tiến độ giải quyết.",
+          "Hỗ trợ đa dạng các vấn đề từ phần cứng, phần mềm, mạng, email, đến các ứng dụng doanh nghiệp, giúp người dùng tập trung vào công việc chính.",
+          "Cung cấp báo cáo định kỳ về tình trạng hỗ trợ, thời gian phản hồi, tỷ lệ giải quyết và phân tích xu hướng để cải thiện dịch vụ liên tục."
+        ]
+      },
+      "13": {
+        "title": "Dịch Vụ Cyber Security",
+        "description": "Tư vấn, thiết kế, triển khai và vận hành giải pháp bảo mật hệ thống mạng toàn diện, bảo vệ doanh nghiệp khỏi các mối đe dọa an ninh mạng.",
+        "category": "Dịch Vụ IT",
+        "features": [
+          "Tư Vấn Bảo Mật",
+          "Thiết Kế Giải Pháp",
+          "Triển Khai Hệ Thống",
+          "Vận Hành & Giám Sát"
+        ],
+        "benefits": [
+          "Đánh giá và tư vấn về tình trạng bảo mật hiện tại của doanh nghiệp, xác định các lỗ hổng và rủi ro, đề xuất giải pháp bảo mật phù hợp.",
+          "Thiết kế kiến trúc bảo mật toàn diện bao gồm firewall, IDS/IPS, endpoint protection, email security, và các giải pháp bảo mật khác theo nhu cầu.",
+          "Triển khai và cấu hình các giải pháp bảo mật chuyên nghiệp, đảm bảo tích hợp liền mạch với hạ tầng hiện có và không ảnh hưởng đến hoạt động kinh doanh.",
+          "Vận hành và giám sát hệ thống bảo mật 24/7, phát hiện và ứng phó với các mối đe dọa, cập nhật bảo mật định kỳ và đảm bảo tuân thủ các tiêu chuẩn bảo mật."
+        ]
+      },
+      "14": {
+        "title": "Dịch Vụ DevOps & Cloud",
+        "description": "Tư vấn, thiết kế, triển khai và vận hành giải pháp cloud hiện đại, giúp doanh nghiệp tận dụng sức mạnh của điện toán đám mây và DevOps.",
+        "category": "Dịch Vụ IT",
+        "features": [
+          "Tư Vấn Cloud Strategy",
+          "Thiết Kế Kiến Trúc Cloud",
+          "Triển Khai & Migration",
+          "Vận Hành & Tối Ưu"
+        ],
+        "benefits": [
+          "Tư vấn chiến lược chuyển đổi cloud phù hợp với doanh nghiệp, lựa chọn mô hình cloud (Public, Private, Hybrid) và nhà cung cấp phù hợp (AWS, Azure, GCP).",
+          "Thiết kế kiến trúc cloud tối ưu, đảm bảo tính khả dụng, khả năng mở rộng, bảo mật và hiệu quả chi phí, phù hợp với các yêu cầu cụ thể của doanh nghiệp.",
+          "Thực hiện migration ứng dụng và dữ liệu lên cloud một cách an toàn, thiết lập CI/CD pipeline, containerization (Docker, Kubernetes) và các công cụ DevOps.",
+          "Vận hành và tối ưu hóa môi trường cloud liên tục, giám sát hiệu suất, quản lý chi phí, đảm bảo bảo mật và cập nhật các dịch vụ cloud mới nhất để tối đa hóa giá trị đầu tư."
+        ]
+      }
+    }
   },
   "projects": {
     "hero": {
@@ -211,6 +553,53 @@
       "happyClients": "Khách hàng hài lòng",
       "awardsWon": "Giải thưởng Đã Đạt được",
       "industryRecognition": "Công nhận ngành"
+    },
+    "items": {
+      "1": {
+        "title": "Triển khai ERP Bán Lẻ cho Chuỗi Siêu thị",
+        "client": "Tập đoàn Bán lẻ Quốc gia",
+        "industry": "Bán lẻ",
+        "description": "Triển khai hệ thống ERP Bán Lẻ toàn diện cho chuỗi siêu thị với hơn 200 điểm bán, tích hợp quản lý đa kênh và tối ưu hóa trải nghiệm khách hàng.",
+        "solution": "ERP Bán Lẻ, Cloud Infrastructure",
+        "result": "Đồng bộ hóa 100% dữ liệu đa kênh, giảm 35% chi phí tồn kho, tăng 50% hiệu quả quản lý khuyến mãi",
+        "content": "<p>Tập đoàn Bán lẻ Quốc gia là một trong những chuỗi siêu thị lớn nhất Việt Nam với hơn 200 điểm bán trên toàn quốc. Việc quản lý đa kênh và đồng bộ dữ liệu giữa các điểm bán là thách thức lớn mà họ phải đối mặt.</p><h2>Thách Thức Ban Đầu</h2><p>Trước khi triển khai ERP, Tập đoàn gặp nhiều khó khăn: dữ liệu tồn kho không đồng bộ giữa các điểm bán, chi phí tồn kho cao, và khó khăn trong quản lý khuyến mãi đa kênh. Hệ thống cũ không đáp ứng được nhu cầu phát triển với quy mô lớn.</p><h2>Giải Pháp Triển Khai</h2><p>NexaCore đã triển khai giải pháp ERP Bán Lẻ toàn diện, tích hợp tất cả các điểm bán, hệ thống online và kênh bán hàng trên mạng xã hội vào một nền tảng thống nhất. Hệ thống được triển khai theo từng giai đoạn để đảm bảo không gián đoạn hoạt động kinh doanh.</p><h2>Tính Năng Nổi Bật</h2><p>Hệ thống ERP Bán Lẻ của NexaCore tích hợp các tính năng tiên tiến như quản lý tồn kho thời gian thực, đồng bộ hóa dữ liệu đa kênh, và quản lý khách hàng 360 độ. Với công nghệ AI và Machine Learning, hệ thống có thể dự báo nhu cầu, tối ưu hóa giá cả và đề xuất các chiến lược khuyến mãi hiệu quả.</p><h2>Kết Quả Ấn Tượng</h2><p>Sau 6 tháng triển khai, Tập đoàn đã đạt được những kết quả ấn tượng: đồng bộ hóa 100% dữ liệu đa kênh, giảm 35% chi phí tồn kho, và tăng 50% hiệu quả quản lý khuyến mãi. Hệ thống giúp Tập đoàn tối ưu hóa hoạt động và nâng cao trải nghiệm khách hàng một cách đáng kể.</p>"
+      },
+      "2": {
+        "title": "Triển khai ERP Sản Xuất cho Nhà máy Dệt may",
+        "client": "Công ty Dệt may Hàng đầu",
+        "industry": "Sản xuất",
+        "description": "Triển khai hệ thống ERP Sản Xuất thông minh với tích hợp sâu từ lập kế hoạch đến kiểm soát chất lượng, quản lý sản lượng WIP/FG và hệ thống Barcode.",
+        "solution": "ERP Sản Xuất, Manufacturing",
+        "result": "Tối ưu 40% công suất sản xuất, giảm 30% lãng phí nguyên vật liệu, tăng 25% độ chính xác kiểm kê",
+        "content": "<p>Công ty Dệt may Hàng đầu là một trong những nhà sản xuất dệt may lớn nhất Việt Nam với quy trình sản xuất phức tạp từ spinning, knitting đến sewing. Việc quản lý và tối ưu hóa quy trình sản xuất là thách thức lớn.</p><h2>Thách Thức Sản Xuất</h2><p>Trước khi triển khai ERP, nhà máy gặp nhiều khó khăn: lãng phí nguyên vật liệu cao, công suất sản xuất chưa được tối ưu, và khó khăn trong kiểm soát chất lượng. Hệ thống cũ không đáp ứng được yêu cầu quản lý chi tiết theo từng công đoạn sản xuất.</p><h2>Giải Pháp ERP Sản Xuất</h2><p>NexaCore đã triển khai giải pháp ERP Sản Xuất với công nghệ IED Tool và Inspection Tool, giúp nhà máy tối ưu quy trình từ lập kế hoạch đến kiểm soát chất lượng. Hệ thống tích hợp sâu với các thiết bị trên sàn nhà máy và quản lý sản lượng WIP/FG chi tiết.</p><h2>Công Nghệ IED Tool Và Inspection Tool</h2><p>Hệ thống tích hợp công cụ IED (Industrial Engineering Data) giúp xây dựng và quản lý thư viện Định mức Thời gian Chuẩn (SMV/SAM/SAH) chi tiết theo từng kiểu dáng. Công cụ Inspection Tool cho phép nhập liệu lỗi qua màn hình cảm ứng và tự động đánh giá chất lượng vải dựa trên số lượng lỗi.</p><h2>Kết Quả Vượt Mong Đợi</h2><p>Sau khi triển khai, nhà máy đã đạt được những kết quả ấn tượng: tối ưu 40% công suất sản xuất, giảm 30% lãng phí nguyên vật liệu, và tăng 25% độ chính xác kiểm kê. Hệ thống giúp nhà máy nâng cao năng lực cạnh tranh và đáp ứng các tiêu chuẩn quốc tế.</p>"
+      },
+      "3": {
+        "title": "Hệ thống Quản Lý Ngân Sách cho Tập đoàn",
+        "client": "Tập đoàn Đa ngành",
+        "industry": "Tài chính",
+        "description": "Triển khai giải pháp Quản Lý Ngân Sách toàn diện với kiểm soát chi tiêu theo thời gian thực và báo cáo phân tích độ lệch chi tiết.",
+        "solution": "Quản Lý Ngân Sách, Financial Management",
+        "result": "Giảm 45% tình trạng vượt chi, tăng 60% độ chính xác dự toán, cải thiện 50% tốc độ phê duyệt",
+        "content": "<p>Tập đoàn Đa ngành với nhiều công ty con và phòng ban khác nhau cần một hệ thống quản lý ngân sách tập trung và hiệu quả. Việc kiểm soát chi tiêu và phân bổ ngân sách là thách thức lớn.</p><h2>Vấn Đề Quản Lý Ngân Sách</h2><p>Trước khi triển khai, Tập đoàn gặp nhiều khó khăn: tình trạng vượt chi thường xuyên, độ chính xác dự toán thấp, và quy trình phê duyệt chậm. Hệ thống cũ không đáp ứng được yêu cầu quản lý tập trung cho nhiều đơn vị trực thuộc.</p><h2>Giải Pháp Quản Lý Ngân Sách</h2><p>NexaCore đã triển khai giải pháp Quản Lý Ngân Sách toàn diện, cho phép Tập đoàn kiểm soát chi tiêu theo thời gian thực và phân bổ ngân sách hiệu quả. Hệ thống tự động hóa quy trình phê duyệt và cảnh báo khi có nguy cơ vượt chi.</p><h2>Kiểm Soát Chi Tiêu Theo Thời Gian Thực</h2><p>Hệ thống tự động hóa quy trình phê duyệt, đối chiếu với ngân sách đã duyệt để ngăn chặn tình trạng vượt chi ngay từ đầu. Mọi giao dịch được theo dõi và cảnh báo ngay lập tức khi có nguy cơ vượt ngân sách.</p><h2>Báo Cáo Và Phân Tích Độ Lệch</h2><p>Giải pháp cung cấp báo cáo chuyên sâu so sánh ngân sách thực tế với dự toán, hỗ trợ ra quyết định đầu tư và phân bổ nguồn lực chính xác. Các dashboard trực quan giúp lãnh đạo nắm bắt tình hình tài chính nhanh chóng.</p><h2>Kết Quả Thành Công</h2><p>Sau khi triển khai, Tập đoàn đã đạt được những kết quả ấn tượng: giảm 45% tình trạng vượt chi, tăng 60% độ chính xác dự toán, và cải thiện 50% tốc độ phê duyệt. Hệ thống giúp Tập đoàn duy trì tính kỷ luật tài chính và tối ưu hiệu quả sử dụng nguồn lực.</p>"
+      },
+      "7": {
+        "title": "Triển khai DMS cho Công ty FMCG",
+        "client": "Công ty Hàng tiêu dùng",
+        "industry": "FMCG",
+        "description": "Triển khai Hệ thống Quản Lý Phân Phối (DMS) số hóa toàn diện quy trình bán hàng và quản lý kênh phân phối, tối ưu hóa hiệu quả hoạt động ngoài thị trường.",
+        "solution": "DMS, Distribution Management",
+        "result": "Tăng 45% độ phủ thị trường, giảm 35% tồn kho chết, cải thiện 50% hiệu suất đội ngũ bán hàng",
+        "content": "<p>Công ty Hàng tiêu dùng là một trong những nhà sản xuất FMCG lớn nhất Việt Nam với mạng lưới phân phối rộng khắp. Việc quản lý kênh phân phối và đội ngũ bán hàng là thách thức lớn.</p><h2>Thách Thức Quản Lý Phân Phối</h2><p>Trước khi triển khai DMS, Công ty gặp nhiều khó khăn: độ phủ thị trường thấp, tồn kho chết cao, và khó khăn trong quản lý đội ngũ bán hàng. Hệ thống cũ không đáp ứng được yêu cầu quản lý thời gian thực với hàng nghìn điểm bán.</p><h2>Triển Khai DMS</h2><p>NexaCore đã triển khai hệ thống DMS toàn diện, giúp Công ty quản lý lực lượng bán hàng, theo dõi tồn kho kênh và tối ưu hóa hiệu quả hoạt động. Hệ thống được tích hợp với ứng dụng di động cho đội ngũ bán hàng.</p><h2>Quản Lý Lực Lượng Bán Hàng</h2><p>DMS giúp giám sát hoạt động, lộ trình bán hàng và hiệu suất đặt hàng của nhân viên thị trường (Sales Reps) qua ứng dụng di động. Hệ thống theo dõi vị trí GPS, thời gian thăm khách hàng và kết quả bán hàng, giúp tối ưu hóa hiệu quả làm việc.</p><h2>Theo Dõi Tồn Kho Kênh</h2><p>Hệ thống cập nhật tồn kho, tình trạng trưng bày, và đơn hàng tại điểm bán/NPP theo thời gian thực, giảm rủi ro thiếu hàng và tồn kho chết. Dữ liệu được đồng bộ tự động với hệ thống ERP trung tâm.</p><h2>Kết Quả Vượt Trội</h2><p>Sau khi triển khai, Công ty đã đạt được những kết quả vượt trội: tăng 45% độ phủ thị trường, giảm 35% tồn kho chết, và cải thiện 50% hiệu suất đội ngũ bán hàng. Hệ thống giúp Công ty tối ưu hóa quy trình phân phối và nâng cao hiệu quả kinh doanh.</p>"
+      },
+      "8": {
+        "title": "Triển khai Nền tảng E-commerce cho Thương hiệu Thời trang",
+        "client": "Thương hiệu Thời trang Quốc tế",
+        "industry": "Thời trang",
+        "description": "Triển khai nền tảng Thương mại Điện tử mạnh mẽ với tích hợp sâu ERP & CRM, hỗ trợ đa ngôn ngữ, đa tiền tệ và tối ưu hiệu suất.",
+        "solution": "E-commerce Platform, Digital Commerce",
+        "result": "Tăng 120% doanh thu online, giảm 40% thời gian xử lý đơn hàng, cải thiện 65% trải nghiệm người dùng",
+        "content": "<p>Thương hiệu Thời trang Quốc tế là một trong những thương hiệu thời trang nổi tiếng với sự hiện diện toàn cầu. Việc phát triển kênh bán hàng online là ưu tiên hàng đầu để mở rộng thị trường.</p><h2>Nhu Cầu Phát Triển E-commerce</h2><p>Trước khi triển khai nền tảng E-commerce, Thương hiệu gặp nhiều khó khăn: doanh thu online thấp, trải nghiệm người dùng chưa tốt, và khó khăn trong quản lý đơn hàng đa kênh. Hệ thống cũ không đáp ứng được yêu cầu phát triển.</p><h2>Triển Khai Nền Tảng E-commerce</h2><p>NexaCore đã triển khai nền tảng E-commerce mạnh mẽ, tích hợp sâu với ERP & CRM, hỗ trợ đa ngôn ngữ, đa tiền tệ và tối ưu hiệu suất. Hệ thống được tùy biến để phù hợp với mô hình kinh doanh của Thương hiệu.</p><h2>Tích Hợp Sâu Với ERP & CRM</h2><p>Đơn hàng, tồn kho, thông tin khách hàng được đồng bộ tự động, loại bỏ sai sót và đảm bảo dữ liệu bán hàng chính xác. Hệ thống tự động cập nhật tồn kho khi có đơn hàng mới và đồng bộ thông tin khách hàng với CRM.</p><h2>Nền Tảng Tùy Biến Cao</h2><p>Cho phép xây dựng giao diện và trải nghiệm người dùng độc đáo, đáp ứng các mô hình kinh doanh B2B/B2C phức tạp. Hệ thống hỗ trợ đa ngôn ngữ, đa tiền tệ, và tích hợp các công cụ Marketing (SEO, liên kết).</p><h2>Kết Quả Ngoạn Mục</h2><p>Sau khi triển khai, Thương hiệu đã đạt được những kết quả ngoạn mục: tăng 120% doanh thu online, giảm 40% thời gian xử lý đơn hàng, và cải thiện 65% trải nghiệm người dùng. Hệ thống giúp Thương hiệu mở rộng thị trường và tăng trưởng doanh thu online đáng kể.</p>"
+      }
     }
   },
   "news": {
@@ -234,6 +623,134 @@
       "title": "Cập nhật",
       "description": "Đăng ký nhận bản tin của chúng tôi và không bao giờ bỏ lỡ tin tức, thông tin chi tiết và cập nhật mới nhất",
       "subscribeNow": "Đăng ký Ngay"
+    },
+    "items": {
+      "1": {
+        "title": "NexaCore Ra Mắt Giải Pháp ERP Bán Lẻ Hiệu Quả Cho Doanh Nghiệp",
+        "excerpt": "Giải pháp ERP Bán Lẻ mới của NexaCore giúp doanh nghiệp quản lý đa kênh hiệu quả, tối ưu hóa tồn kho và nâng cao trải nghiệm khách hàng.",
+        "category": "Product News",
+        "author": "NexaCore Team",
+        "content": "<p>NexaCore tự hào giới thiệu giải pháp ERP Bán Lẻ (Retail ERP) mới nhất, được thiết kế đặc biệt để đáp ứng nhu cầu quản lý phức tạp của các doanh nghiệp bán lẻ hiện đại. Giải pháp này mang lại khả năng quản lý đa kênh toàn diện, từ cửa hàng truyền thống đến thương mại điện tử và các kênh bán hàng trên mạng xã hội.</p><h2>Tính Năng Nổi Bật</h2><p>Hệ thống ERP Bán Lẻ của NexaCore tích hợp các tính năng tiên tiến như quản lý tồn kho thời gian thực, đồng bộ hóa dữ liệu đa kênh, và quản lý khách hàng 360 độ. Với công nghệ AI và Machine Learning, hệ thống có thể dự báo nhu cầu, tối ưu hóa giá cả và đề xuất các chiến lược khuyến mãi hiệu quả.</p><h2>Lợi Ích Cho Doanh Nghiệp</h2><p>Doanh nghiệp sử dụng giải pháp này đã ghi nhận những cải thiện đáng kể: giảm 35% chi phí tồn kho, tăng 50% hiệu quả quản lý khuyến mãi, và cải thiện 40% trải nghiệm khách hàng. Hệ thống giúp tự động hóa các quy trình từ đặt hàng đến giao hàng, giảm thiểu sai sót và tăng tốc độ xử lý đơn hàng.</p><h2>Tương Lai Của Bán Lẻ</h2><p>Với xu hướng số hóa ngày càng tăng, giải pháp ERP Bán Lẻ của NexaCore sẽ là nền tảng vững chắc giúp doanh nghiệp phát triển bền vững và cạnh tranh hiệu quả trong thị trường hiện đại.</p>"
+      },
+      "2": {
+        "title": "ERP Sản Xuất Thông Minh: Giải Pháp Toàn Diện Cho Ngành Dệt May",
+        "excerpt": "Hệ thống ERP Sản Xuất với công nghệ IED Tool và Inspection Tool giúp nhà máy dệt may tối ưu quy trình sản xuất và kiểm soát chất lượng.",
+        "category": "Technology",
+        "author": "NexaCore Team",
+        "content": "<p>Ngành dệt may Việt Nam đang đối mặt với nhiều thách thức trong quản lý sản xuất phức tạp, từ lập kế hoạch sản xuất đến kiểm soát chất lượng. Giải pháp ERP Sản Xuất thông minh của NexaCore được phát triển đặc biệt để giải quyết những vấn đề này.</p><h2>Công Nghệ IED Tool Và Inspection Tool</h2><p>Hệ thống tích hợp công cụ IED (Industrial Engineering Data) giúp xây dựng và quản lý thư viện định mức thời gian chuẩn (SMV/SAM/SAH) chi tiết theo từng kiểu dáng. Công cụ Inspection Tool cho phép nhập liệu lỗi qua màn hình cảm ứng và tự động đánh giá chất lượng vải dựa trên số lượng lỗi.</p><h2>Kết Quả Thực Tế</h2><p>Các nhà máy dệt may đã triển khai giải pháp này ghi nhận những cải thiện ấn tượng: tối ưu 40% công suất sản xuất, giảm 30% lãng phí nguyên vật liệu, và tăng 25% độ chính xác kiểm kê. Hệ thống giúp tự động hóa quy trình từ lập kế hoạch đến kiểm soát chất lượng.</p><h2>Tương Lai Ngành Dệt May</h2><p>Với sự hỗ trợ của công nghệ ERP thông minh, các nhà máy dệt may có thể nâng cao năng lực cạnh tranh, đáp ứng các tiêu chuẩn quốc tế và phát triển bền vững trong thị trường toàn cầu.</p>"
+      },
+      "3": {
+        "title": "Quản Lý Ngân Sách Chuyên Nghiệp: Chìa Khóa Thành Công Cho Doanh Nghiệp",
+        "excerpt": "Giải pháp Quản Lý Ngân Sách giúp doanh nghiệp kiểm soát chi tiêu theo thời gian thực, ngăn chặn vượt chi và tối ưu phân bổ nguồn lực.",
+        "category": "Product News",
+        "author": "NexaCore Team",
+        "content": "<p>Quản lý ngân sách hiệu quả là yếu tố then chốt quyết định thành công của mọi doanh nghiệp. Giải pháp Quản Lý Ngân Sách của NexaCore cung cấp công cụ toàn diện để doanh nghiệp kiểm soát tài chính một cách chủ động và chính xác.</p><h2>Kiểm Soát Chi Tiêu Theo Thời Gian Thực</h2><p>Hệ thống tự động hóa quy trình phê duyệt, đối chiếu với ngân sách đã duyệt để ngăn chặn tình trạng vượt chi ngay từ đầu. Mọi giao dịch được theo dõi và cảnh báo ngay lập tức khi có nguy cơ vượt ngân sách.</p><h2>Báo Cáo Và Phân Tích Độ Lệch</h2><p>Giải pháp cung cấp báo cáo chuyên sâu so sánh ngân sách thực tế với dự toán, hỗ trợ ra quyết định đầu tư và phân bổ nguồn lực chính xác. Các dashboard trực quan giúp lãnh đạo nắm bắt tình hình tài chính nhanh chóng.</p><h2>Kết Quả Thực Tế</h2><p>Doanh nghiệp sử dụng giải pháp này đã giảm 45% tình trạng vượt chi, tăng 60% độ chính xác dự toán, và cải thiện 50% tốc độ phê duyệt. Hệ thống giúp doanh nghiệp duy trì tính kỷ luật tài chính và tối ưu hiệu quả sử dụng nguồn lực.</p>"
+      },
+      "4": {
+        "title": "CRM 360 Độ: Giải Pháp Quản Lý Khách Hàng Toàn Diện",
+        "excerpt": "Hệ thống CRM mới của NexaCore cung cấp cái nhìn 360 độ về khách hàng, tự động hóa quy trình bán hàng và nâng cao chất lượng dịch vụ.",
+        "category": "Product News",
+        "author": "NexaCore Team",
+        "content": "<p>Trong thời đại số hóa, việc hiểu rõ khách hàng là yếu tố quyết định thành công. Hệ thống CRM 360 độ của NexaCore cung cấp cái nhìn toàn diện về mọi tương tác với khách hàng, từ marketing đến bán hàng và dịch vụ.</p><h2>Cái Nhìn 360 Độ Về Khách Hàng</h2><p>Hệ thống tích hợp dữ liệu từ mọi điểm tiếp xúc với khách hàng, tạo ra hồ sơ khách hàng đầy đủ và chi tiết. Từ lịch sử mua hàng, tương tác trên mạng xã hội, đến các yêu cầu hỗ trợ, tất cả đều được ghi nhận và phân tích.</p><h2>Tự Động Hóa Quy Trình Bán Hàng</h2><p>CRM 360 độ tự động hóa các bước trong quy trình bán hàng, từ lead generation đến chốt giao dịch. Hệ thống gợi ý các hành động tiếp theo dựa trên hành vi và sở thích của khách hàng, giúp đội ngũ sales tập trung vào chốt giao dịch.</p><h2>Nâng Cao Chất Lượng Dịch Vụ</h2><p>Hệ thống quản lý, phân loại và ưu tiên giải quyết các yêu cầu/khiếu nại (ticket), đảm bảo tốc độ phản hồi nhanh chóng và chất lượng dịch vụ đồng nhất. Mọi tương tác với khách hàng đều được theo dõi và đánh giá.</p>"
+      },
+      "5": {
+        "title": "Data Warehouse: Xu Hướng Chuyển Đổi Số 2024",
+        "excerpt": "Kho dữ liệu tập trung đang trở thành nền tảng quan trọng cho các doanh nghiệp muốn tận dụng sức mạnh của Business Intelligence và phân tích dữ liệu.",
+        "category": "Technology",
+        "author": "NexaCore Team",
+        "content": "<p>Trong kỷ nguyên số, dữ liệu đã trở thành tài sản quý giá nhất của doanh nghiệp. Data Warehouse (Kho dữ liệu) đang trở thành nền tảng chiến lược giúp doanh nghiệp biến dữ liệu thô thành tri thức kinh doanh sâu sắc.</p><h2>Tầm Quan Trọng Của Data Warehouse</h2><p>Data Warehouse tập trung hóa dữ liệu từ nhiều nguồn khác nhau (ERP, CRM, hệ thống bán hàng, v.v.) vào một kho duy nhất, được tổ chức và làm sạch để phục vụ phân tích. Điều này giúp doanh nghiệp có cái nhìn toàn diện về hoạt động kinh doanh.</p><h2>Business Intelligence Và Phân Tích Dữ Liệu</h2><p>Với Data Warehouse, doanh nghiệp có thể triển khai các công cụ Business Intelligence (BI) để phân tích xu hướng, dự báo tương lai và ra quyết định dựa trên dữ liệu. Hệ thống tối ưu hóa cho các truy vấn phức tạp và báo cáo lớn, đảm bảo tốc độ phân tích nhanh chóng.</p><h2>Xu Hướng 2024</h2><p>Năm 2024 chứng kiến sự phát triển mạnh mẽ của Data Warehouse với tích hợp AI và Machine Learning, cho phép phân tích dự báo chính xác hơn và tự động hóa quy trình ra quyết định. Doanh nghiệp đầu tư vào Data Warehouse sẽ có lợi thế cạnh tranh đáng kể.</p>"
+      },
+      "6": {
+        "title": "Cloud Storage Private: Bảo Mật Tối Đa Cho Dữ Liệu Nhạy Cảm",
+        "excerpt": "Giải pháp lưu trữ đám mây riêng của NexaCore đảm bảo bảo mật tối đa, tuân thủ các quy định nghiêm ngặt và đảm bảo tính sẵn sàng cao.",
+        "category": "Technology",
+        "author": "NexaCore Team",
+        "content": "<p>Với sự gia tăng của các mối đe dọa bảo mật và yêu cầu tuân thủ quy định ngày càng nghiêm ngặt, Cloud Storage Private đang trở thành lựa chọn hàng đầu cho các tổ chức xử lý dữ liệu nhạy cảm.</p><h2>Bảo Mật Tối Đa</h2><p>Cloud Storage Private của NexaCore cung cấp môi trường lưu trữ độc lập, đảm bảo tuân thủ các quy định bảo mật dữ liệu nghiêm ngặt như GDPR, PCI-DSS. Dữ liệu được mã hóa end-to-end và chỉ có thể truy cập bởi các bên được ủy quyền.</p><h2>Khả Năng Mở Rộng Linh Hoạt</h2><p>Giải pháp cho phép doanh nghiệp dễ dàng mở rộng dung lượng và tài nguyên theo nhu cầu tăng trưởng mà không cần đầu tư lớn vào phần cứng vật lý. Hệ thống tự động điều chỉnh để đáp ứng nhu cầu thực tế.</p><h2>Đảm Bảo Tính Sẵn Sàng</h2><p>Dữ liệu được sao lưu và dự phòng tại nhiều khu vực, đảm bảo hoạt động liên tục (Business Continuity) với uptime 99.99%. Hệ thống tự động phát hiện và khắc phục sự cố, đảm bảo dữ liệu luôn sẵn sàng khi cần.</p>"
+      },
+      "7": {
+        "title": "DMS: Số Hóa Toàn Diện Kênh Phân Phối",
+        "excerpt": "Hệ thống Quản Lý Phân Phối (DMS) giúp doanh nghiệp FMCG quản lý lực lượng bán hàng, theo dõi tồn kho kênh và tối ưu hóa hiệu quả hoạt động.",
+        "category": "Product News",
+        "author": "NexaCore Team",
+        "content": "<p>Ngành hàng tiêu dùng nhanh (FMCG) đang đối mặt với thách thức quản lý kênh phân phối phức tạp với hàng nghìn điểm bán và đội ngũ bán hàng lớn. Hệ thống DMS (Distribution Management System) của NexaCore giải quyết những thách thức này một cách toàn diện.</p><h2>Quản Lý Lực Lượng Bán Hàng</h2><p>DMS giúp giám sát hoạt động, lộ trình bán hàng và hiệu suất đặt hàng của nhân viên thị trường (Sales Reps) qua ứng dụng di động. Hệ thống theo dõi vị trí GPS, thời gian thăm khách hàng và kết quả bán hàng, giúp tối ưu hóa hiệu quả làm việc.</p><h2>Theo Dõi Tồn Kho Kênh</h2><p>Hệ thống cập nhật tồn kho, tình trạng trưng bày, và đơn hàng tại điểm bán/NPP theo thời gian thực, giảm rủi ro thiếu hàng và tồn kho chết. Dữ liệu được đồng bộ tự động với hệ thống ERP trung tâm.</p><h2>Kết Quả Thực Tế</h2><p>Doanh nghiệp FMCG sử dụng DMS đã ghi nhận những cải thiện đáng kể: tăng 45% độ phủ thị trường, giảm 35% tồn kho chết, và cải thiện 50% hiệu suất đội ngũ bán hàng. Hệ thống giúp tối ưu hóa quy trình từ đặt hàng đến giao hàng.</p>"
+      },
+      "8": {
+        "title": "Nền Tảng E-commerce: Tăng Trưởng Doanh Thu Online",
+        "excerpt": "Giải pháp Thương Mại Điện Tử tích hợp sâu với ERP & CRM, hỗ trợ đa ngôn ngữ, đa tiền tệ và tối ưu hiệu suất cho doanh nghiệp.",
+        "category": "Product News",
+        "author": "NexaCore Team",
+        "content": "<p>Thương mại điện tử đang trở thành kênh bán hàng quan trọng nhất trong thời đại số. Nền tảng E-commerce của NexaCore được thiết kế để tích hợp liền mạch với hệ thống lõi của doanh nghiệp, tạo ra trải nghiệm mua sắm tuyệt vời cho khách hàng.</p><h2>Tích Hợp Sâu Với ERP & CRM</h2><p>Đơn hàng, tồn kho, thông tin khách hàng được đồng bộ tự động, loại bỏ sai sót và đảm bảo dữ liệu bán hàng chính xác. Hệ thống tự động cập nhật tồn kho khi có đơn hàng mới và đồng bộ thông tin khách hàng với CRM.</p><h2>Nền Tảng Tùy Biến Cao</h2><p>Cho phép xây dựng giao diện và trải nghiệm người dùng độc đáo, đáp ứng các mô hình kinh doanh B2B/B2C phức tạp. Hệ thống hỗ trợ đa ngôn ngữ, đa tiền tệ, và tích hợp các công cụ Marketing (SEO, liên kết).</p><h2>Tăng Trưởng Doanh Thu</h2><p>Doanh nghiệp sử dụng nền tảng này đã ghi nhận tăng trưởng doanh thu online đáng kể, với khả năng mở rộng thị trường và tiếp cận khách hàng toàn cầu. Hệ thống tối ưu hiệu suất và tốc độ tải trang, cải thiện trải nghiệm người dùng.</p>"
+      },
+      "9": {
+        "title": "Thành Công Triển Khai ERP Cho Chuỗi Siêu Thị Hàng Đầu",
+        "excerpt": "Dự án triển khai ERP Bán Lẻ cho Tập đoàn Bán lẻ Quốc gia đạt được kết quả ấn tượng: đồng bộ hóa 100% dữ liệu đa kênh và giảm 35% chi phí tồn kho.",
+        "category": "Case Study",
+        "author": "NexaCore Team",
+        "content": "<p>Tập đoàn Bán lẻ Quốc gia là một trong những chuỗi siêu thị lớn nhất Việt Nam với hơn 200 điểm bán trên toàn quốc. Việc quản lý đa kênh và đồng bộ dữ liệu giữa các điểm bán là thách thức lớn mà họ phải đối mặt.</p><h2>Thách Thức Ban Đầu</h2><p>Trước khi triển khai ERP, Tập đoàn gặp nhiều khó khăn: dữ liệu tồn kho không đồng bộ giữa các điểm bán, chi phí tồn kho cao, và khó khăn trong quản lý khuyến mãi đa kênh. Hệ thống cũ không đáp ứng được nhu cầu phát triển.</p><h2>Giải Pháp Triển Khai</h2><p>NexaCore đã triển khai giải pháp ERP Bán Lẻ toàn diện, tích hợp tất cả các điểm bán, hệ thống online và kênh bán hàng trên mạng xã hội vào một nền tảng thống nhất. Hệ thống được triển khai theo từng giai đoạn để đảm bảo không gián đoạn hoạt động kinh doanh.</p><h2>Kết Quả Ấn Tượng</h2><p>Sau 6 tháng triển khai, Tập đoàn đã đạt được những kết quả ấn tượng: đồng bộ hóa 100% dữ liệu đa kênh, giảm 35% chi phí tồn kho, và tăng 50% hiệu quả quản lý khuyến mãi. Hệ thống giúp Tập đoàn tối ưu hóa hoạt động và nâng cao trải nghiệm khách hàng.</p>"
+      },
+      "10": {
+        "title": "ERP Sản Xuất Giúp Nhà Máy Dệt May Tối Ưu Hiệu Quả",
+        "excerpt": "Công ty Dệt may Hàng đầu đã thành công triển khai ERP Sản Xuất, tối ưu 40% công suất sản xuất và giảm 30% lãng phí nguyên vật liệu.",
+        "category": "Case Study",
+        "author": "NexaCore Team",
+        "content": "<p>Công ty Dệt may Hàng đầu là một trong những nhà sản xuất dệt may lớn nhất Việt Nam với quy trình sản xuất phức tạp từ spinning, knitting đến sewing. Việc quản lý và tối ưu hóa quy trình sản xuất là thách thức lớn.</p><h2>Thách Thức Sản Xuất</h2><p>Trước khi triển khai ERP, nhà máy gặp nhiều khó khăn: lãng phí nguyên vật liệu cao, công suất sản xuất chưa được tối ưu, và khó khăn trong kiểm soát chất lượng. Hệ thống cũ không đáp ứng được yêu cầu quản lý chi tiết.</p><h2>Giải Pháp ERP Sản Xuất</h2><p>NexaCore đã triển khai giải pháp ERP Sản Xuất với công nghệ IED Tool và Inspection Tool, giúp nhà máy tối ưu quy trình từ lập kế hoạch đến kiểm soát chất lượng. Hệ thống tích hợp sâu với các thiết bị trên sàn nhà máy.</p><h2>Kết Quả Vượt Mong Đợi</h2><p>Sau khi triển khai, nhà máy đã đạt được những kết quả ấn tượng: tối ưu 40% công suất sản xuất, giảm 30% lãng phí nguyên vật liệu, và tăng 25% độ chính xác kiểm kê. Hệ thống giúp nhà máy nâng cao năng lực cạnh tranh và đáp ứng các tiêu chuẩn quốc tế.</p>"
+      },
+      "11": {
+        "title": "Quản Lý Ngân Sách: Giải Pháp Cho Tập Đoàn Đa Ngành",
+        "excerpt": "Hệ thống Quản Lý Ngân Sách giúp Tập đoàn Đa ngành giảm 45% tình trạng vượt chi và tăng 60% độ chính xác dự toán.",
+        "category": "Case Study",
+        "author": "NexaCore Team",
+        "content": "<p>Tập đoàn Đa ngành với nhiều công ty con và phòng ban khác nhau cần một hệ thống quản lý ngân sách tập trung và hiệu quả. Việc kiểm soát chi tiêu và phân bổ ngân sách là thách thức lớn.</p><h2>Vấn Đề Quản Lý Ngân Sách</h2><p>Trước khi triển khai, Tập đoàn gặp nhiều khó khăn: tình trạng vượt chi thường xuyên, độ chính xác dự toán thấp, và quy trình phê duyệt chậm. Hệ thống cũ không đáp ứng được yêu cầu quản lý tập trung.</p><h2>Giải Pháp Quản Lý Ngân Sách</h2><p>NexaCore đã triển khai giải pháp Quản Lý Ngân Sách toàn diện, cho phép Tập đoàn kiểm soát chi tiêu theo thời gian thực và phân bổ ngân sách hiệu quả. Hệ thống tự động hóa quy trình phê duyệt và cảnh báo khi có nguy cơ vượt chi.</p><h2>Kết Quả Thành Công</h2><p>Sau khi triển khai, Tập đoàn đã đạt được những kết quả ấn tượng: giảm 45% tình trạng vượt chi, tăng 60% độ chính xác dự toán, và cải thiện 50% tốc độ phê duyệt. Hệ thống giúp Tập đoàn duy trì tính kỷ luật tài chính và tối ưu hiệu quả sử dụng nguồn lực.</p>"
+      },
+      "12": {
+        "title": "Chuyển Đổi Số Ngân Hàng: Xây Dựng Data Warehouse Thành Công",
+        "excerpt": "Ngân hàng Thương mại đã xây dựng thành công nền tảng Data Warehouse, tăng 70% tốc độ phân tích dữ liệu và cải thiện 80% độ chính xác dự báo.",
+        "category": "Case Study",
+        "author": "NexaCore Team",
+        "content": "<p>Ngân hàng Thương mại là một trong những ngân hàng lớn nhất Việt Nam với khối lượng dữ liệu khổng lồ từ nhiều hệ thống khác nhau. Việc phân tích và ra quyết định dựa trên dữ liệu là thách thức lớn.</p><h2>Thách Thức Phân Tích Dữ Liệu</h2><p>Trước khi xây dựng Data Warehouse, Ngân hàng gặp nhiều khó khăn: dữ liệu phân tán ở nhiều hệ thống, tốc độ phân tích chậm, và độ chính xác dự báo thấp. Việc ra quyết định dựa trên dữ liệu không hiệu quả.</p><h2>Xây Dựng Data Warehouse</h2><p>NexaCore đã xây dựng nền tảng Data Warehouse tập trung, tích hợp dữ liệu từ tất cả các hệ thống của Ngân hàng. Hệ thống được tối ưu hóa cho các truy vấn phức tạp và phân tích dữ liệu lớn.</p><h2>Kết Quả Ấn Tượng</h2><p>Sau khi triển khai, Ngân hàng đã đạt được những kết quả ấn tượng: tăng 70% tốc độ phân tích dữ liệu, cải thiện 80% độ chính xác dự báo, và nâng cao khả năng ra quyết định dựa trên dữ liệu. Hệ thống giúp Ngân hàng nâng cao chất lượng dịch vụ và tối ưu hóa hoạt động kinh doanh.</p>"
+      },
+      "13": {
+        "title": "Cloud Storage Private: Giải Pháp Cho Tổ Chức Chính Phủ",
+        "excerpt": "Cơ quan Chính phủ đã triển khai thành công Cloud Storage Private, đạt 99.99% uptime và tuân thủ 100% các quy định bảo mật dữ liệu.",
+        "category": "Case Study",
+        "author": "NexaCore Team",
+        "content": "<p>Cơ quan Chính phủ xử lý một lượng lớn dữ liệu nhạy cảm và cần một giải pháp lưu trữ đảm bảo bảo mật tối đa và tuân thủ các quy định nghiêm ngặt. Cloud Storage Private là lựa chọn phù hợp.</p><h2>Yêu Cầu Bảo Mật Nghiêm Ngặt</h2><p>Cơ quan Chính phủ có yêu cầu bảo mật rất cao và cần tuân thủ các quy định về bảo vệ dữ liệu. Giải pháp lưu trữ phải đảm bảo tính bảo mật, tính sẵn sàng và khả năng kiểm soát hoàn toàn.</p><h2>Triển Khai Cloud Storage Private</h2><p>NexaCore đã triển khai giải pháp Cloud Storage Private với môi trường lưu trữ độc lập, đảm bảo tuân thủ các quy định bảo mật dữ liệu. Hệ thống được mã hóa end-to-end và chỉ có thể truy cập bởi các bên được ủy quyền.</p><h2>Kết Quả Xuất Sắc</h2><p>Sau khi triển khai, Cơ quan đã đạt được những kết quả xuất sắc: đạt 99.99% uptime, tuân thủ 100% các quy định bảo mật dữ liệu, và giảm 60% chi phí lưu trữ. Hệ thống giúp Cơ quan đảm bảo tính sẵn sàng và bảo mật của dữ liệu quan trọng.</p>"
+      },
+      "14": {
+        "title": "DMS Giúp Công Ty FMCG Tăng 45% Độ Phủ Thị Trường",
+        "excerpt": "Công ty Hàng tiêu dùng đã triển khai thành công DMS, tăng 45% độ phủ thị trường và giảm 35% tồn kho chết.",
+        "category": "Case Study",
+        "author": "NexaCore Team",
+        "content": "<p>Công ty Hàng tiêu dùng là một trong những nhà sản xuất FMCG lớn nhất Việt Nam với mạng lưới phân phối rộng khắp. Việc quản lý kênh phân phối và đội ngũ bán hàng là thách thức lớn.</p><h2>Thách Thức Quản Lý Phân Phối</h2><p>Trước khi triển khai DMS, Công ty gặp nhiều khó khăn: độ phủ thị trường thấp, tồn kho chết cao, và khó khăn trong quản lý đội ngũ bán hàng. Hệ thống cũ không đáp ứng được yêu cầu quản lý thời gian thực.</p><h2>Triển Khai DMS</h2><p>NexaCore đã triển khai hệ thống DMS toàn diện, giúp Công ty quản lý lực lượng bán hàng, theo dõi tồn kho kênh và tối ưu hóa hiệu quả hoạt động. Hệ thống được tích hợp với ứng dụng di động cho đội ngũ bán hàng.</p><h2>Kết Quả Vượt Trội</h2><p>Sau khi triển khai, Công ty đã đạt được những kết quả vượt trội: tăng 45% độ phủ thị trường, giảm 35% tồn kho chết, và cải thiện 50% hiệu suất đội ngũ bán hàng. Hệ thống giúp Công ty tối ưu hóa quy trình phân phối và nâng cao hiệu quả kinh doanh.</p>"
+      },
+      "15": {
+        "title": "E-commerce Platform: Thương Hiệu Thời Trang Tăng 120% Doanh Thu",
+        "excerpt": "Thương hiệu Thời trang Quốc tế đã triển khai nền tảng E-commerce, tăng 120% doanh thu online và cải thiện 65% trải nghiệm người dùng.",
+        "category": "Case Study",
+        "author": "NexaCore Team",
+        "content": "<p>Thương hiệu Thời trang Quốc tế là một trong những thương hiệu thời trang nổi tiếng với sự hiện diện toàn cầu. Việc phát triển kênh bán hàng online là ưu tiên hàng đầu để mở rộng thị trường.</p><h2>Nhu Cầu Phát Triển E-commerce</h2><p>Trước khi triển khai nền tảng E-commerce, Thương hiệu gặp nhiều khó khăn: doanh thu online thấp, trải nghiệm người dùng chưa tốt, và khó khăn trong quản lý đơn hàng đa kênh. Hệ thống cũ không đáp ứng được yêu cầu phát triển.</p><h2>Triển Khai Nền Tảng E-commerce</h2><p>NexaCore đã triển khai nền tảng E-commerce mạnh mẽ, tích hợp sâu với ERP & CRM, hỗ trợ đa ngôn ngữ, đa tiền tệ và tối ưu hiệu suất. Hệ thống được tùy biến để phù hợp với mô hình kinh doanh của Thương hiệu.</p><h2>Kết Quả Ngoạn Mục</h2><p>Sau khi triển khai, Thương hiệu đã đạt được những kết quả ngoạn mục: tăng 120% doanh thu online, giảm 40% thời gian xử lý đơn hàng, và cải thiện 65% trải nghiệm người dùng. Hệ thống giúp Thương hiệu mở rộng thị trường và tăng trưởng doanh thu online đáng kể.</p>"
+      },
+      "16": {
+        "title": "Xu Hướng Công Nghệ 2024: Chuyển Đổi Số Toàn Diện",
+        "excerpt": "Các xu hướng công nghệ nổi bật trong năm 2024 bao gồm ERP thông minh, Cloud Storage, Data Warehouse và các giải pháp số hóa toàn diện.",
+        "category": "Technology",
+        "author": "NexaCore Team",
+        "content": "<p>Năm 2024 chứng kiến sự phát triển mạnh mẽ của các công nghệ chuyển đổi số, với nhiều xu hướng mới định hình tương lai của doanh nghiệp. Các giải pháp ERP thông minh, Cloud Storage, và Data Warehouse đang trở thành nền tảng quan trọng.</p><h2>ERP Thông Minh Với AI</h2><p>ERP thông minh với tích hợp AI và Machine Learning đang trở thành xu hướng chính. Hệ thống có thể tự động hóa quy trình, dự báo xu hướng và tối ưu hóa hiệu quả kinh doanh. Các doanh nghiệp đầu tư vào ERP thông minh sẽ có lợi thế cạnh tranh đáng kể.</p><h2>Cloud Storage Và Data Warehouse</h2><p>Cloud Storage và Data Warehouse đang trở thành nền tảng chiến lược cho các doanh nghiệp muốn tận dụng sức mạnh của dữ liệu. Các giải pháp này giúp doanh nghiệp lưu trữ, phân tích và ra quyết định dựa trên dữ liệu một cách hiệu quả.</p><h2>Tương Lai Chuyển Đổi Số</h2><p>Với sự phát triển của các công nghệ mới, chuyển đổi số sẽ tiếp tục là ưu tiên hàng đầu của doanh nghiệp. Các giải pháp số hóa toàn diện sẽ giúp doanh nghiệp nâng cao năng lực cạnh tranh và phát triển bền vững trong thị trường hiện đại.</p>"
+      },
+      "17": {
+        "title": "NexaCore Hợp Tác Với Đối Tác Chiến Lược Mới",
+        "excerpt": "NexaCore công bố hợp tác với các đối tác công nghệ hàng đầu để mở rộng dịch vụ và nâng cao chất lượng giải pháp cho khách hàng.",
+        "category": "Company News",
+        "author": "NexaCore Team",
+        "content": "<p>NexaCore tự hào công bố hợp tác chiến lược với các đối tác công nghệ hàng đầu trong ngành, mở ra một chương mới trong hành trình phát triển và đổi mới của công ty.</p><h2>Đối Tác Chiến Lược</h2><p>Thông qua các hợp tác này, NexaCore sẽ mở rộng phạm vi dịch vụ và nâng cao chất lượng giải pháp cho khách hàng. Các đối tác sẽ cung cấp công nghệ tiên tiến và chuyên môn sâu để hỗ trợ NexaCore phát triển các giải pháp tốt nhất.</p><h2>Lợi Ích Cho Khách Hàng</h2><p>Khách hàng của NexaCore sẽ được hưởng lợi từ các giải pháp được cải thiện, công nghệ mới nhất và dịch vụ tốt hơn. Hợp tác này sẽ giúp NexaCore đáp ứng tốt hơn nhu cầu của khách hàng và mang lại giá trị lớn hơn.</p><h2>Tương Lai Phát Triển</h2><p>Với các hợp tác chiến lược này, NexaCore sẽ tiếp tục dẫn đầu trong đổi mới công nghệ và cung cấp các giải pháp tốt nhất cho khách hàng. Công ty cam kết đầu tư vào phát triển và đổi mới để mang lại giá trị lâu dài.</p>"
+      },
+      "18": {
+        "title": "Giải Pháp ERP Tương Lai: Tích Hợp AI Và Machine Learning",
+        "excerpt": "Tương lai của ERP sẽ tích hợp sâu với AI và Machine Learning để tự động hóa quy trình, dự báo xu hướng và tối ưu hóa hiệu quả kinh doanh.",
+        "category": "Technology",
+        "author": "NexaCore Team",
+        "content": "<p>Tương lai của ERP đang được định hình bởi sự tích hợp sâu với AI và Machine Learning. Các giải pháp ERP thông minh sẽ tự động hóa quy trình, dự báo xu hướng và tối ưu hóa hiệu quả kinh doanh một cách chưa từng có.</p><h2>Tích Hợp AI Và Machine Learning</h2><p>ERP với AI và Machine Learning có thể tự động hóa các quy trình phức tạp, từ lập kế hoạch sản xuất đến quản lý tồn kho. Hệ thống có thể học từ dữ liệu lịch sử và đưa ra các đề xuất thông minh để tối ưu hóa hoạt động.</p><h2>Dự Báo Và Tối Ưu Hóa</h2><p>Với khả năng phân tích dữ liệu lớn, ERP thông minh có thể dự báo xu hướng thị trường, nhu cầu khách hàng và các rủi ro tiềm ẩn. Hệ thống tự động tối ưu hóa các quy trình để đạt hiệu quả cao nhất.</p><h2>Tương Lai Của Doanh Nghiệp</h2><p>Các doanh nghiệp đầu tư vào ERP thông minh sẽ có lợi thế cạnh tranh đáng kể trong thị trường hiện đại. Hệ thống sẽ giúp doanh nghiệp phản ứng nhanh với thay đổi, tối ưu hóa hoạt động và phát triển bền vững.</p>"
+      }
     }
   },
   "careers": {
@@ -247,10 +764,10 @@
       "subtitle": "Chúng tôi cung cấp nhiều hơn chỉ là một công việc - chúng tôi cung cấp một sự nghiệp có mục đích và tăng trưởng",
       "competitiveSalary": {
         "title": "Lương Cạnh tranh",
-        "description": "Gói bồi thường dẫn đầu thị trường"
+        "description": "Đãi ngộ dẫn đầu thị trường"
       },
       "healthWellness": {
-        "title": "Sức khỏe & Sức khỏe",
+        "title": "Sức khỏe",
         "description": "Bảo hiểm y tế toàn diện và chương trình sức khỏe"
       },
       "flexibleWork": {
@@ -267,7 +784,7 @@
       },
       "timeOff": {
         "title": "Nghỉ phép",
-        "description": "Nghỉ phép và nghỉ cá nhân hào phóng"
+        "description": "Chế độ nghỉ phép và nghỉ cá nhân đầy đủ theo quy định"
       }
     },
     "positions": {
@@ -329,6 +846,172 @@
       "description": "Không thấy vị trí phù hợp với kỹ năng của bạn? Chúng tôi luôn tìm kiếm những cá nhân tài năng để tham gia đội ngũ của chúng tôi.",
       "sendResume": "Gửi CV của Bạn cho Chúng tôi",
       "learnMore": "Tìm hiểu thêm về Chúng tôi"
+    },
+    "seo": {
+      "title": "Tuyển dụng - Tham gia NexaCore | Nexa Core Việc làm",
+      "description": "Khám phá cơ hội nghề nghiệp thú vị tại NexaCore (Nexa Core). Tham gia đội ngũ đổi mới của chúng tôi và giúp định hình tương lai của chuyển đổi số."
+    },
+    "items": {
+      "1": {
+        "title": "Senior Full Stack Developer",
+        "department": "Engineering",
+        "location": "Remote / Viet Nam",
+        "type": "Full-time",
+        "description": "Chúng tôi đang tìm kiếm một Senior Full Stack Developer giàu kinh nghiệm để tham gia vào đội ngũ kỹ thuật và xây dựng các giải pháp công nghệ tiên tiến. Bạn sẽ làm việc với các công nghệ hiện đại nhất và có cơ hội phát triển sự nghiệp trong môi trường năng động, sáng tạo.",
+        "requirements": [
+          "5+ năm kinh nghiệm phát triển full-stack",
+          "Thành thạo React, Node.js, và TypeScript",
+          "Kinh nghiệm với các nền tảng cloud (AWS/Azure/GCP)",
+          "Kỹ năng giải quyết vấn đề mạnh mẽ",
+          "Kỹ năng giao tiếp xuất sắc",
+          "Kinh nghiệm với database (PostgreSQL, MongoDB)",
+          "Hiểu biết về CI/CD và DevOps practices"
+        ],
+        "responsibilities": [
+          "Thiết kế và phát triển các ứng dụng web có khả năng mở rộng",
+          "Hợp tác với các đội ngũ đa chức năng",
+          "Viết code sạch, dễ bảo trì",
+          "Tham gia code review và thảo luận kiến trúc",
+          "Mentor các developer junior",
+          "Tối ưu hóa hiệu suất ứng dụng",
+          "Nghiên cứu và áp dụng các công nghệ mới"
+        ],
+        "salary": "25,000,000 - 40,000,000 VNĐ/tháng",
+        "experienceLevel": "Senior (5+ years)",
+        "skills": [
+          "React",
+          "Node.js",
+          "TypeScript",
+          "PostgreSQL",
+          "MongoDB",
+          "AWS",
+          "Docker",
+          "Git",
+          "RESTful API",
+          "GraphQL"
+        ],
+        "benefits": [
+          "Lương cạnh tranh và review định kỳ",
+          "Bảo hiểm đầy đủ (BHXH, BHYT, BHTN)",
+          "Làm việc remote linh hoạt",
+          "Đào tạo và phát triển kỹ năng",
+          "Môi trường làm việc trẻ trung, năng động",
+          "Thưởng theo dự án và hiệu suất"
+        ]
+      },
+      "2": {
+        "title": "AI/ML Engineer",
+        "department": "AI Research",
+        "location": "Hybrid / Viet Nam",
+        "type": "Full-time",
+        "description": "Tham gia đội ngũ nghiên cứu AI của chúng tôi để phát triển các giải pháp machine learning sáng tạo cho khách hàng doanh nghiệp. Bạn sẽ làm việc với các dự án AI/ML tiên tiến và có cơ hội nghiên cứu, phát triển các thuật toán mới.",
+        "requirements": [
+          "Thạc sĩ hoặc Tiến sĩ về Khoa học Máy tính hoặc lĩnh vực liên quan",
+          "3+ năm kinh nghiệm trong machine learning",
+          "Nền tảng vững chắc về Python, TensorFlow/PyTorch",
+          "Kinh nghiệm với NLP và computer vision",
+          "Có nghiên cứu đã công bố là một lợi thế",
+          "Hiểu biết về MLOps và deployment models",
+          "Kỹ năng toán học và thống kê mạnh"
+        ],
+        "responsibilities": [
+          "Phát triển và triển khai các mô hình ML",
+          "Nghiên cứu các thuật toán và kỹ thuật AI mới",
+          "Hợp tác với các đội ngũ sản phẩm",
+          "Tối ưu hóa hiệu suất mô hình",
+          "Trình bày kết quả cho các bên liên quan",
+          "Xây dựng pipeline ML từ đầu đến cuối",
+          "Giám sát và cải thiện mô hình trong production"
+        ],
+        "salary": "30,000,000 - 50,000,000 VNĐ/tháng",
+        "experienceLevel": "Mid to Senior (3+ years)",
+        "skills": [
+          "Python",
+          "TensorFlow",
+          "PyTorch",
+          "Scikit-learn",
+          "NLP",
+          "Computer Vision",
+          "MLOps",
+          "Docker",
+          "Kubernetes",
+          "Data Science"
+        ],
+        "benefits": [
+          "Lương cao và thưởng theo dự án",
+          "Bảo hiểm đầy đủ và chăm sóc sức khỏe",
+          "Làm việc hybrid linh hoạt",
+          "Ngân sách cho nghiên cứu và học tập",
+          "Tham gia các hội nghị AI/ML",
+          "Cơ hội công bố nghiên cứu"
+        ]
+      },
+      "3": {
+        "title": "Product Manager",
+        "department": "Product",
+        "location": "Hybrid / Viet Nam",
+        "type": "Full-time",
+        "description": "Dẫn dắt chiến lược và thực thi sản phẩm cho các giải pháp phần mềm doanh nghiệp của chúng tôi. Bạn sẽ làm việc với các đội ngũ đa chức năng để định hình tương lai của sản phẩm và đảm bảo thành công trên thị trường.",
+        "requirements": [
+          "5+ năm kinh nghiệm quản lý sản phẩm",
+          "Kinh nghiệm với sản phẩm phần mềm doanh nghiệp",
+          "Tư duy phân tích và chiến lược mạnh mẽ",
+          "Kỹ năng quản lý stakeholder xuất sắc",
+          "Nền tảng kỹ thuật được ưu tiên",
+          "Kinh nghiệm với Agile/Scrum",
+          "Kỹ năng giao tiếp và thuyết trình tốt"
+        ],
+        "responsibilities": [
+          "Định nghĩa tầm nhìn và lộ trình sản phẩm",
+          "Thu thập và ưu tiên hóa yêu cầu sản phẩm",
+          "Làm việc với các đội ngũ engineering và design",
+          "Phân tích xu hướng thị trường và đối thủ cạnh tranh",
+          "Thúc đẩy ra mắt sản phẩm và tăng trưởng",
+          "Quản lý backlog và sprint planning",
+          "Theo dõi metrics và KPIs của sản phẩm"
+        ],
+        "salary": "35,000,000 - 55,000,000 VNĐ/tháng",
+        "experienceLevel": "Senior (5+ years)",
+        "skills": [
+          "Product Strategy",
+          "Agile/Scrum",
+          "User Research",
+          "Data Analysis",
+          "Stakeholder Management",
+          "Roadmap Planning",
+          "A/B Testing",
+          "Product Metrics",
+          "Jira",
+          "Figma"
+        ],
+        "benefits": [
+          "Lương cao và thưởng theo hiệu suất",
+          "Bảo hiểm đầy đủ và quỹ phúc lợi",
+          "Làm việc hybrid linh hoạt",
+          "Đào tạo và phát triển chuyên môn",
+          "Tham gia các sự kiện và hội nghị",
+          "Cơ hội thăng tiến nhanh"
+        ]
+      }
+    },
+    "detail": {
+      "jobDescription": "Mô tả công việc",
+      "responsibilities": "Trách nhiệm",
+      "requirements": "Yêu cầu",
+      "requiredSkills": "Kỹ năng yêu cầu",
+      "benefits": "Phúc lợi",
+      "salary": "Mức lương",
+      "postedDate": "Đăng ngày",
+      "applicationDeadline": "Hạn nộp",
+      "close": "Đóng",
+      "applyNow": "Ứng tuyển ngay"
+    },
+    "careerDetail": {
+      "notFound": "Không tìm thấy vị trí",
+      "backToCareers": "Quay lại Tuyển dụng",
+      "sharePosition": "Chia sẻ vị trí này",
+      "readyToApply": "Sẵn sàng Ứng tuyển?",
+      "applyDescription": "Tham gia đội ngũ của chúng tôi và giúp định hình tương lai của chuyển đổi số."
     }
   },
   "solutions": {
@@ -343,7 +1026,119 @@
     "keyBenefits": "Lợi ích Chính",
     "readyToTransform": "Sẵn sàng chuyển đổi doanh nghiệp của bạn với",
     "getStarted": "Bắt đầu",
-    "learnMore": "Tìm hiểu thêm"
+    "learnMore": "Tìm hiểu thêm",
+    "solutionDetails": "Chi Tiết Giải Pháp",
+    "solutionDetailsSubtitle": "Khám phá từng giải pháp chi tiết để hiểu cách chúng tôi có thể giúp doanh nghiệp của bạn",
+    "details": {
+      "erp": {
+        "title": "Hoạch Định Nguồn Lực Doanh Nghiệp",
+        "description": "Tối ưu hóa hoạt động kinh doanh của bạn với các giải pháp ERP tích hợp.",
+        "features": [
+          "Quản Lý Tài Chính & Kế Toán",
+          "Quản Lý Chuỗi Cung Ứng & Tồn Kho",
+          "Quản Lý Nhân Sự",
+          "Sản Xuất & Lập Kế Hoạch Sản Xuất",
+          "Business Intelligence & Phân Tích",
+          "Hỗ Trợ Đa Thực Thể & Đa Tiền Tệ"
+        ],
+        "benefits": [
+          "Giảm 40% chi phí vận hành",
+          "Tầm nhìn thời gian thực trên tất cả các phòng ban",
+          "Cải thiện việc ra quyết định với phân tích dữ liệu",
+          "Tự động hóa quy trình và quy trình làm việc"
+        ]
+      },
+      "crm": {
+        "title": "Quản Lý Quan Hệ Khách Hàng",
+        "description": "Xây dựng mối quan hệ khách hàng bền chặt hơn với các hệ thống CRM thông minh.",
+        "features": [
+          "Cái Nhìn 360° Về Khách Hàng",
+          "Tự Động Hóa Lực Lượng Bán Hàng",
+          "Quản Lý Chiến Dịch Marketing",
+          "Dịch Vụ & Hỗ Trợ Khách Hàng",
+          "Quản Lý Lead & Cơ Hội",
+          "Truy Cập CRM Di Động"
+        ],
+        "benefits": [
+          "Tăng 35% năng suất bán hàng",
+          "Giữ chân khách hàng và sự hài lòng tốt hơn",
+          "Chiến dịch marketing tự động",
+          "Cải thiện hợp tác giữa các đội ngũ"
+        ]
+      },
+      "ai": {
+        "title": "Trí Tuệ Nhân Tạo & Học Máy",
+        "description": "Tận dụng AI và ML để khám phá thông tin chi tiết và tự động hóa quy trình.",
+        "features": [
+          "Phân Tích Dự Báo",
+          "Xử Lý Ngôn Ngữ Tự Nhiên",
+          "Thị Giác Máy Tính",
+          "Công Cụ Đề Xuất",
+          "Ra Quyết Định Tự Động",
+          "Phát Triển Mô Hình ML Tùy Chỉnh"
+        ],
+        "benefits": [
+          "Ra quyết định nhanh hơn 50%",
+          "Tự động hóa các tác vụ lặp lại",
+          "Thông tin chi tiết và dự báo dựa trên dữ liệu",
+          "Trải nghiệm khách hàng được nâng cao"
+        ]
+      },
+      "cloud": {
+        "title": "Hạ Tầng Điện Toán Đám Mây",
+        "description": "Hiện đại hóa hạ tầng IT của bạn với các giải pháp đám mây có thể mở rộng.",
+        "features": [
+          "Di Chuyển & Chiến Lược Đám Mây",
+          "Kiến Trúc Đa Đám Mây",
+          "DevOps & CI/CD",
+          "Bảo Mật & Tuân Thủ Đám Mây",
+          "Infrastructure as Code",
+          "Tối Ưu Hóa Chi Phí"
+        ],
+        "benefits": [
+          "Giảm 60% chi phí hạ tầng",
+          "Đảm bảo thời gian hoạt động 99.99%",
+          "Tài nguyên có thể mở rộng và linh hoạt",
+          "Bảo mật và tuân thủ được nâng cao"
+        ]
+      },
+      "iot": {
+        "title": "Internet Thông Minh",
+        "description": "Kết nối thiết bị và hệ thống để tạo ra các hệ sinh thái thông minh.",
+        "features": [
+          "Quản Lý Thiết Bị IoT",
+          "Thu Thập Dữ Liệu Thời Gian Thực",
+          "Giải Pháp Edge Computing",
+          "Bảo Trì Dự Báo",
+          "Sản Xuất Thông Minh",
+          "Chuỗi Cung Ứng Kết Nối"
+        ],
+        "benefits": [
+          "Giảm 30% chi phí bảo trì",
+          "Giám sát và cảnh báo thời gian thực",
+          "Cải thiện hiệu quả hoạt động",
+          "Thông tin chi tiết dựa trên dữ liệu từ thiết bị kết nối"
+        ]
+      },
+      "security": {
+        "title": "Giải Pháp An Ninh Mạng",
+        "description": "Bảo vệ tài sản kỹ thuật số của bạn với các giải pháp bảo mật toàn diện.",
+        "features": [
+          "Phát Hiện & Phản Ứng Mối Đe Dọa",
+          "Quản Lý Danh Tính & Truy Cập",
+          "Mã Hóa Dữ Liệu & Quyền Riêng Tư",
+          "Tuân Thủ Bảo Mật",
+          "Kiểm Thử Xâm Nhập",
+          "Giám Sát Bảo Mật 24/7"
+        ],
+        "benefits": [
+          "Không có vi phạm bảo mật",
+          "Tuân thủ các tiêu chuẩn ngành",
+          "Phát hiện mối đe dọa thời gian thực",
+          "Bảo mật toàn diện"
+        ]
+      }
+    }
   },
   "common": {
     "loading": "Đang tải...",
@@ -359,7 +1154,7 @@
   "services": {
     "enterpriseSolutions": "Giải pháp Doanh nghiệp",
     "crmSystems": "Hệ thống CRM",
-    "aiMachineLearning": "AI & Học máy",
+    "aiMachineLearning": "AI & Machine Learning",
     "cloudInfrastructure": "Hạ tầng Điện toán đám mây",
     "iotSolutions": "Giải pháp IoT",
     "cybersecurity": "An ninh mạng",

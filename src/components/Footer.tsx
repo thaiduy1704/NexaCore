@@ -3,10 +3,6 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button, Input, message } from "antd";
 import {
-  FacebookOutlined,
-  TwitterOutlined,
-  LinkedinOutlined,
-  InstagramOutlined,
   MailOutlined,
   PhoneOutlined,
   EnvironmentOutlined,
@@ -21,6 +17,14 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
+
+  // Detect if device is mobile
+  const isMobile = () => {
+    return (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+      window.innerWidth <= 768
+    );
+  };
 
   const handleSubscribe = async () => {
     if (!email || !/\S+@\S+\.\S+/.test(email)) {
@@ -177,7 +181,7 @@ export default function Footer() {
             <p className="!text-gray-400 !text-base !leading-relaxed !mb-8">
               {t("footer.companyDescription")}
             </p>
-            <div className="!flex !gap-3">
+            {/* <div className="!flex !gap-3">
               {[
                 {
                   icon: FacebookOutlined,
@@ -212,7 +216,7 @@ export default function Footer() {
                   <social.icon className="!text-lg" />
                 </motion.a>
               ))}
-            </div>
+            </div> */}
           </motion.div>
 
           {/* Quick Links */}
@@ -315,10 +319,7 @@ export default function Footer() {
                 >
                   <EnvironmentOutlined className="!text-lg" />
                 </motion.div>
-                <span className="!text-sm !leading-relaxed !pt-2">
-                  49/35/19 Đường Giang Cự Vọng, Khu phố 4, Phường Trung Mỹ Tây, Thành phố Hồ Chí
-                  Minh, Việt Nam
-                </span>
+                <span className="!text-sm !leading-relaxed !pt-2">{t("contact.info.address")}</span>
               </motion.li>
               <motion.li
                 className="!flex !items-center !gap-4 !text-gray-400 hover:!text-white !transition-colors !group !cursor-pointer"
@@ -332,10 +333,12 @@ export default function Footer() {
                   <PhoneOutlined className="!text-lg" />
                 </motion.div>
                 <a
-                  href="tel:+15551234567"
+                  href={isMobile() ? "tel:0983460137" : "https://zalo.me/0983460137"}
                   className="!text-sm hover:!text-blue-400 !transition-colors"
+                  target={!isMobile() ? "_blank" : undefined}
+                  rel={!isMobile() ? "noopener noreferrer" : undefined}
                 >
-                  0924600029
+                  098 346 0137
                 </a>
               </motion.li>
               <motion.li

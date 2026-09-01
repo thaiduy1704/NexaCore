@@ -12,7 +12,9 @@ import ProjectDetailPage from "./pages/ProjectDetailPage";
 import NewsPage from "./pages/NewsPage";
 import NewsDetailPage from "./pages/NewsDetailPage";
 import CareersPage from "./pages/CareersPage";
+import CareerDetailPage from "./pages/CareerDetailPage";
 import ContactPage from "./pages/ContactPage";
+import PrivacyPage from "./pages/PrivacyPage";
 
 function App() {
   return (
@@ -31,7 +33,9 @@ function App() {
           <Route path="/news" element={<NewsPage />} />
           <Route path="/news/:slug" element={<NewsDetailPage />} />
           <Route path="/careers" element={<CareersPage />} />
+          <Route path="/careers/:id" element={<CareerDetailPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/privacy" element={<PrivacyPage />} />
         </Routes>
       </main>
       <Footer />

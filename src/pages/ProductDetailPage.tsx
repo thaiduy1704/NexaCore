@@ -63,8 +63,16 @@ export default function ProductDetailPage() {
   return (
     <div className="!pt-20 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50">
       <SeoHelmet
-        title={`${product.title} | NexaCore`}
-        description={product.description}
+        title={`${(() => {
+          const titleKey = `products.items.${product.id}.title`;
+          const translated = t(titleKey);
+          return translated !== titleKey ? translated : product.title;
+        })()} | NexaCore`}
+        description={(() => {
+          const descKey = `products.items.${product.id}.description`;
+          const translated = t(descKey);
+          return translated !== descKey ? translated : product.description;
+        })()}
         url={canonicalUrl}
         type="product"
       />
@@ -156,7 +164,11 @@ export default function ProductDetailPage() {
               >
                 <RocketOutlined className="text-white !text-lg" />
                 <span className="text-white font-bold text-sm md:text-base">
-                  {product.category}
+                  {(() => {
+                    const categoryKey = `products.items.${product.id}.category`;
+                    const translated = t(categoryKey);
+                    return translated !== categoryKey ? translated : product.category;
+                  })()}
                 </span>
               </motion.div>
 
@@ -167,7 +179,11 @@ export default function ProductDetailPage() {
                 transition={{ delay: 0.3 }}
                 className="!text-4xl md:!text-5xl lg:!text-6xl font-extrabold !mb-8 leading-tight drop-shadow-2xl"
               >
-                {product.title}
+                {(() => {
+                  const titleKey = `products.items.${product.id}.title`;
+                  const translated = t(titleKey);
+                  return translated !== titleKey ? translated : product.title;
+                })()}
               </motion.h1>
 
               {/* Description - Enhanced */}
@@ -177,7 +193,11 @@ export default function ProductDetailPage() {
                 transition={{ delay: 0.4 }}
                 className="!text-lg md:!text-xl lg:!text-2xl text-white/95 !max-w-3xl !mx-auto leading-relaxed font-normal"
               >
-                {product.description}
+                {(() => {
+                  const descKey = `products.items.${product.id}.description`;
+                  const translated = t(descKey);
+                  return translated !== descKey ? translated : product.description;
+                })()}
               </motion.p>
             </div>
           </motion.div>
@@ -306,7 +326,11 @@ export default function ProductDetailPage() {
                 </div>
 
                 <ul className="!space-y-4">
-                  {product.features.map((feature, index) => (
+                  {(() => {
+                    const featuresKey = `products.items.${product.id}.features`;
+                    const translated = t(featuresKey, { returnObjects: true });
+                    const features = (Array.isArray(translated) && translated[0] !== featuresKey) ? translated : product.features;
+                    return features.map((feature, index) => (
                     <motion.li
                       key={index}
                       initial={{ opacity: 0, x: -20 }}
@@ -329,7 +353,8 @@ export default function ProductDetailPage() {
                         {feature}
                       </span>
                     </motion.li>
-                  ))}
+                    ));
+                  })()}
                 </ul>
               </motion.div>
 
@@ -360,7 +385,11 @@ export default function ProductDetailPage() {
                 </div>
 
                 <ul className="!space-y-4">
-                  {product.benefits?.map((benefit, index) => (
+                  {(() => {
+                    const benefitsKey = `products.items.${product.id}.benefits`;
+                    const translated = t(benefitsKey, { returnObjects: true });
+                    const benefits = (Array.isArray(translated) && translated[0] !== benefitsKey) ? translated : (product.benefits || []);
+                    return benefits.map((benefit, index) => (
                     <motion.li
                       key={index}
                       initial={{ opacity: 0, x: -20 }}
@@ -394,7 +423,8 @@ export default function ProductDetailPage() {
                         </span>
                       </div>
                     </motion.li>
-                  ))}
+                    ));
+                  })()}
                 </ul>
               </motion.div>
             </div>
@@ -524,7 +554,13 @@ export default function ProductDetailPage() {
               {t("productDetail.readyToTransform")}
             </h2>
             <p className="!text-xl md:!text-2xl text-white/95 !mb-12 leading-relaxed font-normal">
-              {t("productDetail.getStartedWith", { product: product.title })}
+              {t("productDetail.getStartedWith", { 
+                product: (() => {
+                  const titleKey = `products.items.${product.id}.title`;
+                  const translated = t(titleKey);
+                  return translated !== titleKey ? translated : product.title;
+                })()
+              })}
             </p>
 
             <div className="flex flex-wrap !gap-6 justify-center">

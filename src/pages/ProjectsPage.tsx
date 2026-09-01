@@ -23,13 +23,13 @@ export default function ProjectsPage() {
   const stats = [
     {
       label: t("projects.impact.projectsCompleted"),
-      value: "500+",
+      value: "100+",
       icon: "CheckCircleOutlined",
       description: t("projects.impact.successfullyDelivered"),
     },
     {
       label: t("projects.impact.countriesServed"),
-      value: "50+",
+      value: "2+",
       icon: "GlobalOutlined",
       description: t("projects.impact.worldwidePresence"),
     },
@@ -38,12 +38,6 @@ export default function ProjectsPage() {
       value: "98%",
       icon: "SmileOutlined",
       description: t("projects.impact.happyClients"),
-    },
-    {
-      label: t("projects.impact.awardsWon"),
-      value: "25+",
-      icon: "TrophyOutlined",
-      description: t("projects.impact.industryRecognition"),
     },
   ];
 
@@ -55,110 +49,111 @@ export default function ProjectsPage() {
         keywords={projectsMetadata.keywords}
       />
       <div className="!pt-20">
-      <HeroBanner
-        title={t("projects.hero.title")}
-        subtitle={t("projects.hero.subtitle")}
-        ctaText={t("projects.hero.startProject")}
-        ctaLink="/contact"
-      />
+        <HeroBanner
+          title={t("projects.hero.title")}
+          subtitle={t("projects.hero.subtitle")}
+          ctaText={t("projects.hero.startProject")}
+          ctaLink="/contact"
+        />
 
-      <section className="!py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50">
-        <div className="container !mx-auto !px-4">
-          <SectionTitle title={t("projects.title")} subtitle={t("projects.subtitle")} />
+        <section className="!py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50">
+          <div className="container !mx-auto !px-4">
+            <SectionTitle title={t("projects.title")} subtitle={t("projects.subtitle")} />
 
-          <div className="!max-w-7xl !mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 !gap-8 !mt-12">
-            {projects.map((project, index) => (
-              <motion.div
-                key={project.id}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <ProjectCard project={project} />
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="!py-24 relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
-        {/* Animated Background */}
-        <div className="absolute inset-0 !opacity-20">
-          <div className="absolute !top-20 !left-10 !w-96 !h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
-          <div className="absolute !top-40 !right-10 !w-96 !h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
-          <div className="absolute !bottom-20 !left-1/2 !w-96 !h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
-        </div>
-
-        <div className="container !mx-auto !px-4 relative !z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center !mb-16"
-          >
-            <h2 className="!text-5xl md:text-6xl font-extrabold text-white !mb-6">
-              {t("projects.impact.title")}
-            </h2>
-            <p className="!text-2xl text-white/95 !max-w-3xl !mx-auto leading-relaxed">
-              {t("projects.impact.subtitle")}
-            </p>
-          </motion.div>
-
-          <div className="!max-w-6xl !mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 !gap-8">
-            {stats.map((stat, index) => {
-              // eslint-disable-next-line @typescript-eslint/no-explicit-any
-              const IconComponent = (Icons as any)[stat.icon] || Icons.CheckCircleOutlined;
-              return (
+            <div className="!max-w-7xl !mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 !gap-8 !mt-12">
+              {projects.map((project, index) => (
                 <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  onMouseEnter={() => setHoveredStat(index)}
-                  onMouseLeave={() => setHoveredStat(null)}
-                  className="relative group"
+                  key={project.id}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="h-full"
                 >
-                  <div
-                    className={`
+                  <ProjectCard project={project} />
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        <section className="!py-24 relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
+          {/* Animated Background */}
+          <div className="absolute inset-0 !opacity-20">
+            <div className="absolute !top-20 !left-10 !w-96 !h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
+            <div className="absolute !top-40 !right-10 !w-96 !h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+            <div className="absolute !bottom-20 !left-1/2 !w-96 !h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
+          </div>
+
+          <div className="container !mx-auto !px-4 relative !z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center !mb-16"
+            >
+              <h2 className="!text-5xl md:text-6xl font-extrabold text-white !mb-6">
+                {t("projects.impact.title")}
+              </h2>
+              <p className="!text-2xl text-white/95 !max-w-3xl !mx-auto leading-relaxed">
+                {t("projects.impact.subtitle")}
+              </p>
+            </motion.div>
+
+            <div className="!max-w-6xl !mx-auto grid grid-cols-1 md:grid-cols-3 !gap-8">
+              {stats.map((stat, index) => {
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                const IconComponent = (Icons as any)[stat.icon] || Icons.CheckCircleOutlined;
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    onMouseEnter={() => setHoveredStat(index)}
+                    onMouseLeave={() => setHoveredStat(null)}
+                    className="relative group"
+                  >
+                    <div
+                      className={`
                       bg-white/10 backdrop-blur-lg rounded-3xl p-8 text-center
                       transition-all duration-500
                       ${hoveredStat === index ? "bg-white/20 scale-105" : ""}
                       border border-white/20
                     `}
-                  >
-                    <div
-                      className={`
+                    >
+                      <div
+                        className={`
                         !w-16 !h-16 rounded-2xl bg-gradient-to-br ${
                           statGradients[index % statGradients.length]
                         }
                         flex items-center justify-center !mx-auto !mb-6 shadow-lg
                       `}
-                    >
-                      <IconComponent className="!text-3xl text-white" />
+                      >
+                        <IconComponent className="!text-3xl text-white" />
+                      </div>
+                      <motion.div
+                        className="!text-5xl font-extrabold text-white !mb-3"
+                        initial={{ scale: 0 }}
+                        whileInView={{ scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: index * 0.1, type: "spring" }}
+                      >
+                        {stat.value}
+                      </motion.div>
+                      <div className="!text-xl font-bold text-white/95 !mb-2">{stat.label}</div>
+                      <div className="!text-sm text-white/80">{stat.description}</div>
                     </div>
-                    <motion.div
-                      className="!text-5xl font-extrabold text-white !mb-3"
-                      initial={{ scale: 0 }}
-                      whileInView={{ scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: index * 0.1, type: "spring" }}
-                    >
-                      {stat.value}
-                    </motion.div>
-                    <div className="!text-xl font-bold text-white/95 !mb-2">{stat.label}</div>
-                    <div className="!text-sm text-white/80">{stat.description}</div>
-                  </div>
-                </motion.div>
-              );
-            })}
+                  </motion.div>
+                );
+              })}
+            </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
     </>
   );
 }

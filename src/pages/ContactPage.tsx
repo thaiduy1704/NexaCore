@@ -27,24 +27,28 @@ export default function ContactPage() {
   const { t } = useTranslation();
   const [hoveredContact, setHoveredContact] = useState<number | null>(null);
 
+  // Detect if device is mobile
+  const isMobile = () => {
+    return (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+      window.innerWidth <= 768
+    );
+  };
+
   const contactInfo = [
     {
       icon: EnvironmentOutlined,
       title: t("contact.info.headquarters"),
       gradient: contactGradients[0],
-      content: [
-        "49/35/19 Đường Giang Cự Vọng",
-        " Khu phố 4, Phường Trung Mỹ Tây,",
-        "Thành phố Hồ Chí Minh, Việt Nam",
-      ],
+      content: [t("contact.info.address")],
     },
     {
       icon: PhoneOutlined,
       title: t("contact.info.phone"),
       gradient: contactGradients[1],
       content: [
-        `${t("contact.info.sales")}: 092 460 0029`,
-        `${t("contact.info.support")}: 092 460 0029`,
+        // `${t("contact.info.sales")}: 092 460 0029`,
+        // `${t("contact.info.support")}: 092 460 0029`,
         `${t("contact.info.general")}: 098 346 0137`,
       ],
     },
@@ -252,7 +256,9 @@ export default function ContactPage() {
                   <motion.a
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    href="tel:+15551234567"
+                    href={isMobile() ? "tel:0983460137" : "https://zalo.me/0983460137"}
+                    target={!isMobile() ? "_blank" : undefined}
+                    rel={!isMobile() ? "noopener noreferrer" : undefined}
                     className="inline-flex items-center !gap-3 !px-10 !py-5 bg-white text-indigo-900 rounded-2xl font-bold !text-lg shadow-2xl hover:shadow-white/50 transition-all"
                   >
                     <PhoneOutlined className="!text-xl" />

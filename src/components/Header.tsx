@@ -23,6 +23,7 @@ export default function Header() {
       { key: "/news", label: <Link to="/news">{t("nav.news")}</Link> },
       { key: "/careers", label: <Link to="/careers">{t("nav.careers")}</Link> },
       { key: "/contact", label: <Link to="/contact">{t("nav.contact")}</Link> },
+      { key: "/privacy", label: <Link to="/privacy">{t("footer.privacyPolicy")}</Link> },
     ],
     [t, i18n.language]
   );
